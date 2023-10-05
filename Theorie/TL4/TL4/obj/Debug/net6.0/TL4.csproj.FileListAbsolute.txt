@@ -1,0 +1,14 @@
+C:\Users\thiba\source\repos\Theorie\TL4\TL4\bin\Debug\net6.0\TL4.exe
+C:\Users\thiba\source\repos\Theorie\TL4\TL4\bin\Debug\net6.0\TL4.deps.json
+C:\Users\thiba\source\repos\Theorie\TL4\TL4\bin\Debug\net6.0\TL4.runtimeconfig.json
+C:\Users\thiba\source\repos\Theorie\TL4\TL4\bin\Debug\net6.0\TL4.dll
+C:\Users\thiba\source\repos\Theorie\TL4\TL4\bin\Debug\net6.0\TL4.pdb
+C:\Users\thiba\source\repos\Theorie\TL4\TL4\obj\Debug\net6.0\TL4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thiba\source\repos\Theorie\TL4\TL4\obj\Debug\net6.0\TL4.AssemblyInfoInputs.cache
+C:\Users\thiba\source\repos\Theorie\TL4\TL4\obj\Debug\net6.0\TL4.AssemblyInfo.cs
+C:\Users\thiba\source\repos\Theorie\TL4\TL4\obj\Debug\net6.0\TL4.csproj.CoreCompileInputs.cache
+C:\Users\thiba\source\repos\Theorie\TL4\TL4\obj\Debug\net6.0\TL4.dll
+C:\Users\thiba\source\repos\Theorie\TL4\TL4\obj\Debug\net6.0\refint\TL4.dll
+C:\Users\thiba\source\repos\Theorie\TL4\TL4\obj\Debug\net6.0\TL4.pdb
+C:\Users\thiba\source\repos\Theorie\TL4\TL4\obj\Debug\net6.0\TL4.genruntimeconfig.cache
+C:\Users\thiba\source\repos\Theorie\TL4\TL4\obj\Debug\net6.0\ref\TL4.dll

@@ -1,0 +1,14 @@
+C:\Users\thiba\source\repos\Les3\Oef03_01\Oef03_01\bin\Debug\net6.0\Oef03_01.exe
+C:\Users\thiba\source\repos\Les3\Oef03_01\Oef03_01\bin\Debug\net6.0\Oef03_01.deps.json
+C:\Users\thiba\source\repos\Les3\Oef03_01\Oef03_01\bin\Debug\net6.0\Oef03_01.runtimeconfig.json
+C:\Users\thiba\source\repos\Les3\Oef03_01\Oef03_01\bin\Debug\net6.0\Oef03_01.dll
+C:\Users\thiba\source\repos\Les3\Oef03_01\Oef03_01\bin\Debug\net6.0\Oef03_01.pdb
+C:\Users\thiba\source\repos\Les3\Oef03_01\Oef03_01\obj\Debug\net6.0\Oef03_01.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thiba\source\repos\Les3\Oef03_01\Oef03_01\obj\Debug\net6.0\Oef03_01.AssemblyInfoInputs.cache
+C:\Users\thiba\source\repos\Les3\Oef03_01\Oef03_01\obj\Debug\net6.0\Oef03_01.AssemblyInfo.cs
+C:\Users\thiba\source\repos\Les3\Oef03_01\Oef03_01\obj\Debug\net6.0\Oef03_01.csproj.CoreCompileInputs.cache
+C:\Users\thiba\source\repos\Les3\Oef03_01\Oef03_01\obj\Debug\net6.0\Oef03_01.dll
+C:\Users\thiba\source\repos\Les3\Oef03_01\Oef03_01\obj\Debug\net6.0\refint\Oef03_01.dll
+C:\Users\thiba\source\repos\Les3\Oef03_01\Oef03_01\obj\Debug\net6.0\Oef03_01.pdb
+C:\Users\thiba\source\repos\Les3\Oef03_01\Oef03_01\obj\Debug\net6.0\Oef03_01.genruntimeconfig.cache
+C:\Users\thiba\source\repos\Les3\Oef03_01\Oef03_01\obj\Debug\net6.0\ref\Oef03_01.dll
