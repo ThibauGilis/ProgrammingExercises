@@ -1,2 +1,2 @@
-# ProgrammingExercises
-C#, CSS-HTML, SQL oefeningen
+# CSharpOef
+Programming Essentials Thomas More
