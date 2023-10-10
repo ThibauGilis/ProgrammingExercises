@@ -3,19 +3,27 @@ string naam, overzicht = "";
 
 Console.Write("Geef naam: ");
 naam = Console.ReadLine();
-while (naam != "")
+
+if (string.IsNullOrEmpty(naam))
 {
-    do
-    {
-        Console.Write($"Wat is de score van {naam}? ");
-    } while (!int.TryParse(Console.ReadLine(), out score));
-
-    overzicht += naam + $" ({score})\n";
-    som += score;
-    i++;
-
-    Console.Write("Geef naam: ");
-    naam = Console.ReadLine();
+    Console.WriteLine("Geen aanwezigen");
 }
+else
+{
+    while (naam != "")
+    {
+        do
+        {
+            Console.Write($"Wat is de score van {naam}? ");
+        } while (!int.TryParse(Console.ReadLine(), out score));
 
-Console.WriteLine(overzicht + "Gemiddelde: " + (som/i));
+        overzicht += naam + $" ({score})\n";
+        som += score;
+        i++;
+
+        Console.Write("Geef naam: ");
+        naam = Console.ReadLine();
+    }
+
+    Console.WriteLine(overzicht + "Gemiddelde: " + (som / i));
+}

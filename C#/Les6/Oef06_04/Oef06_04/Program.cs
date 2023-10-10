@@ -13,7 +13,6 @@ while (getal != 0)
         output += i + " x " + getal + " = " + (i*getal) +"\n";
     }
 
-
     do
     {
         Console.Write("Van welk getal wil je nog de maaltafel? ");
