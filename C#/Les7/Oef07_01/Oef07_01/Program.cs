@@ -1,10 +1,14 @@
-﻿int getal, AantalPositief = 0, som = 0;
+﻿int AantalPositief = 0, som = 0;
+string invoer;
 List<int> numbers = new List<int>();
 
 Console.Write("Geef een getal: ");
-while (int.TryParse(Console.ReadLine(), out getal))
+while (!string.IsNullOrWhiteSpace(invoer = Console.ReadLine()))
 {
-    numbers.Add(getal);
+    if (int.TryParse(invoer, out int getal))
+    {
+        numbers.Add(getal);
+    }
     Console.Write("Geef een getal: ");
 }
 
