@@ -1,0 +1,14 @@
+C:\Users\thiba\source\repos\Theorie\TL8\TL8\bin\Debug\net6.0\TL8.exe
+C:\Users\thiba\source\repos\Theorie\TL8\TL8\bin\Debug\net6.0\TL8.deps.json
+C:\Users\thiba\source\repos\Theorie\TL8\TL8\bin\Debug\net6.0\TL8.runtimeconfig.json
+C:\Users\thiba\source\repos\Theorie\TL8\TL8\bin\Debug\net6.0\TL8.dll
+C:\Users\thiba\source\repos\Theorie\TL8\TL8\bin\Debug\net6.0\TL8.pdb
+C:\Users\thiba\source\repos\Theorie\TL8\TL8\obj\Debug\net6.0\TL8.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thiba\source\repos\Theorie\TL8\TL8\obj\Debug\net6.0\TL8.AssemblyInfoInputs.cache
+C:\Users\thiba\source\repos\Theorie\TL8\TL8\obj\Debug\net6.0\TL8.AssemblyInfo.cs
+C:\Users\thiba\source\repos\Theorie\TL8\TL8\obj\Debug\net6.0\TL8.csproj.CoreCompileInputs.cache
+C:\Users\thiba\source\repos\Theorie\TL8\TL8\obj\Debug\net6.0\TL8.dll
+C:\Users\thiba\source\repos\Theorie\TL8\TL8\obj\Debug\net6.0\refint\TL8.dll
+C:\Users\thiba\source\repos\Theorie\TL8\TL8\obj\Debug\net6.0\TL8.pdb
+C:\Users\thiba\source\repos\Theorie\TL8\TL8\obj\Debug\net6.0\TL8.genruntimeconfig.cache
+C:\Users\thiba\source\repos\Theorie\TL8\TL8\obj\Debug\net6.0\ref\TL8.dll
