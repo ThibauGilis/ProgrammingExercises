@@ -14,6 +14,7 @@ breedte = int.Parse(Console.ReadLine());
 for  (int i = 0; i < lengte; i++)
 {
     for (int j = 0; j < breedte; j++)
+    {
         if (i % 2 == 0)
         {
             output += stijl1;
@@ -22,6 +23,7 @@ for  (int i = 0; i < lengte; i++)
         {
             output += stijl2;
         }
+    }
     output += "\n";
 }
 
