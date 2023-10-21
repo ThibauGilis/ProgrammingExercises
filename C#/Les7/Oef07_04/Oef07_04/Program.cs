@@ -12,11 +12,11 @@ string LangsteWoord = "", KortsteWoord = lijst[0];
 
 foreach (string s in lijst)
 {
-    if (s.Count() > LangsteWoord.Count())
+    if (s.Length > LangsteWoord.Length)
     {
         LangsteWoord = s;
     }
-    else if (s.Count() < KortsteWoord.Count())
+    else if (s.Length < KortsteWoord.Length)
     {
         KortsteWoord = s;
     }
