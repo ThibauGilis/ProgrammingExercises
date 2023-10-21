@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\thiba\\source\\repos\\Les7\\Oef07_04\\Oef07_04\\Oef07_04.csproj": {}
+    "C:\\Users\\thiba\\ProgrammingExercises\\C#\\Les7\\Oef07_04\\Oef07_04\\Oef07_04.csproj": {}
   },
   "projects": {
-    "C:\\Users\\thiba\\source\\repos\\Les7\\Oef07_04\\Oef07_04\\Oef07_04.csproj": {
+    "C:\\Users\\thiba\\ProgrammingExercises\\C#\\Les7\\Oef07_04\\Oef07_04\\Oef07_04.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\thiba\\source\\repos\\Les7\\Oef07_04\\Oef07_04\\Oef07_04.csproj",
+        "projectUniqueName": "C:\\Users\\thiba\\ProgrammingExercises\\C#\\Les7\\Oef07_04\\Oef07_04\\Oef07_04.csproj",
         "projectName": "Oef07_04",
-        "projectPath": "C:\\Users\\thiba\\source\\repos\\Les7\\Oef07_04\\Oef07_04\\Oef07_04.csproj",
+        "projectPath": "C:\\Users\\thiba\\ProgrammingExercises\\C#\\Les7\\Oef07_04\\Oef07_04\\Oef07_04.csproj",
         "packagesPath": "C:\\Users\\thiba\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\thiba\\source\\repos\\Les7\\Oef07_04\\Oef07_04\\obj\\",
+        "outputPath": "C:\\Users\\thiba\\ProgrammingExercises\\C#\\Les7\\Oef07_04\\Oef07_04\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\thiba\\AppData\\Roaming\\NuGet\\NuGet.Config",
