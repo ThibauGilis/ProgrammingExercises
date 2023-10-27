@@ -1,0 +1,15 @@
+C:\Users\thiba\source\repos\ExamenOef\Emailcontrole\Emailcontrole\bin\Debug\net6.0\Emailcontrole.exe
+C:\Users\thiba\source\repos\ExamenOef\Emailcontrole\Emailcontrole\bin\Debug\net6.0\Emailcontrole.deps.json
+C:\Users\thiba\source\repos\ExamenOef\Emailcontrole\Emailcontrole\bin\Debug\net6.0\Emailcontrole.runtimeconfig.json
+C:\Users\thiba\source\repos\ExamenOef\Emailcontrole\Emailcontrole\bin\Debug\net6.0\Emailcontrole.dll
+C:\Users\thiba\source\repos\ExamenOef\Emailcontrole\Emailcontrole\bin\Debug\net6.0\Emailcontrole.pdb
+C:\Users\thiba\source\repos\ExamenOef\Emailcontrole\Emailcontrole\obj\Debug\net6.0\Emailcontrole.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thiba\source\repos\ExamenOef\Emailcontrole\Emailcontrole\obj\Debug\net6.0\Emailcontrole.AssemblyInfoInputs.cache
+C:\Users\thiba\source\repos\ExamenOef\Emailcontrole\Emailcontrole\obj\Debug\net6.0\Emailcontrole.AssemblyInfo.cs
+C:\Users\thiba\source\repos\ExamenOef\Emailcontrole\Emailcontrole\obj\Debug\net6.0\Emailcontrole.csproj.CoreCompileInputs.cache
+C:\Users\thiba\source\repos\ExamenOef\Emailcontrole\Emailcontrole\obj\Debug\net6.0\Emailcontrole.dll
+C:\Users\thiba\source\repos\ExamenOef\Emailcontrole\Emailcontrole\obj\Debug\net6.0\refint\Emailcontrole.dll
+C:\Users\thiba\source\repos\ExamenOef\Emailcontrole\Emailcontrole\obj\Debug\net6.0\Emailcontrole.pdb
+C:\Users\thiba\source\repos\ExamenOef\Emailcontrole\Emailcontrole\obj\Debug\net6.0\Emailcontrole.genruntimeconfig.cache
+C:\Users\thiba\source\repos\ExamenOef\Emailcontrole\Emailcontrole\obj\Debug\net6.0\ref\Emailcontrole.dll
+C:\Users\thiba\source\repos\ExamenOef\Emailcontrole\Emailcontrole\bin\Debug\net6.0\emails.txt

@@ -1,0 +1,15 @@
+C:\Users\thiba\source\repos\Les10\Oef10_05\Oef10_05\bin\Debug\net6.0\Oef10_05.exe
+C:\Users\thiba\source\repos\Les10\Oef10_05\Oef10_05\bin\Debug\net6.0\Bewerkingen-1.txt
+C:\Users\thiba\source\repos\Les10\Oef10_05\Oef10_05\bin\Debug\net6.0\Oef10_05.deps.json
+C:\Users\thiba\source\repos\Les10\Oef10_05\Oef10_05\bin\Debug\net6.0\Oef10_05.runtimeconfig.json
+C:\Users\thiba\source\repos\Les10\Oef10_05\Oef10_05\bin\Debug\net6.0\Oef10_05.dll
+C:\Users\thiba\source\repos\Les10\Oef10_05\Oef10_05\bin\Debug\net6.0\Oef10_05.pdb
+C:\Users\thiba\source\repos\Les10\Oef10_05\Oef10_05\obj\Debug\net6.0\Oef10_05.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thiba\source\repos\Les10\Oef10_05\Oef10_05\obj\Debug\net6.0\Oef10_05.AssemblyInfoInputs.cache
+C:\Users\thiba\source\repos\Les10\Oef10_05\Oef10_05\obj\Debug\net6.0\Oef10_05.AssemblyInfo.cs
+C:\Users\thiba\source\repos\Les10\Oef10_05\Oef10_05\obj\Debug\net6.0\Oef10_05.csproj.CoreCompileInputs.cache
+C:\Users\thiba\source\repos\Les10\Oef10_05\Oef10_05\obj\Debug\net6.0\Oef10_05.dll
+C:\Users\thiba\source\repos\Les10\Oef10_05\Oef10_05\obj\Debug\net6.0\refint\Oef10_05.dll
+C:\Users\thiba\source\repos\Les10\Oef10_05\Oef10_05\obj\Debug\net6.0\Oef10_05.pdb
+C:\Users\thiba\source\repos\Les10\Oef10_05\Oef10_05\obj\Debug\net6.0\Oef10_05.genruntimeconfig.cache
+C:\Users\thiba\source\repos\Les10\Oef10_05\Oef10_05\obj\Debug\net6.0\ref\Oef10_05.dll

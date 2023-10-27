@@ -1,3 +1,7 @@
-﻿char[] karakters = new char[] {'a', 'b', 'c', 'd', 'e'}; 
+﻿while (Console.ReadKey().Key == ConsoleKey.Enter)
+{
+    Console.WriteLine($"Key Pressed: {ConsoleKey.Enter}");
+}
+Console.WriteLine($"\rKey pressed: not {ConsoleKey.Enter}");
 
-Console.WriteLine(new string(karakters, 0, 2));
+Console.WriteLine($"\n\n{a.Key}");

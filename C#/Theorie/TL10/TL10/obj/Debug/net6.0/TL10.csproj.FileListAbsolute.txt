@@ -1,0 +1,15 @@
+C:\Users\thiba\source\repos\Theorie\TL10\TL10\bin\Debug\net6.0\TL10.exe
+C:\Users\thiba\source\repos\Theorie\TL10\TL10\bin\Debug\net6.0\Getallen1.txt
+C:\Users\thiba\source\repos\Theorie\TL10\TL10\bin\Debug\net6.0\TL10.deps.json
+C:\Users\thiba\source\repos\Theorie\TL10\TL10\bin\Debug\net6.0\TL10.runtimeconfig.json
+C:\Users\thiba\source\repos\Theorie\TL10\TL10\bin\Debug\net6.0\TL10.dll
+C:\Users\thiba\source\repos\Theorie\TL10\TL10\bin\Debug\net6.0\TL10.pdb
+C:\Users\thiba\source\repos\Theorie\TL10\TL10\obj\Debug\net6.0\TL10.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thiba\source\repos\Theorie\TL10\TL10\obj\Debug\net6.0\TL10.AssemblyInfoInputs.cache
+C:\Users\thiba\source\repos\Theorie\TL10\TL10\obj\Debug\net6.0\TL10.AssemblyInfo.cs
+C:\Users\thiba\source\repos\Theorie\TL10\TL10\obj\Debug\net6.0\TL10.csproj.CoreCompileInputs.cache
+C:\Users\thiba\source\repos\Theorie\TL10\TL10\obj\Debug\net6.0\TL10.dll
+C:\Users\thiba\source\repos\Theorie\TL10\TL10\obj\Debug\net6.0\refint\TL10.dll
+C:\Users\thiba\source\repos\Theorie\TL10\TL10\obj\Debug\net6.0\TL10.pdb
+C:\Users\thiba\source\repos\Theorie\TL10\TL10\obj\Debug\net6.0\TL10.genruntimeconfig.cache
+C:\Users\thiba\source\repos\Theorie\TL10\TL10\obj\Debug\net6.0\ref\TL10.dll
