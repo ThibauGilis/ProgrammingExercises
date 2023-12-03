@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\thiba\\ProgrammingExercises\\C#\\oefeningen-oop-23-24-ThibauGilis\\04\\04_03\\consoleapp\\consoleapp.csproj",
+      "projectUniqueName": "C:\\Users\\thiba\\source\\repos\\oefeningen-oop-23-24-ThibauGilis\\04\\04_03\\consoleapp\\consoleapp.csproj",
       "projectName": "consoleapp",
-      "projectPath": "C:\\Users\\thiba\\ProgrammingExercises\\C#\\oefeningen-oop-23-24-ThibauGilis\\04\\04_03\\consoleapp\\consoleapp.csproj",
+      "projectPath": "C:\\Users\\thiba\\source\\repos\\oefeningen-oop-23-24-ThibauGilis\\04\\04_03\\consoleapp\\consoleapp.csproj",
       "packagesPath": "C:\\Users\\thiba\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\thiba\\ProgrammingExercises\\C#\\oefeningen-oop-23-24-ThibauGilis\\04\\04_03\\consoleapp\\obj\\",
+      "outputPath": "C:\\Users\\thiba\\source\\repos\\oefeningen-oop-23-24-ThibauGilis\\04\\04_03\\consoleapp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\thiba\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+List<Student> studenten = FileOperations.LeesStudenten();
+
+foreach (Student student in studenten)
+{
+    Console.WriteLine(student);
+}

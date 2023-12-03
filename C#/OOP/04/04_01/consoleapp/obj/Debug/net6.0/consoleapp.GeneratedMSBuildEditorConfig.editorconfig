@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = consoleapp
-build_property.ProjectDir = C:\Users\thiba\ProgrammingExercises\C#\oefeningen-oop-23-24-ThibauGilis\04\04_01\consoleapp\
+build_property.ProjectDir = C:\Users\thiba\source\repos\oefeningen-oop-23-24-ThibauGilis\04\04_01\consoleapp\
