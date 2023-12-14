@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace consoleapp.Models
 {
-    public class FileOperations
+    public static class FileOperations
     {
-        public List<Kaart> LeesFile(string BestandNaam)
+        public static List<Kaart> LeesFile(string BestandNaam)
         {
             List<Kaart> kaarten = new List<Kaart>();
 

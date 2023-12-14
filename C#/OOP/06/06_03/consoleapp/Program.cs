@@ -23,7 +23,7 @@ int LeesGetal(string vraag)
 
 //--------------------------------------------------------------------------------
 
-List<Kaart> kaarten = new FileOperations().LeesFile(LeesInvoer("Kies een spel: "));
+List<Kaart> kaarten = FileOperations.LeesFile(LeesInvoer("Kies een spel: "));
 
 int ComputerPunten = 0;
 int SpelerPunten = 0;
