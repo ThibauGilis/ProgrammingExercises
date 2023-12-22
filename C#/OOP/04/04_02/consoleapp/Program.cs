@@ -1,4 +1,6 @@
-﻿string[] Menu = new string[] { "Rekening", "Spaarrekening", "Zichtrekening" };
+﻿using System.ComponentModel;
+
+string[] Menu = new string[] { "Rekening", "Spaarrekening", "Zichtrekening" };
 for (int i = 0; i < Menu.Length; i++)
 {
     Console.WriteLine($"{i}. {Menu[i]}");

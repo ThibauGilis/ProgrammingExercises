@@ -7,7 +7,7 @@ int LeesMenu(string[] menu, string vraag)
     }
     Console.WriteLine();
 
-    return LeesGetal(vraag, 0, menu.Length-1);
+    return LeesGetal(vraag, 0, menu.Length /*-1*/); // fout exeption example
 }
 int LeesGetal(string vraag, int min, int max)
 {
@@ -57,10 +57,10 @@ while (keuze != 0)
         case 3:
             auto = bmw;
             break;
-
-        default:
-            Console.WriteLine("ERROR");
-            break;
+        
+      /*default:
+            Console.WriteLine("ERROR");  // fout exeption example
+            break;*/
     }
 
     string[] submenu = new string[] { "Testrit maken", "Details tonen" };
@@ -70,7 +70,15 @@ while (keuze != 0)
     {
         case 0:
             double aantalKM = LeesGetalDouble("Geef aantal kilometer: ");
-            auto.Rijden(aantalKM);
+            /*auto.Rijden(aantalKM);*/
+            try
+            {
+                auto.Rijden(aantalKM);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"fout... {ex.Message}");
+            }
             break;
 
         case 1:
