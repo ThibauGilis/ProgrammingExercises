@@ -1,0 +1,165 @@
+﻿Name;Move;LevelUnlock
+Bulbasaur;Tackle;1
+Bulbasaur;Growl;1
+Bulbasaur;Leer;1
+Bulbasaur;Quick Attack;3
+Bulbasaur;Absorb;10
+Ivysaur;Tackle;1
+Ivysaur;Growl;1
+Ivysaur;Leer;1
+Ivysaur;Quick Attack;3
+Ivysaur;Sharpen;5
+Ivysaur;Absorb;10
+Ivysaur;Struggle;15
+Ivysaur;Constrict;25
+Ivysaur;Solar Beam;30
+Venusaur;Tackle;1
+Venusaur;Growl;1
+Venusaur;Leer;1
+Venusaur;Harden;3
+Venusaur;Sharpen;5
+Venusaur;Absorb;10
+Venusaur;Struggle;15
+Venusaur;Constrict;25
+Venusaur;Solar Beam;30
+Venusaur;Headbutt;35
+Venusaur;Take Down;45
+Venusaur;Super Fang;50
+Charmander;Tackle;1
+Charmander;Growl;1
+Charmander;Leer;1
+Charmander;Quick Attack;3
+Charmander;Ember;10
+Charmeleon;Tackle;1
+Charmeleon;Growl;1
+Charmeleon;Leer;1
+Charmeleon;Quick Attack;3
+Charmeleon;Sharpen;5
+Charmeleon;Ember;10
+Charmeleon;Flash;15
+Charmeleon;Barrage;20
+Charmeleon;Struggle;25
+Charmeleon;Flamethrower;30
+Charizard;Tackle;1
+Charizard;Growl;1
+Charizard;Leer;1
+Charizard;Sharpen;5
+Charizard;Ember;10
+Charizard;Fly;15
+Charizard;Flash;15
+Charizard;Struggle;25
+Charizard;Flamethrower;30
+Charizard;Slash;35
+Charizard;Cut;40
+Charizard;Super Fang;50
+Squirtle;Tackle;1
+Squirtle;Growl;1
+Squirtle;Leer;1
+Squirtle;Quick Attack;3
+Squirtle;Bubble;10
+Wartortle;Tackle;1
+Wartortle;Growl;1
+Wartortle;Leer;1
+Wartortle;Quick Attack;3
+Wartortle;Harden;5
+Wartortle;Bubble;10
+Wartortle;Struggle;15
+Wartortle;Headbutt;20
+Wartortle;Dive;30
+Blastoise;Tackle;1
+Blastoise;Growl;1
+Blastoise;Leer;1
+Blastoise;Quick Attack;3
+Blastoise;Harden;5
+Blastoise;Bubble;10
+Blastoise;Struggle;15
+Blastoise;Headbutt;20
+Blastoise;Dive;30
+Blastoise;Take Down;45
+Blastoise;Super Fang;50
+Blastoise;Surf;55
+Sandshrew;Tackle;1
+Sandshrew;Growl;1
+Sandshrew;Leer;1
+Sandshrew;Quick Attack;3
+Sandshrew;Harden;5
+Sandshrew;Mud-Slap;10
+Sandslash;Tackle;1
+Sandslash;Growl;1
+Sandslash;Leer;1
+Sandslash;Quick Attack;3
+Sandslash;Harden;5
+Sandslash;Mud-Slap;10
+Sandslash;Slash;20
+Sandslash;Sharpen;20
+Sandslash;Barrage;30
+Sandslash;Cut;35
+Sandslash;Smack Down;40
+Rattata;Tackle;1
+Rattata;Growl;1
+Rattata;Leer;1
+Rattata;Quick Attack;3
+Rattata;Sharpen;5
+Rattata;Barrage;10
+Raticate;Tackle;1
+Raticate;Growl;1
+Raticate;Leer;1
+Raticate;Quick Attack;3
+Raticate;Sharpen;5
+Raticate;Barrage;10
+Raticate;Struggle;15
+Raticate;Slash;20
+Onix;Tackle;1
+Onix;Leer;1
+Onix;Struggle;5
+Onix;Harden;5
+Onix;Headbutt;10
+Onix;Take Down;20
+Onix;Mud-Slap;35
+Onix;Smack Down;40
+Pidgey;Tackle;1
+Pidgey;Leer;1
+Pidgey;Quick Attack;3
+Pidgey;Sharpen;5
+Pidgey;Tailwind;15
+Pidgeotto;Tackle;1
+Pidgeotto;Leer;1
+Pidgeotto;Quick Attack;3
+Pidgeotto;Sharpen;5
+Pidgeotto;Tailwind;15
+Pidgeotto;Barrage;25
+Pidgeotto;Slash;30
+Pidgeot;Tackle;1
+Pidgeot;Leer;1
+Pidgeot;Quick Attack;3
+Pidgeot;Sharpen;5
+Pidgeot;Tailwind;15
+Pidgeot;Barrage;25
+Pidgeot;Slash;30
+Pidgeot;Headbutt;45
+Pidgeot;Fly;50
+Eevee;Tackle;1
+Eevee;Growl;1
+Eevee;Quick Attack;3
+Leafeon;Tackle;1
+Leafeon;Growl;1
+Leafeon;Quick Attack;3
+Leafeon;Constrict;10
+Leafeon;Absorb;15
+Flareon;Tackle;1
+Flareon;Growl;1
+Flareon;Leer;1
+Flareon;Quick Attack;3
+Flareon;Ember;15
+Flareon;Flamethrower;20
+Vaporeon;Tackle;1
+Vaporeon;Growl;1
+Vaporeon;Quick Attack;3
+Vaporeon;Bubble;15
+Vaporeon;Dive;20
+Bouldereon;Tackle;1
+Bouldereon;Growl;1
+Bouldereon;Quick Attack;3
+Bouldereon;Mud-Slap;10
+Bouldereon;Headbutt;25
+Bouldereon;Smack Down;30

@@ -1,0 +1,15 @@
+C:\Users\thiba\source\repos\Test\WriteInTextDoc\WriteInTextDoc\bin\Debug\net6.0\WriteInTextDoc.exe
+C:\Users\thiba\source\repos\Test\WriteInTextDoc\WriteInTextDoc\bin\Debug\net6.0\RandomGetallen.txt
+C:\Users\thiba\source\repos\Test\WriteInTextDoc\WriteInTextDoc\bin\Debug\net6.0\WriteInTextDoc.deps.json
+C:\Users\thiba\source\repos\Test\WriteInTextDoc\WriteInTextDoc\bin\Debug\net6.0\WriteInTextDoc.runtimeconfig.json
+C:\Users\thiba\source\repos\Test\WriteInTextDoc\WriteInTextDoc\bin\Debug\net6.0\WriteInTextDoc.dll
+C:\Users\thiba\source\repos\Test\WriteInTextDoc\WriteInTextDoc\bin\Debug\net6.0\WriteInTextDoc.pdb
+C:\Users\thiba\source\repos\Test\WriteInTextDoc\WriteInTextDoc\obj\Debug\net6.0\WriteInTextDoc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thiba\source\repos\Test\WriteInTextDoc\WriteInTextDoc\obj\Debug\net6.0\WriteInTextDoc.AssemblyInfoInputs.cache
+C:\Users\thiba\source\repos\Test\WriteInTextDoc\WriteInTextDoc\obj\Debug\net6.0\WriteInTextDoc.AssemblyInfo.cs
+C:\Users\thiba\source\repos\Test\WriteInTextDoc\WriteInTextDoc\obj\Debug\net6.0\WriteInTextDoc.csproj.CoreCompileInputs.cache
+C:\Users\thiba\source\repos\Test\WriteInTextDoc\WriteInTextDoc\obj\Debug\net6.0\WriteInTextDoc.dll
+C:\Users\thiba\source\repos\Test\WriteInTextDoc\WriteInTextDoc\obj\Debug\net6.0\refint\WriteInTextDoc.dll
+C:\Users\thiba\source\repos\Test\WriteInTextDoc\WriteInTextDoc\obj\Debug\net6.0\WriteInTextDoc.pdb
+C:\Users\thiba\source\repos\Test\WriteInTextDoc\WriteInTextDoc\obj\Debug\net6.0\WriteInTextDoc.genruntimeconfig.cache
+C:\Users\thiba\source\repos\Test\WriteInTextDoc\WriteInTextDoc\obj\Debug\net6.0\ref\WriteInTextDoc.dll

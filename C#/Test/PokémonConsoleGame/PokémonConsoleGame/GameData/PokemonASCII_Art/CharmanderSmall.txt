@@ -1,0 +1,30 @@
+RRRRRRRRRRRR▒▒░░▒▒░RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+RRRRRRRR░░░░░░░░░░░░▓RRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+RRRRRRR▒░░░░░░░░░░░░▒▒▒RRRRRRRRRRRRRRRRRRRRRRRRRRR
+RRRRR░░░░░░░░░░░░░░░▒▒▒RRRRRRRRRRRRRRRRRRRRRRRRRRR
+RRRRR▓▒░░░░░░░░░░▒░▒ █▒▒RRRRRRRRRRRRRRRRRRRRRRRRRR
+RRRRR█░░░░░░░░░░░░░█ ██▒▒RRRRRRRRRRRRRRRRRRRRRRRRR
+RRRR░█▒▒░░░░░░░░░░░███▓▒▒RRRRRRRRRRRRRRRRRRRRRRRRR
+RRRRR▓█▒░░░░░░░░░░░█▓█▓▒▒RRRRRRRRRRRRRRRRRRRRRRRRR
+RRRR░░░░░░░░░░░░░░░░▒▒▒▒▒RRRRRRRRRRRRRRRRRRRRRRRRR
+RRRR▓▓░░░░░░░░▒░░░░▒▒▓▓▒▒RRRRRRRRRRRRRRRRRRR░▒RRRR
+RRRR░▒▒▒▓▓▒▒▒▒▒▓▓▓▒▒▓▒▒▒RRRRRRRRRRRRRRRRRRRR░▒▒RRR
+RRRRRRR▓▒▒▓▒▒▒░░░░░▓▒▒▒▒RRRRRRRRRRRRRRRRRR░▒▒▒▒RRR
+RRRRRRRRRR▒▒▒▓▓▓▓▒▒▒▒▒▓RRRRRRRRRRRRRRRRRR░░░▒▒░▒RR
+RRRRRRRRR░▒░▒▒▒▒▓▒▒▒▒▒▒░░░▒░░RRRRRRRRRRRR░▒▒▒▒░░▒░
+RRRRR▒▒░░░░░▒░░░░░░▓░░░░░░░░░░░▒▒░▒RRRRRR░▒▒▒▒░░░R
+░▓▒░░░░░░░░▒░░░░░░░░▒░░░░░░░░░░░▒▒▒▒░RRR░░░░▒░░░░░
+RR▒░░░░░░░░▓░░░░░░░░░░▒░░░░░░░░▒▓▒▒░RRRR░░░░░░░▒▒R
+RR░▒░R░░RR░░░░░░░░░░░░░▒░▒▒░░░RRRRRRRRRRR░░░░░▒▒░R
+RRRRRRRRRR░░ ░░░░░░░░░░░░░░░▒RRRRRRRRRRRRRR░▒▒░RRR
+RRRRRRRRRR░░ ░░░░░░░░░░░▓░░░░▒RRRRRRRRRRRRR░░░RRRR
+RRRRRRRRRR░░░ ░░░░░░░░░░░░░░░░▓RRRRRRRRRRRR▒░▒RRRR
+RRRRRRRRR▒░░░  ░░░░░░░░░░░░░░░░░▓RRRRRRRRR▓▒▒▓RRRR
+RRRRRRR░░░░▒░░    ░░░░░░░░░░░░░░▒░RR░▒▒▓▒▒▒▒░RRRRR
+RRRRRR░░░░░░▒░░░░    ░░░░░░░░░░░▒▓▒▒▒▒▒▒▒▓▒RRRRRRR
+RRRRR░░░░░▒▒▒▒▓░░░░░░░░░░▒░░░░░▒▒▒▒▒▒▒▒▓▒▒RRRRRRRR
+RRRRR░▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░▓▒▒▒▒▒▒▒▒▒▓▒▒▒▒░RRRRRRRRRR
+RRRRRR▓▒▒▒▒▒▒▒▓RRRRRRRRRR░▒▒▒▒▒▒▒▒░RRRRRRRRRRRRRRR
+RRRR░▒░▒▒▒▒▒▒▒▓RRRRRRRRRRRR▓▒▒▒▒▒▒▒RRRRRRRRRRRRRRR
+RRRR▒░▓░░RRRRRRRRRRRRRRRRRRR▒▒▒▒▒░▓▒▒RRRRRRRRRRRRR
+RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR▒▒░░░RRRRRRRRRRRRRR

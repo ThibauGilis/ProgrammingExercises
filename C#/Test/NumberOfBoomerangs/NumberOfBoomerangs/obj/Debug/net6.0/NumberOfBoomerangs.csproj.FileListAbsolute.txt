@@ -1,0 +1,15 @@
+C:\Users\thiba\source\repos\Test\NumberOfBoomerangs\NumberOfBoomerangs\obj\Debug\net6.0\NumberOfBoomerangs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thiba\source\repos\Test\NumberOfBoomerangs\NumberOfBoomerangs\obj\Debug\net6.0\NumberOfBoomerangs.AssemblyInfoInputs.cache
+C:\Users\thiba\source\repos\Test\NumberOfBoomerangs\NumberOfBoomerangs\obj\Debug\net6.0\NumberOfBoomerangs.AssemblyInfo.cs
+C:\Users\thiba\source\repos\Test\NumberOfBoomerangs\NumberOfBoomerangs\obj\Debug\net6.0\NumberOfBoomerangs.csproj.CoreCompileInputs.cache
+C:\Users\thiba\source\repos\Test\NumberOfBoomerangs\NumberOfBoomerangs\bin\Debug\net6.0\NumberOfBoomerangs.exe
+C:\Users\thiba\source\repos\Test\NumberOfBoomerangs\NumberOfBoomerangs\bin\Debug\net6.0\NumberOfBoomerangs.deps.json
+C:\Users\thiba\source\repos\Test\NumberOfBoomerangs\NumberOfBoomerangs\bin\Debug\net6.0\NumberOfBoomerangs.runtimeconfig.json
+C:\Users\thiba\source\repos\Test\NumberOfBoomerangs\NumberOfBoomerangs\bin\Debug\net6.0\NumberOfBoomerangs.dll
+C:\Users\thiba\source\repos\Test\NumberOfBoomerangs\NumberOfBoomerangs\bin\Debug\net6.0\NumberOfBoomerangs.pdb
+C:\Users\thiba\source\repos\Test\NumberOfBoomerangs\NumberOfBoomerangs\obj\Debug\net6.0\NumberOfBoomerangs.dll
+C:\Users\thiba\source\repos\Test\NumberOfBoomerangs\NumberOfBoomerangs\obj\Debug\net6.0\refint\NumberOfBoomerangs.dll
+C:\Users\thiba\source\repos\Test\NumberOfBoomerangs\NumberOfBoomerangs\obj\Debug\net6.0\NumberOfBoomerangs.pdb
+C:\Users\thiba\source\repos\Test\NumberOfBoomerangs\NumberOfBoomerangs\obj\Debug\net6.0\NumberOfBoomerangs.genruntimeconfig.cache
+C:\Users\thiba\source\repos\Test\NumberOfBoomerangs\NumberOfBoomerangs\obj\Debug\net6.0\ref\NumberOfBoomerangs.dll
+C:\Users\thiba\source\repos\Test\NumberOfBoomerangs\NumberOfBoomerangs\bin\Debug\net6.0\Numbers.txt

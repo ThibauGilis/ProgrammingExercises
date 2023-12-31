@@ -1,0 +1,14 @@
+C:\Users\thiba\source\repos\Test\MaxSubArraySum\MaxSubArraySum\bin\Debug\net6.0\MaxSubArraySum.exe
+C:\Users\thiba\source\repos\Test\MaxSubArraySum\MaxSubArraySum\bin\Debug\net6.0\MaxSubArraySum.deps.json
+C:\Users\thiba\source\repos\Test\MaxSubArraySum\MaxSubArraySum\bin\Debug\net6.0\MaxSubArraySum.runtimeconfig.json
+C:\Users\thiba\source\repos\Test\MaxSubArraySum\MaxSubArraySum\bin\Debug\net6.0\MaxSubArraySum.dll
+C:\Users\thiba\source\repos\Test\MaxSubArraySum\MaxSubArraySum\bin\Debug\net6.0\MaxSubArraySum.pdb
+C:\Users\thiba\source\repos\Test\MaxSubArraySum\MaxSubArraySum\obj\Debug\net6.0\MaxSubArraySum.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thiba\source\repos\Test\MaxSubArraySum\MaxSubArraySum\obj\Debug\net6.0\MaxSubArraySum.AssemblyInfoInputs.cache
+C:\Users\thiba\source\repos\Test\MaxSubArraySum\MaxSubArraySum\obj\Debug\net6.0\MaxSubArraySum.AssemblyInfo.cs
+C:\Users\thiba\source\repos\Test\MaxSubArraySum\MaxSubArraySum\obj\Debug\net6.0\MaxSubArraySum.csproj.CoreCompileInputs.cache
+C:\Users\thiba\source\repos\Test\MaxSubArraySum\MaxSubArraySum\obj\Debug\net6.0\MaxSubArraySum.dll
+C:\Users\thiba\source\repos\Test\MaxSubArraySum\MaxSubArraySum\obj\Debug\net6.0\refint\MaxSubArraySum.dll
+C:\Users\thiba\source\repos\Test\MaxSubArraySum\MaxSubArraySum\obj\Debug\net6.0\MaxSubArraySum.pdb
+C:\Users\thiba\source\repos\Test\MaxSubArraySum\MaxSubArraySum\obj\Debug\net6.0\MaxSubArraySum.genruntimeconfig.cache
+C:\Users\thiba\source\repos\Test\MaxSubArraySum\MaxSubArraySum\obj\Debug\net6.0\ref\MaxSubArraySum.dll

@@ -1,0 +1,27 @@
+﻿Name;Description;Type;PowerPoints;Effect;PokemonLocation;MoveLocation;Priority;HealthRecovery;AttackDamage;Accuracy;AttackIncrease;AccuracyIncrease;DefenseIncrease;SpeedIncrease;AttackDecrease;AccuracyDecrease;DefenseDecrease;SpeedDecrease
+Tackle;Tackle is one of the most common and basic moves a Pokémon learns. It deals damage with no additional effects.;Normal;35;None;Ground;Ground;0;0;10;95;0;0;0;0;0;0;0;0
+Growl;Growl lowers the target's Attack by one stage.;Normal;40;None;Ground;GroundAir;0;0;0;100;0;0;0;0;1;0;0;0
+Leer;Leer lowers the target's Defense by one stage.;Normal;30;None;Ground;GroundAir;0;0;0;100;0;0;0;0;0;0;1;0
+Harden;Harden raises the user's Defense by one stage.;Normal;30;None;Ground;GroundAir;0;0;0;100;0;0;1;0;0;0;0;0
+Quick Attack;Quick Attack deals damage and has a priority of +1.;Normal;25;None;Ground;Ground;1;0;10;100;0;0;0;0;0;0;0;0
+Flash;Flash lowers the target's Accuracy by one stage.;Normal;20;None;Ground;GroundAir;0;0;0;100;0;0;0;0;0;1;0;0
+Sharpen;Sharpen raises the user's Attack by one stage.;Normal;30;None;Ground;GroundAir;0;0;0;100;1;0;0;0;0;0;0;0
+Struggle;Only usable when all PP are gone. Hurts the user.;Normal;-1;NoPowerPoints;Ground;All;0;-25;15;100;0;0;0;0;0;0;0;0
+Constrict;Constrict deals damage and lowers the target's Speed by one stage.;Normal;10;None;Ground;GroundAir;0;0;10;100;0;0;0;0;0;0;0;1
+Headbutt;Headbutt deals damage and has a 30% chance of causing the target to flinch (if the target has not yet moved).;Normal;15;Flinch;Ground;Ground;0;0;15;80;0;0;0;0;0;0;0;0
+Barrage;Barrage hits 2-5 times per turn used. The probability of each interval is shown in the table, with the total power after each hit.;Normal;20;MultipleHits;Ground;Ground;0;0;4;85;0;0;0;0;0;0;0;0
+Slash;Slash deals damage and has an increased critical hit ratio;Normal;15;Crit;Ground;Ground;0;0;15;95;0;0;0;0;0;0;0;0
+Take Down;Take Down deals damage, but the user receives 1⁄4 of the damage it inflicted in recoil.;Normal;20;Recoil;Ground;Ground;0;-25;30;85;0;0;0;0;0;0;0;0
+Cut;Cut deals damage with no additional effect in battle.;Normal;15;DestroyTree;Ground;Ground;0;0;20;95;0;0;0;0;0;0;0;0
+Super Fang;Always takes off half of the opponent's HP.;Normal;5;HalfHP;Ground;Ground;0;0;0;0;0;0;0;0;0;0;0;0
+Ember;Ember deals damage and has a 10% chance of burning the target.;Fire;25;Burn;Ground;Ground;0;0;15;100;0;0;0;0;0;0;0;0
+Flamethrower;Flamethrower deals damage and has a 10% chance of burning the target.;Fire;15;Burn;Ground;GroundAir;0;0;20;100;0;0;0;0;0;0;0;0
+Absorb;Absorb deals damage and the user will recover 50% of the HP drained.;Grass;20;None;Ground;Ground;0;50;7;100;0;0;0;0;0;0;0;0
+Solar Beam;The user of Solar Beam will absorb light on the first turn. On the second turn, Solar Beam deals damage.;Grass;10;TwoTurnMove;Ground;All;0;0;50;100;0;0;0;0;0;0;0;0
+Bubble;Bubble deals damage and decreases the target's accuracy.;Water;20;None;Ground;All;0;0;20;100;0;0;0;0;0;1;0;0
+Surf;"Surf deals damage. In double battles it will hit all Pokémon on the field; in triple battles it will hit all adjacent Pokémon.";Water;15;None;Ground;GroundSubmerged;0;0;25;100;0;0;0;0;0;0;0;0
+Dive;The user of Dive will hide underwater on the first turn, disappearing from view and becoming invulnerable to most attacks. On the second turn, Dive deals damage.;Water;10;TwoTurnMove;Submerged;GroundSubmerged;0;0;20;100;0;0;0;0;0;0;0;0
+Fly;The user of Fly will fly up high on the first turn, disappearing from view and becoming invulnerable to grounded attacks. On the second turn, Fly deals damage.;Air;15;TwoTurnMove;Air;All;1;0;20;95;0;0;0;0;0;0;0;0
+Tailwind;Tailwind doubles the speed of all Pokémon in the user's party for 4 turns.;Air;15;None;Ground;GroundAir;0;0;15;100;0;0;0;1;0;0;0;0
+Smack Down;Smack Down deals damage and knocks the target to the ground.;Rock;15;None;Ground;GroundAir;0;0;20;100;0;0;0;0;0;0;0;0
+Mud-Slap;Mud-Slap deals damage and lowers the target's Accuracy by one stage.;Rock;20;None;Ground;Ground;0;0;15;100;0;0;0;0;0;1;0;0

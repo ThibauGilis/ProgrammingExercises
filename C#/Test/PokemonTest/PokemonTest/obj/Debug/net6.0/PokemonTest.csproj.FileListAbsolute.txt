@@ -1,0 +1,14 @@
+C:\Users\thiba\source\repos\Test\PokemonTest\PokemonTest\bin\Debug\net6.0\PokemonTest.exe
+C:\Users\thiba\source\repos\Test\PokemonTest\PokemonTest\bin\Debug\net6.0\PokemonTest.deps.json
+C:\Users\thiba\source\repos\Test\PokemonTest\PokemonTest\bin\Debug\net6.0\PokemonTest.runtimeconfig.json
+C:\Users\thiba\source\repos\Test\PokemonTest\PokemonTest\bin\Debug\net6.0\PokemonTest.dll
+C:\Users\thiba\source\repos\Test\PokemonTest\PokemonTest\bin\Debug\net6.0\PokemonTest.pdb
+C:\Users\thiba\source\repos\Test\PokemonTest\PokemonTest\obj\Debug\net6.0\PokemonTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thiba\source\repos\Test\PokemonTest\PokemonTest\obj\Debug\net6.0\PokemonTest.AssemblyInfoInputs.cache
+C:\Users\thiba\source\repos\Test\PokemonTest\PokemonTest\obj\Debug\net6.0\PokemonTest.AssemblyInfo.cs
+C:\Users\thiba\source\repos\Test\PokemonTest\PokemonTest\obj\Debug\net6.0\PokemonTest.csproj.CoreCompileInputs.cache
+C:\Users\thiba\source\repos\Test\PokemonTest\PokemonTest\obj\Debug\net6.0\PokemonTest.dll
+C:\Users\thiba\source\repos\Test\PokemonTest\PokemonTest\obj\Debug\net6.0\refint\PokemonTest.dll
+C:\Users\thiba\source\repos\Test\PokemonTest\PokemonTest\obj\Debug\net6.0\PokemonTest.pdb
+C:\Users\thiba\source\repos\Test\PokemonTest\PokemonTest\obj\Debug\net6.0\PokemonTest.genruntimeconfig.cache
+C:\Users\thiba\source\repos\Test\PokemonTest\PokemonTest\obj\Debug\net6.0\ref\PokemonTest.dll

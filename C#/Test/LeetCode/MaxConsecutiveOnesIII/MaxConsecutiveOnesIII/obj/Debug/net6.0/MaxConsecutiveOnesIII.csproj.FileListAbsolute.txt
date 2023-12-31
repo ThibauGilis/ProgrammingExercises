@@ -1,0 +1,14 @@
+C:\Users\thiba\source\repos\Test\LeetCode\MaxConsecutiveOnesIII\MaxConsecutiveOnesIII\bin\Debug\net6.0\MaxConsecutiveOnesIII.exe
+C:\Users\thiba\source\repos\Test\LeetCode\MaxConsecutiveOnesIII\MaxConsecutiveOnesIII\bin\Debug\net6.0\MaxConsecutiveOnesIII.deps.json
+C:\Users\thiba\source\repos\Test\LeetCode\MaxConsecutiveOnesIII\MaxConsecutiveOnesIII\bin\Debug\net6.0\MaxConsecutiveOnesIII.runtimeconfig.json
+C:\Users\thiba\source\repos\Test\LeetCode\MaxConsecutiveOnesIII\MaxConsecutiveOnesIII\bin\Debug\net6.0\MaxConsecutiveOnesIII.dll
+C:\Users\thiba\source\repos\Test\LeetCode\MaxConsecutiveOnesIII\MaxConsecutiveOnesIII\bin\Debug\net6.0\MaxConsecutiveOnesIII.pdb
+C:\Users\thiba\source\repos\Test\LeetCode\MaxConsecutiveOnesIII\MaxConsecutiveOnesIII\obj\Debug\net6.0\MaxConsecutiveOnesIII.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thiba\source\repos\Test\LeetCode\MaxConsecutiveOnesIII\MaxConsecutiveOnesIII\obj\Debug\net6.0\MaxConsecutiveOnesIII.AssemblyInfoInputs.cache
+C:\Users\thiba\source\repos\Test\LeetCode\MaxConsecutiveOnesIII\MaxConsecutiveOnesIII\obj\Debug\net6.0\MaxConsecutiveOnesIII.AssemblyInfo.cs
+C:\Users\thiba\source\repos\Test\LeetCode\MaxConsecutiveOnesIII\MaxConsecutiveOnesIII\obj\Debug\net6.0\MaxConsecutiveOnesIII.csproj.CoreCompileInputs.cache
+C:\Users\thiba\source\repos\Test\LeetCode\MaxConsecutiveOnesIII\MaxConsecutiveOnesIII\obj\Debug\net6.0\MaxConsecutiveOnesIII.dll
+C:\Users\thiba\source\repos\Test\LeetCode\MaxConsecutiveOnesIII\MaxConsecutiveOnesIII\obj\Debug\net6.0\refint\MaxConsecutiveOnesIII.dll
+C:\Users\thiba\source\repos\Test\LeetCode\MaxConsecutiveOnesIII\MaxConsecutiveOnesIII\obj\Debug\net6.0\MaxConsecutiveOnesIII.pdb
+C:\Users\thiba\source\repos\Test\LeetCode\MaxConsecutiveOnesIII\MaxConsecutiveOnesIII\obj\Debug\net6.0\MaxConsecutiveOnesIII.genruntimeconfig.cache
+C:\Users\thiba\source\repos\Test\LeetCode\MaxConsecutiveOnesIII\MaxConsecutiveOnesIII\obj\Debug\net6.0\ref\MaxConsecutiveOnesIII.dll

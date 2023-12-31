@@ -1,0 +1,11 @@
+https://www.asciiart.eu/image-to-ascii
+
+Large: ---------------------
+120-characters
+normal ASCII gradient
+----------------------------
+
+Small: ---------------------
+50-characters
+Code Page 437 ASCII gradient
+----------------------------

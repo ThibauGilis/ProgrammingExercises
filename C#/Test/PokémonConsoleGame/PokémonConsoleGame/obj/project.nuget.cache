@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "YwO4Tn+iQJt2vT/OpBLMXgjj0+P/EjHFD8PyQyGo5QrHNRynNbEj9waPtq6zgjgUukOpeqVGNVA1yWFX0OIkmQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\thiba\\source\\repos\\Test\\PokémonConsoleGame\\PokémonConsoleGame\\PokémonConsoleGame.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\thiba\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,15 @@
+C:\Users\thiba\source\repos\Test\Wordle4\Wordle4\bin\Debug\net6.0\Wordle4.exe
+C:\Users\thiba\source\repos\Test\Wordle4\Wordle4\bin\Debug\net6.0\Woorden.txt
+C:\Users\thiba\source\repos\Test\Wordle4\Wordle4\bin\Debug\net6.0\Wordle4.deps.json
+C:\Users\thiba\source\repos\Test\Wordle4\Wordle4\bin\Debug\net6.0\Wordle4.runtimeconfig.json
+C:\Users\thiba\source\repos\Test\Wordle4\Wordle4\bin\Debug\net6.0\Wordle4.dll
+C:\Users\thiba\source\repos\Test\Wordle4\Wordle4\bin\Debug\net6.0\Wordle4.pdb
+C:\Users\thiba\source\repos\Test\Wordle4\Wordle4\obj\Debug\net6.0\Wordle4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thiba\source\repos\Test\Wordle4\Wordle4\obj\Debug\net6.0\Wordle4.AssemblyInfoInputs.cache
+C:\Users\thiba\source\repos\Test\Wordle4\Wordle4\obj\Debug\net6.0\Wordle4.AssemblyInfo.cs
+C:\Users\thiba\source\repos\Test\Wordle4\Wordle4\obj\Debug\net6.0\Wordle4.csproj.CoreCompileInputs.cache
+C:\Users\thiba\source\repos\Test\Wordle4\Wordle4\obj\Debug\net6.0\Wordle4.dll
+C:\Users\thiba\source\repos\Test\Wordle4\Wordle4\obj\Debug\net6.0\refint\Wordle4.dll
+C:\Users\thiba\source\repos\Test\Wordle4\Wordle4\obj\Debug\net6.0\Wordle4.pdb
+C:\Users\thiba\source\repos\Test\Wordle4\Wordle4\obj\Debug\net6.0\Wordle4.genruntimeconfig.cache
+C:\Users\thiba\source\repos\Test\Wordle4\Wordle4\obj\Debug\net6.0\ref\Wordle4.dll
