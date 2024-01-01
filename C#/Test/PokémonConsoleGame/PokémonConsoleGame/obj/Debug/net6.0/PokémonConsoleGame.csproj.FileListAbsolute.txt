@@ -62,3 +62,5 @@ C:\Users\thiba\source\repos\Test\PokémonConsoleGame\PokémonConsoleGame\bin\Deb
 C:\Users\thiba\source\repos\Test\PokémonConsoleGame\PokémonConsoleGame\bin\Debug\net6.0\GameData\MoveData.csv
 C:\Users\thiba\source\repos\Test\PokémonConsoleGame\PokémonConsoleGame\bin\Debug\net6.0\GameData\PokemonData.csv
 C:\Users\thiba\source\repos\Test\PokémonConsoleGame\PokémonConsoleGame\bin\Debug\net6.0\GameData\PokemonMoveSetData.csv
+C:\Users\thiba\source\repos\Test\PokémonConsoleGame\PokémonConsoleGame\bin\Debug\net6.0\GameData\OtherASCII_Art\BattlePlatform.txt
+C:\Users\thiba\source\repos\Test\PokémonConsoleGame\PokémonConsoleGame\bin\Debug\net6.0\GameData\OtherASCII_Art\PokeBall.txt

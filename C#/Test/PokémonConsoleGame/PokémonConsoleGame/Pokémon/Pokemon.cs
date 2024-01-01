@@ -24,8 +24,8 @@ namespace PokémonConsoleGame.Pokémon
         public Move[] Moves { get { return _moves; } set { _moves = value; } }
         public List<Tuple<Move, int>> UnlockableMoves { get { return _unlockableMoves; } set { _unlockableMoves = value; } }
 
-        public readonly string ImageSmall;
-        public readonly string ImageLarge;
+        public readonly string[] ImageSmall;
+        public readonly string[] ImageLarge;
         //---------------------
 
         // Pokemon Stats ------

@@ -18,6 +18,7 @@
 using System;
 using System.Diagnostics.Tracing;
 using System.Runtime.CompilerServices;
+using PokémonConsoleGame.Pokémon;
 
 void ShowMainMenu()
 {
@@ -134,70 +135,43 @@ void ShowMainMenu()
 
             void ChangePokeball(int choice, Pokemon starter)
             {
-                Console.SetCursorPosition(0,0); // where tf are those images
+                Console.SetCursorPosition(0, 0); // where tf are those PokemonImages
                 string clearPokemonArt = "";
-                for (int i = 0; i < Console.WindowHeight*65/100; i++)
+                for (int i = 0; i < Console.WindowHeight - 21; i++)
                 {
-                    clearPokemonArt += new string(' ', 195);
+                    clearPokemonArt += new string(' ', Console.WindowWidth);
                     clearPokemonArt += "\n";
                 }
                 Console.Write(clearPokemonArt);
 
-                string pokeball = "          ░░░░░░░░░░░\n" +
-                                  "       ░░░▒▓▓▓▓▓▓▓▓▓▒░░░░\n" +
-                                  "     ░░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒░░\n" +
-                                  "   ░░▒▓▓██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒░░\n" +
-                                  "  ░░▓▓██████▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒░░\n" +
-                                  "░░░▒▓▓██████▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒░░░\n" +
-                                  "░░▒▓▓▓▓▓██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒░░\n" +
-                                  "░░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒░░\n" +
-                                  "░░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒░░\n" +
-                                  "░░░▒▒▓▓▓▓▒▒▒▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒░░\n" +
-                                  "░░░▒▒▒▒▒▒▓▓█▓▓▒▒▓▓▒▒▒▒▒▒▒▒▒▒░░░\n" +
-                                  "░░░░▒▒▒▒▒█████▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░\n" +
-                                  "  ░▒▓██▓▓▓███▓▒▒▒▒▒▒▒▒▒▓▓▓▓▒░\n" +
-                                  "   ░░▒███▓▒▒▒▓██████████▓▒░░\n" +
-                                  "     ░░▒▓███████████▓▓▓▒░░\n" +
-                                  "       ░░░▒▓▓▓▓▓▓▓▓▓▒░░░░\n" +
-                                  "          ░░░░░░░░░░░";
-
-                int widthOfPokeball = 31;
-                int centerOnheigth = Console.WindowHeight*70/100;
-                int centerOnWidth = (Console.WindowWidth - (widthOfPokeball*3+20*2)) / 2;
-
-                Console.ForegroundColor = ConsoleColor.Gray;
-                Console.SetCursorPosition(centerOnWidth+ choice*(widthOfPokeball+20) -9, centerOnheigth-35);
-                foreach (char c in starter.ImageSmall)
+                int imageMaxWidth = 0;
+                foreach (string line in Save.PokeBall)
                 {
-                    if (c == '\n')
-                    {
-                        Console.CursorLeft = centerOnWidth+ choice*(widthOfPokeball+20) -9;
-                        Console.CursorTop++;
-                    }
-                    else
-                    {
-                        Console.Write(c);
-                    }
+                    if (imageMaxWidth < line.Length) imageMaxWidth = line.Length;
+                }
+
+                int spaceBetween = 15;
+                /*SetForegroundColorToType(starter.Type);*/
+
+                Console.CursorTop = Console.WindowHeight / 5;
+                foreach (string line in starter.ImageSmall)
+                {
+                    Console.CursorLeft = (Console.WindowWidth/2-(imageMaxWidth*3/2+spaceBetween) -((Save.PokemonASCIIWidth-imageMaxWidth)/2)) + (choice * (imageMaxWidth + spaceBetween));
+                    Console.Write(line.Replace('R', ' '));
                 }
 
                 for (int i = 0; i < 3; i++)
                 {
                     Console.ForegroundColor = (choice == i ?  ConsoleColor.Yellow: ConsoleColor.Gray);
-                    Console.SetCursorPosition(centerOnWidth + i* (widthOfPokeball + 20), centerOnheigth);
-                    foreach (char c in pokeball)
+                    Console.CursorTop = Console.WindowHeight-20;
+                    foreach (string line in Save.PokeBall)
                     {
-                        if (c == '\n')
-                        {
-                            Console.CursorLeft = centerOnWidth + i*(widthOfPokeball+20); // 
-                            Console.CursorTop++;
-                        }
-                        else
-                        {
-                            Console.Write(c);
-                        }
+                        Console.CursorLeft = (Console.WindowWidth/2 -(imageMaxWidth*3/2 + spaceBetween)) + (i *(imageMaxWidth + spaceBetween));
+                        Console.Write(line);
                     }
                 }
 
+                Console.ForegroundColor = ConsoleColor.Gray;
                 Console.SetCursorPosition(0, 0);
             }
 
@@ -249,22 +223,26 @@ void ShowMainMenu()
 
 int ReadInteger(string question, int min, int max)
 {
+    Console.CursorVisible = true;
     int integer;
     do
     {
         Console.Write(question + $"({min}-{max}) ");
     } while (!int.TryParse(Console.ReadLine(), out integer) || integer < min || integer > max);
+    Console.CursorVisible = false;
     return integer;
 }
 
 string ReadString(string question, int minLength = 3, int maxLength = 9)
 {
+    Console.CursorVisible = true;
     string input;
     do
     {
         Console.Write(question + $"({minLength}-{maxLength} char) ");
         input = Console.ReadLine();
     } while (string.IsNullOrWhiteSpace(input) || input.Length < minLength || input.Length > maxLength);
+    Console.CursorVisible = false;
     return input;
 }
 
@@ -411,6 +389,136 @@ void AddColorsPrintArea(string areaType, string areaData)
     Console.SetCursorPosition(0, 0);
 }
 
+void SetForegroundColorToType(string type)
+{
+    switch (type)
+    {
+        case "Grass":
+            Console.ForegroundColor = ConsoleColor.Green;
+            break;
+
+        case "Fire":
+            Console.ForegroundColor = ConsoleColor.Red;
+            break;
+
+        case "Water":
+            Console.ForegroundColor = ConsoleColor.Blue;
+            break;
+
+        case "Rock":
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            break;
+
+        case "Air":
+            Console.ForegroundColor = ConsoleColor.White;
+            break;
+
+        default:
+            Console.ForegroundColor = ConsoleColor.Gray;
+            break;
+    }
+}
+void SetBackgroundColorToType(string type)
+{
+    switch (type)
+    {
+        case "Grass":
+            Console.BackgroundColor = ConsoleColor.DarkGreen;
+            break;
+
+        case "Fire":
+            Console.BackgroundColor = ConsoleColor.Red;
+            break;
+
+        case "Water":
+            Console.BackgroundColor = ConsoleColor.Blue;
+            break;
+
+        case "Rock":
+            Console.BackgroundColor = ConsoleColor.Yellow;
+            break;
+
+        case "Air":
+            Console.BackgroundColor = ConsoleColor.White;
+            break;
+
+        default:
+            Console.BackgroundColor = ConsoleColor.Gray;
+            break;
+    }
+}
+
+void PrintArtWithoutWhiteSpace(string[] lines, int[] cursorposition) // whitespace detirmend by 'R'
+{
+    char check = ' ';
+    List<string> subLines = new List<string>();
+    foreach (string line in lines)
+    {
+        int index = 0, nextIndex = 0;
+        while (true)
+        {
+            if (check != 'R')
+            {
+                int i = line.IndexOf(' ', index);
+                nextIndex = i == -1? line.Length: i;
+                i = line.IndexOf('░', index);
+                nextIndex = Math.Min((i == -1 ? nextIndex : i), nextIndex);
+                i = line.IndexOf('▒', index);
+                nextIndex = Math.Min((i == -1 ? nextIndex: i), nextIndex);
+                i = line.IndexOf('▓', index);
+                nextIndex = Math.Min((i == -1 ? nextIndex : i), nextIndex);
+                i = line.IndexOf('█', index);
+                nextIndex = Math.Min((i == -1 ? nextIndex : i), nextIndex);
+                i = line.IndexOf('\n');
+                nextIndex = Math.Min((i == -1 ? nextIndex : i), nextIndex);
+
+                if (nextIndex == line.IndexOf('\n'))
+                {
+                    subLines.Add("\n");
+                    break;
+                }
+
+                subLines.Add(line.Substring(index, nextIndex - index));
+                check = 'R';
+            }
+            else
+            {
+                check = ' ';
+                nextIndex = line.IndexOf('R', index);
+                if (nextIndex == -1)
+                {
+                    string subLine = line.Substring(index, line.Length - index);
+                    subLine = (subLine.Contains("\n") ? subLine.Remove(subLine.Length-1): subLine);
+                    subLines.Add(subLine);
+                    subLines.Add("\n");
+                    break;
+                }
+
+                subLines.Add(line.Substring(index, nextIndex - index));
+            }
+            index = nextIndex;
+        }
+    }
+
+    Console.SetCursorPosition(cursorposition[0], cursorposition[1]);
+    foreach (string line in subLines)
+    {
+        if (line.Contains('\n'))
+        {
+            Console.CursorTop++;
+            Console.CursorLeft = cursorposition[0];
+        }
+        else if (line.Contains('R'))
+        {
+            Console.CursorLeft += line.Length;
+        }
+        else
+        {
+            Console.Write(line);
+        }
+    }
+} // ik weet ni wrm ma het werkt
+
 string[] PlayerMove(World world, Terrain terrain, int[] currentTerrainID, int[] yx, int[] vector, string tileTypeMovedFrom)
 {
     int y = yx[0];
@@ -479,9 +587,86 @@ Player TileEvent(string tile, Player player, Terrain terrain)
 
     Player FightWildPokemon(Player player, Pokemon enemy)
     {
-        void DrawFightScene(Player player, Pokemon enemy)
+        void ShowBattleScreen(Pokemon myPokemon, Pokemon enemy)
         {
-            
+            // teken platformpjes
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            int x = Console.WindowWidth * 5 / 100;
+            int imageMaxWidth = 0, imageMaxHeigth = 0;
+            Console.SetCursorPosition(x,Console.WindowHeight*70/100);
+            foreach (string line in Save.BattlePlatform)
+            {
+                if (imageMaxWidth < line.Length) imageMaxWidth = line.Length;
+
+                imageMaxHeigth++;
+                Console.Write(line);
+                Console.CursorLeft = x;
+            }
+            x = Console.WindowWidth - (imageMaxWidth-1+x); // ik denk dat die -1 moet omda \n erin staat
+            Console.SetCursorPosition(x, Console.WindowHeight*50/100);
+            foreach (string line in Save.BattlePlatform)
+            {
+                Console.Write(line);
+                Console.CursorLeft = x;
+            }
+
+            /*Console.ForegroundColor = ConsoleColor.Gray;*/
+            //teken le pokemones
+            SetForegroundColorToType(myPokemon.Type);
+            x = (Console.WindowWidth * 5 / 100) + ((imageMaxWidth-Save.PokemonASCIIWidth)/2);
+            PrintArtWithoutWhiteSpace(myPokemon.ImageSmall, new int[] {x, Console.WindowHeight*40/100});
+
+            SetForegroundColorToType(enemy.Type);
+            x = Console.WindowWidth - (imageMaxWidth - 1 + x) + ((imageMaxWidth - Save.PokemonASCIIWidth));
+            PrintArtWithoutWhiteSpace(enemy.ImageSmall, new int[] { x, Console.WindowHeight*20/100});
+
+            // teken le health card thingy
+
+            int xBoxPos = 4;
+            int yBoxPos = Console.WindowHeight*25/100;
+            Console.SetCursorPosition(xBoxPos, yBoxPos);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            int size = 60;
+            Console.WriteLine(new string('▓', size));
+            for (int i = 0; i < 5; i++)
+            {
+                Console.CursorLeft = xBoxPos;
+                Console.WriteLine("▓▓" + new string('█', size - 4) + "▓▓");
+            }
+            Console.CursorLeft = xBoxPos;
+            Console.Write(new string('▓', size));
+
+            Console.BackgroundColor = ConsoleColor.Gray;
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.SetCursorPosition(xBoxPos+4, yBoxPos+2);
+            Console.Write(myPokemon.Name);
+
+            SetBackgroundColorToType(myPokemon.Type);
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.CursorLeft += 4;
+            Console.Write($" {myPokemon.Type} ");
+
+            Console.BackgroundColor = ConsoleColor.Gray;
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.SetCursorPosition(size+xBoxPos-10, yBoxPos+2);
+            Console.WriteLine($"Lv: {myPokemon.Level}");
+
+            Console.BackgroundColor = ConsoleColor.DarkGray;
+
+            Console.SetCursorPosition(xBoxPos+4, yBoxPos+4);
+            Console.Write(" HP:" + new string(' ', size-20));
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.SetCursorPosition(xBoxPos+9, yBoxPos+4);
+            Console.Write(new string('▬', size-22));
+
+            Console.BackgroundColor = ConsoleColor.Gray;
+            Console.ForegroundColor = ConsoleColor.Black;
+
+            Console.CursorLeft += 3;
+            Console.Write($"{myPokemon.Health}/{myPokemon.Health}");
+
+            Console.BackgroundColor = ConsoleColor.Black;
         }
 
         string line = new string(' ', Save.TerrainWidth*2 + Save.DataLocSize.Length) + "\n" +
@@ -496,11 +681,11 @@ Player TileEvent(string tile, Player player, Terrain terrain)
         Thread.Sleep(1000);
         // fight start
 
-        DrawFightScene(player, enemy);
+        ShowBattleScreen(player.PokemonTeam[0], enemy);
 
         while (true)
         {
-            Thread.Sleep(5000);
+            Thread.Sleep(15000);
             break;
         }
 
@@ -546,6 +731,7 @@ Console.BufferHeight = Console.LargestWindowHeight;
 Console.BufferWidth = Console.LargestWindowWidth;
 Console.WindowHeight = Console.LargestWindowHeight;
 Console.WindowWidth = Console.LargestWindowWidth;
+Console.CursorVisible = false;
 
 ShowMainMenu();
 

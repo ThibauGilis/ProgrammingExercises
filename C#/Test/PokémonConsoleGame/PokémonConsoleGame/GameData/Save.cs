@@ -31,21 +31,24 @@ namespace PokémonConsoleGame.GameData
 
         // Program.cs Shit
         public static World World;
-        public static Terrain Terrain; // code in Program.cs re-arrange omdit in World te plaatsen ig
+        public static Terrain Terrain; // code in Program.cs re-arrangen omdit in World te plaatsen ig
         public static int[] MyYX;
         public static string TileTypeMovedFrom;
         public static int[] CurrentTerrainID;
 
         // ASCII art data
-        public static string[] BattlePlatform;
-
+        public static int PokemonASCIIWidth = 50;
+        public static string[] BattlePlatform; //string array prints faster TODO keep the '\n' or no?
+        public static string[] PokeBall;
 
         public static void NewGame()
         {
             FileOperations.LoadAllMoves();
             FileOperations.LoadAllPokemonMoveSets();
             FileOperations.LoadAllPokemon();
-            FileOperations.LoadOtherAsciiArt("BattlePlatform");
+            BattlePlatform = FileOperations.LoadOtherAsciiArt("BattlePlatform");
+            PokeBall = FileOperations.LoadOtherAsciiArt("PokeBall");
+
 
             do
             {

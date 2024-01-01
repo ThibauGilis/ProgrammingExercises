@@ -15,7 +15,13 @@
     <None Update="GameData\MoveData.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="GameData\OtherASCII_Art\BattlePlatform.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="GameData\OtherASCII_Art\FightPlatform.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="GameData\OtherASCII_Art\PokeBall.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="GameData\PokemonASCII_Art\BlastoiseLarge.txt">

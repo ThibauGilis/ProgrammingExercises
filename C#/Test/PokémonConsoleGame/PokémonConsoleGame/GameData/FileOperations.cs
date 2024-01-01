@@ -111,18 +111,12 @@ namespace PokémonConsoleGame.GameData
             Save.AllPokemonMoveSets = csvReader.GetRecords<PokemonMoveSet>().ToList();
         }
 
-        public static string LoadPokemonAsciiArt(string pokemonName, string size)
+        public static string[] LoadPokemonAsciiArt(string pokemonName, string size)
         {
             StreamReader streamReader = new StreamReader($"GameData\\PokemonASCII_Art\\{pokemonName}{size}.txt");
             string image = streamReader.ReadToEnd();
+            image = image.Replace("\r", string.Empty);
             image = ReverseDarkAndLight(image, size);
-            return image;
-        }
-
-        public static void LoadOtherAsciiArt(string item)
-        {
-            StreamReader streamReader = new StreamReader($"GameData\\OtherASCII_Art\\{item}.txt");
-            string image = streamReader.ReadToEnd();
 
             List<string> imageLines = new List<string>();
             string line = "";
@@ -139,21 +133,48 @@ namespace PokémonConsoleGame.GameData
                 }
                 else line += c;
             }
+            imageLines.Add(line);
 
-            Save.BattlePlatform = imageLines.ToArray();
+            return imageLines.ToArray();
+        }
+
+        public static string[] LoadOtherAsciiArt(string item)
+        {
+            StreamReader streamReader = new StreamReader($"GameData\\OtherASCII_Art\\{item}.txt");
+            string image = streamReader.ReadToEnd();
+            image = image.Replace("\r", string.Empty);
+
+            List<string> imageLines = new List<string>();
+            string line = "";
+
+            for (int i = 0; i < image.Length; i++)
+            {
+                char c = image[i];
+
+                if (c == '\n')
+                {
+                    line += c;
+                    imageLines.Add(line);
+                    line = "";
+                }
+                else line += c;
+            }
+            imageLines.Add(line);
+
+            return imageLines.ToArray();
         }
 
         private static string ReverseDarkAndLight(string image, string size)
         {
             if (size == "Small")
-            {
+            {   // " ░▒▓█" - switcheroo | middle one stays the same
                 image = image.Replace(' ', 'P'); // P = placeholder
                 image = image.Replace('█', ' ');
                 image = image.Replace('P', '█');
                 image = image.Replace('░', 'P');
                 image = image.Replace('▓', '░');
                 image = image.Replace('P', '▓');
-                image = image.Replace('R', ' '); // R = emptySpaces
+                /*image = image.Replace('R', ' '); // R = emptySpaces*/
             }
 
             return image;
