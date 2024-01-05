@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CsvHelper;
 using CsvHelper.Configuration;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace PokémonConsoleGame.GameData
 {
@@ -25,8 +26,12 @@ namespace PokémonConsoleGame.GameData
             StreamReader streamReader = new StreamReader(PokemonDataFile);
 
             streamReader.ReadLine(); // data explanation/header at top
+            /*int debugCounter = 0;*/
             while (!streamReader.EndOfStream)
             {
+                /*debugCounter++;
+                Console.WriteLine(debugCounter);*/
+
                 string[] data = streamReader.ReadLine().Split(';');
 
                 string name = data[0];
@@ -138,6 +143,54 @@ namespace PokémonConsoleGame.GameData
             return imageLines.ToArray();
         }
 
+        public static string[] CreatePokemonSilhouette(string[] OGimage)
+        {
+            // y x
+            int[] up = new int[] { -1, 0 };
+            int[] down = new int[] { 1, 0 };
+            int[] left = new int[] { 0, -1 };
+            int[] right = new int[] { 0, 1 };
+
+            OGimage[OGimage.Length-1] += "\n";
+
+            string[] borderedImage = new string[OGimage.Length + 2];
+            borderedImage[0] = new string('R', OGimage[0].Length + 1) + "\n";
+            for (int i = 1; i < OGimage.Length + 1; i++)
+            {
+                string line = OGimage[i - 1].Replace('\n', 'R');
+                borderedImage[i] = "R" + line + "\n";
+            }
+            borderedImage[borderedImage.Length - 1] = new string('R', OGimage[OGimage.Length - 1].Length + 1);
+
+            string[] CheckCheckChickettyCheck(int y, int x, int[] vector, string[] OGimage, string[] borderedImage, string[] silhouette)
+            {
+                for (int j = y; j < OGimage.Length + y; j++)
+                {
+                    for (int i = x; i < OGimage[y].Length + x; i++)
+                    {
+                        if (borderedImage[j].ElementAt(i) != 'R') continue;
+
+                        if (borderedImage[j+vector[0]].ElementAt(i+vector[1]) != 'R')
+                        {
+                            silhouette[j] = silhouette[j].Remove(i, 1).Insert(i, " ");
+                        }
+                    }
+                }
+
+                return silhouette;
+            }
+
+            string[] silhouette = new string[OGimage.Length + 2];
+            borderedImage.CopyTo(silhouette, 0);
+
+            silhouette = CheckCheckChickettyCheck(0, 1, down, OGimage, borderedImage, silhouette);
+            silhouette = CheckCheckChickettyCheck(2, 1, up, OGimage, borderedImage, silhouette);
+            silhouette = CheckCheckChickettyCheck(1, 0, right, OGimage, borderedImage, silhouette);
+            silhouette = CheckCheckChickettyCheck(1, 2, left, OGimage, borderedImage, silhouette);
+
+            return silhouette;
+        }
+
         public static string[] LoadOtherAsciiArt(string item)
         {
             StreamReader streamReader = new StreamReader($"GameData\\OtherASCII_Art\\{item}.txt");
@@ -164,7 +217,7 @@ namespace PokémonConsoleGame.GameData
             return imageLines.ToArray();
         }
 
-        private static string ReverseDarkAndLight(string image, string size)
+        public static string ReverseDarkAndLight(string image, string size)
         {
             if (size == "Small")
             {   // " ░▒▓█" - switcheroo | middle one stays the same
@@ -179,5 +232,6 @@ namespace PokémonConsoleGame.GameData
 
             return image;
         }
+
     }
 }

@@ -36,6 +36,7 @@ namespace PokémonConsoleGame.GameData
         public static string TileTypeMovedFrom;
         public static int[] CurrentTerrainID;
 
+
         // ASCII art data
         public static int PokemonASCIIWidth = 50;
         public static string[] BattlePlatform; //string array prints faster TODO keep the '\n' or no?
@@ -67,6 +68,12 @@ namespace PokémonConsoleGame.GameData
         {
             // TODO Ma wa te hell isdees allemaal, denke die manne dak ik 100 jaar leef ofzo
             // player kan gemaakt worden in FileOperations en dan ook de properties
+        }
+
+        public static int CalculateDamage(Pokemon target, Pokemon attacker, Move move)
+        {
+            int damage = ((attacker.Attack * move.AttackDamage)*100 / (int)Math.Pow(target.Defense, 2))*3 /100;
+            return damage;
         }
     }
 }

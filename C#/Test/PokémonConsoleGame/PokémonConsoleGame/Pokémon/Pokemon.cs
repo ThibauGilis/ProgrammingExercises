@@ -13,7 +13,7 @@ namespace PokémonConsoleGame.Pokémon
         private string _name;
         private string _description;
         private string _evolution;
-        private Move[] _moves;
+        private Tuple<Move, int>[] _moves;
         private List<Tuple<Move,int>> _unlockableMoves;
         //TODO ADD CATCH RATE
         // TODO ADD SPAWN RATE
@@ -21,10 +21,11 @@ namespace PokémonConsoleGame.Pokémon
         public string Name { get { return _name; } set { _name = value; } }
         public string Description { get { return _description; } set { _description = value; } }
         public string Evolution { get { return _evolution; } set { _evolution = value; } }
-        public Move[] Moves { get { return _moves; } set { _moves = value; } }
+        public Tuple<Move, int>[] Moves { get { return _moves; } set { _moves = value; } }
         public List<Tuple<Move, int>> UnlockableMoves { get { return _unlockableMoves; } set { _unlockableMoves = value; } }
 
         public readonly string[] ImageSmall;
+        public readonly string[] ImageSmallWhosThatPokemon;
         public readonly string[] ImageLarge;
         //---------------------
 
@@ -60,7 +61,7 @@ namespace PokémonConsoleGame.Pokémon
             this.Level = level;
             this.XP = 0;
             this.XPLevelUp = 10;
-            this.Health = health + (level-1)*2;
+            this.Health = health + (level-1)*2;  // example level 1 = 10
             this.Attack = attack + (level-1);
             this.Defense = defense + (level-1);
             this.Speed = speed;
@@ -68,31 +69,56 @@ namespace PokémonConsoleGame.Pokémon
             this.UnlockableMoves = unlockableMoves;
             InitializeStartingMoves(unlockableMoves);
             this.ImageSmall = FileOperations.LoadPokemonAsciiArt(name, "Small");
+            this.ImageSmallWhosThatPokemon = FileOperations.CreatePokemonSilhouette(ImageSmall);
+            this.ImageLarge = FileOperations.LoadPokemonAsciiArt(name, "Large");
+        }
+
+        public Pokemon(string name, string description, string evolution, List<Tuple<Move, int>> unlockableMoves, Tuple<Move, int>[] moves,
+                       string type, int xp, int xpLevelUp, int level, int health, int attack, int defense, int accuracy, int speed)
+        {
+            this.Name = name;
+            this.Description = description;
+            this.Evolution = evolution;
+            this.Type = type;
+            this.Level = level;
+            this.XP = xp;
+            this.XPLevelUp = xpLevelUp;
+            this.Health = health + (level - 1)*2;
+            this.Attack = attack + (level - 1);
+            this.Defense = defense + (level - 1);
+            this.Speed = speed;
+            this.Accuracy = accuracy;
+            this.UnlockableMoves = unlockableMoves;
+            this.Moves = moves;
+            this.ImageSmall = FileOperations.LoadPokemonAsciiArt(name, "Small");
+            this.ImageSmallWhosThatPokemon = FileOperations.CreatePokemonSilhouette(ImageSmall);
             this.ImageLarge = FileOperations.LoadPokemonAsciiArt(name, "Large");
         }
 
         private void InitializeStartingMoves(List<Tuple<Move, int>> unlockableMoves)
         {
             Random rnd = new Random();
-            Move[] moves = new Move[4];
+            Tuple<Move, int>[] moves = new Tuple<Move, int>[4];
 
-            int Index = 0;
+            int amountMoves = 0;
+            int Index = -1;
             foreach (Tuple<Move, int> move in unlockableMoves)
             {
                 if (Level >= move.Item2)
                 {
                     for (int i = 0; i < moves.Length; i++)
                     {
-                        if (rnd.Next(0, 2) == 1 || moves[Index] == null)
-                        {
-                            moves[Index] = move.Item1;
-                            break;
-                        }
-
                         Index++;
                         if (Index == 4)
                         {
                             Index = 0;
+                        }
+
+                        if (rnd.Next(0, 2) == 1 || amountMoves < 4)
+                        {
+                            amountMoves++;
+                            moves[Index] = new Tuple<Move, int>(move.Item1, move.Item1.PowerPoints);
+                            break;
                         }
                     }
                 }
@@ -103,17 +129,22 @@ namespace PokémonConsoleGame.Pokémon
 
         public override string ToString()
         {
-            string Info = $"{ImageSmall}\n" +
-                          $"Name: {Name}\n" +
-                          $"Description: {Description}\n\n" +
-                          $"Base Stats:{new string('-', 49)}\n" +
-                          $"Type: {Type}\t" +
-                          $"Level: {Level}\n" +
-                          $"Health: {Health}\t" +
-                          $"Attack: {Attack}\t" +
-                          $"Defense: {Defense}\t" +
-                          $"Speed: {Speed}\n" +
-                          $"{new string('-', 60)}\n";
+            string Info = "";
+            foreach (string line in ImageSmall)
+            {
+                Info += line.Replace('R', ' ');
+            }
+
+            Info += $"Name: {Name}\n" +
+                    $"Description: {Description}\n\n" +
+                    $"Base Stats:{new string('-', 49)}\n" +
+                    $"Type: {Type}\t" +
+                    $"Level: {Level}\n" +
+                    $"Health: {Health}\t" +
+                    $"Attack: {Attack}\t" +
+                    $"Defense: {Defense}\t" +
+                    $"Speed: {Speed}\n" +
+                    $"{new string('-', 60)}\n";
             for (int i = 0; i < UnlockableMoves.Count; i++)
             {
                 Info += $"{UnlockableMoves[i].Item1}\n" +
@@ -122,6 +153,12 @@ namespace PokémonConsoleGame.Pokémon
             }
 
             return Info;
+        }
+
+        public Pokemon CreateDuplicatePokemon(Pokemon p)
+        {
+            return new Pokemon(p.Name, p.Description, p.Evolution, p.UnlockableMoves, p.Moves,
+                               p.Type, p.XP, p.XPLevelUp, p.Level, p.Health, p.Attack, p.Defense, p.Accuracy, p.Speed);
         }
 
     }
