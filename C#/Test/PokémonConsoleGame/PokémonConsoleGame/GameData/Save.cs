@@ -70,10 +70,21 @@ namespace PokémonConsoleGame.GameData
             // player kan gemaakt worden in FileOperations en dan ook de properties
         }
 
-        public static int CalculateDamage(Pokemon target, Pokemon attacker, Move move)
+        public static int CalculateDamage(Pokemon attacker, Move move, Pokemon target)
         {
-            int damage = ((attacker.Attack * move.AttackDamage)*100 / (int)Math.Pow(target.Defense, 2))*3 /100;
-            return damage;
+            double damage;
+
+            double A = attacker.Attack;
+            double L = attacker.Level;
+
+            double a = move.AttackDamage;
+
+            double d = target.Defense;
+            double l = target.Level;
+
+            damage = (1 + (A - d) * 2 / 100) * a * 0.15 * (L / l * 0.5) * L / 6 /** Math.Abs(L-l)/20*/; // kdenk dat dit goe is idk
+
+            return (int)Math.Ceiling(damage);
         }
     }
 }

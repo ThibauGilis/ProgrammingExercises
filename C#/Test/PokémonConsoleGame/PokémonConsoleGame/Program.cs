@@ -3,7 +3,7 @@
 //  Console.WriteLine(terrain.Level);
 //  Console.WriteLine(terrain.IDtoString() + $"\t{Save.TerrainLevelModifierBySize}");
 // 
-// 
+// fuckGoBack TODO
 //
 //
 //
@@ -20,12 +20,18 @@ using System.Diagnostics.Tracing;
 using System.Runtime.CompilerServices;
 using PokémonConsoleGame.Pokémon;
 
+int[] fuckGoBack;
+
 void ShowMainMenu()
 {
-    int centerOnheigth = (Console.WindowHeight-3) / 2;
-    int centerOnWidth = (Console.WindowWidth-74) / 2;
+    Console.BackgroundColor = ConsoleColor.Black;
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.Clear();
 
-    Console.SetCursorPosition(centerOnWidth+18, centerOnheigth+10);
+    int centerOnheigth = (Console.WindowHeight - 3) / 2;
+    int centerOnWidth = (Console.WindowWidth - 74) / 2;
+
+    Console.SetCursorPosition(centerOnWidth + 18, centerOnheigth + 10);
     Console.WriteLine("Press Enter To Select | Q & D To Move");
 
     bool LoadGame = false;
@@ -61,12 +67,12 @@ void ShowMainMenu()
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
         }
-        Console.SetCursorPosition(centerOnWidth+40, centerOnheigth);
+        Console.SetCursorPosition(centerOnWidth + 40, centerOnheigth);
         foreach (char c in loadText)
         {
             if (c == '\n')
             {
-                Console.CursorLeft = centerOnWidth+40;
+                Console.CursorLeft = centerOnWidth + 40;
                 Console.CursorTop++;
             }
             else
@@ -81,7 +87,7 @@ void ShowMainMenu()
     ConsoleKey key = Console.ReadKey().Key;
     while (key != ConsoleKey.Enter)
     {
-        
+
         switch (key)
         {
             case ConsoleKey.Q:
@@ -114,7 +120,7 @@ void ShowMainMenu()
             Console.ForegroundColor = ConsoleColor.White;
             Console.BackgroundColor = ConsoleColor.Black;
             Save.TerrainHeigth = ReadInteger("Terrain Height: ", 10, Console.WindowHeight);
-            Save.TerrainWidth = ReadInteger("Terrain Width: ", 10, (Console.WindowWidth - Save.DataLocSize.Length)/2);
+            Save.TerrainWidth = ReadInteger("Terrain Width: ", 10, (Console.WindowWidth - Save.DataLocSize.Length) / 2);
             Save.TerrainLevelModifierBySize = Math.Max(1, (int)Math.Pow((Math.Pow(Math.Log10(Save.TerrainWidth * Save.TerrainHeigth), 2) - 2) / 5, 2)); // wa deze calculatie doe? uuhhhmm.... Het werkt
         }
         void ChooseStarterPokemon()
@@ -124,9 +130,9 @@ void ShowMainMenu()
 
             List<Pokemon> starters = new List<Pokemon>();
 
-            foreach(string name in Save.StarterPokemon)
+            foreach (string name in Save.StarterPokemon)
             {
-                foreach(Pokemon pokemon in Save.AllPokemon)
+                foreach (Pokemon pokemon in Save.AllPokemon)
                 {
                     if (pokemon.Name == name)
                     {
@@ -159,17 +165,17 @@ void ShowMainMenu()
                 Console.CursorTop = Console.WindowHeight / 5;
                 foreach (string line in starter.ImageSmall)
                 {
-                    Console.CursorLeft = (Console.WindowWidth/2-(imageMaxWidth*3/2+spaceBetween) -((Save.PokemonASCIIWidth-imageMaxWidth)/2)) + (choice * (imageMaxWidth + spaceBetween));
+                    Console.CursorLeft = (Console.WindowWidth / 2 - (imageMaxWidth * 3 / 2 + spaceBetween) - ((Save.PokemonASCIIWidth - imageMaxWidth) / 2)) + (choice * (imageMaxWidth + spaceBetween));
                     Console.Write(line.Replace('R', ' '));
                 }
 
                 for (int i = 0; i < 3; i++)
                 {
-                    Console.ForegroundColor = (choice == i ?  ConsoleColor.Yellow: ConsoleColor.Gray);
-                    Console.CursorTop = Console.WindowHeight-20;
+                    Console.ForegroundColor = (choice == i ? ConsoleColor.Yellow : ConsoleColor.Gray);
+                    Console.CursorTop = Console.WindowHeight - 20;
                     foreach (string line in Save.PokeBall)
                     {
-                        Console.CursorLeft = (Console.WindowWidth/2 -(imageMaxWidth*3/2 + spaceBetween)) + (i *(imageMaxWidth + spaceBetween));
+                        Console.CursorLeft = (Console.WindowWidth / 2 - (imageMaxWidth * 3 / 2 + spaceBetween)) + (i * (imageMaxWidth + spaceBetween));
                         Console.Write(line);
                     }
                 }
@@ -471,11 +477,11 @@ void PrintArtWithoutWhiteSpace(string[] lines, int[] cursorposition) // whitespa
             if (check != 'R')
             {
                 int i = line.IndexOf(' ', index);
-                nextIndex = i == -1? line.Length: i;
+                nextIndex = i == -1 ? line.Length : i;
                 i = line.IndexOf('░', index);
                 nextIndex = Math.Min((i == -1 ? nextIndex : i), nextIndex);
                 i = line.IndexOf('▒', index);
-                nextIndex = Math.Min((i == -1 ? nextIndex: i), nextIndex);
+                nextIndex = Math.Min((i == -1 ? nextIndex : i), nextIndex);
                 i = line.IndexOf('▓', index);
                 nextIndex = Math.Min((i == -1 ? nextIndex : i), nextIndex);
                 i = line.IndexOf('█', index);
@@ -499,7 +505,7 @@ void PrintArtWithoutWhiteSpace(string[] lines, int[] cursorposition) // whitespa
                 if (nextIndex == -1)
                 {
                     string subLine = line.Substring(index, line.Length - index);
-                    subLine = (subLine.Contains("\n") ? subLine.Remove(subLine.Length-1): subLine);
+                    subLine = (subLine.Contains("\n") ? subLine.Remove(subLine.Length - 1) : subLine);
                     subLines.Add(subLine);
                     subLines.Add("\n");
                     break;
@@ -529,6 +535,18 @@ void PrintArtWithoutWhiteSpace(string[] lines, int[] cursorposition) // whitespa
         }
     }
 } // ik weet ni wrm ma het werkt
+
+int PokemonMaxHealth(Pokemon pokemon) // too lazy to add extra properties
+{
+    foreach (Pokemon check in Save.AllPokemon)
+    {
+        if (check.Name == pokemon.Name)
+        {
+            return check.Health + (pokemon.Level - check.Level) * 2;
+        }
+    }
+    return 0;
+}
 
 string[] PlayerMove(World world, Terrain terrain, int[] currentTerrainID, int[] yx, int[] vector, string tileTypeMovedFrom)
 {
@@ -586,6 +604,24 @@ string[] PlayerMove(World world, Terrain terrain, int[] currentTerrainID, int[] 
     return new string[] { terrain.IDtoString(), $"{y}", $"{x}", tileTypeMovedFrom };
 }
 
+Pokemon[] BattleAffectedStats(Pokemon attacker, Move move, Pokemon target) // TODO Add like extra damage due to type and effect shit
+{
+    target.Health -= Save.CalculateDamage(attacker, move, target);
+    target.Attack -= move.AttackDecrease * Math.Max(1, (target.Attack * 10) / 100);
+    target.Defense -= move.DefenseDecrease * Math.Max(1, (target.Defense * 10) / 100);
+    target.Accuracy -= move.AccuracyDecrease * 5;
+    target.Speed -= move.SpeedDecrease;
+
+    int attackerMaxHealth = PokemonMaxHealth(attacker);
+    attacker.Health = Math.Min(attackerMaxHealth, ((100 + move.HealthRecovery) * attacker.Health) / 100);
+    attacker.Attack += move.AttackIncrease * Math.Max(1, (target.Attack * 10) / 100);
+    attacker.Defense += move.DefenseIncrease * Math.Max(1, (target.Defense * 10) / 100);
+    attacker.Accuracy += move.AccuracyIncrease * 5;
+    attacker.Speed += move.SpeedIncrease;
+
+    return new Pokemon[] { attacker, target };
+}
+
 Player TileEvent(string tile, Player player, Terrain terrain)
 {
     Pokemon GenerateWildPokemon(Pokemon p, Terrain terrain)
@@ -593,22 +629,24 @@ Player TileEvent(string tile, Player player, Terrain terrain)
         Random rnd = new Random();
 
         // die level shit man, howly
-        int level = Math.Max((p.Level + rnd.Next(0, 3 + (p.Level / 3))), Math.Min(terrain.Level, p.Level+rnd.Next(10,15))); 
+        int level = Math.Max((p.Level + rnd.Next(0, 3 + (p.Level / 3))), Math.Min(terrain.Level, p.Level + rnd.Next(10, 15)));
 
-        Pokemon enemy = new Pokemon( p.Name, p.Description, p.Evolution, p.UnlockableMoves, p.Type, level,
-                                     p.Health-((p.Level-1)*2), p.Attack-(p.Level-1), p.Defense-(p.Level-1), p.Speed );
+        /*level = 1; // TODO CHANGE KEYWORD UHM INSERT TEST DEBUG*/
+
+        Pokemon enemy = new Pokemon(p.Name, p.Description, p.Evolution, p.UnlockableMoves, p.Type, level,
+                                     p.Health - ((p.Level - 1) * 2), p.Attack - (p.Level - 1), p.Defense - (p.Level - 1), p.Speed);
         return enemy;
-    } // dont look inside
-
+    }
     Player FightWildPokemon(Player player, Pokemon enemy)
     {
+        // METH
         void ShowBattleScreen(Pokemon myPokemon, Pokemon enemy)
         {
             // teken platformpjes
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             int x = Console.WindowWidth * 5 / 100;
             int imageMaxWidth = 0, imageMaxHeigth = 0;
-            Console.SetCursorPosition(x,Console.WindowHeight*70/100);
+            Console.SetCursorPosition(x, Console.WindowHeight * 70 / 100);
             foreach (string line in Save.BattlePlatform)
             {
                 if (imageMaxWidth < line.Length) imageMaxWidth = line.Length;
@@ -617,8 +655,8 @@ Player TileEvent(string tile, Player player, Terrain terrain)
                 Console.Write(line);
                 Console.CursorLeft = x;
             }
-            x = Console.WindowWidth - (imageMaxWidth-1+x); // ik denk dat die -1 moet omda \n erin staat
-            Console.SetCursorPosition(x, Console.WindowHeight*50/100);
+            x = Console.WindowWidth - (imageMaxWidth - 1 + x); // ik denk dat die -1 moet omda \n erin staat
+            Console.SetCursorPosition(x, Console.WindowHeight * 50 / 100);
             foreach (string line in Save.BattlePlatform)
             {
                 Console.Write(line);
@@ -628,12 +666,12 @@ Player TileEvent(string tile, Player player, Terrain terrain)
             /*Console.ForegroundColor = ConsoleColor.Gray;*/
             //teken le pokemones TODO position die met hun art hoogte in mind
             SetForegroundColorToType(myPokemon.Type);
-            x = (Console.WindowWidth * 5 / 100) + ((imageMaxWidth-Save.PokemonASCIIWidth)/2);
-            PrintArtWithoutWhiteSpace(myPokemon.ImageSmallWhosThatPokemon, new int[] {x, (Console.WindowHeight*40/100)-1});
+            x = (Console.WindowWidth * 5 / 100) + ((imageMaxWidth - Save.PokemonASCIIWidth) / 2);
+            PrintArtWithoutWhiteSpace(myPokemon.ImageSmallWhosThatPokemon, new int[] { x, (Console.WindowHeight * 40 / 100) - 1 });
 
             SetForegroundColorToType(enemy.Type);
             x = Console.WindowWidth - (imageMaxWidth - 1 + x) + ((imageMaxWidth - Save.PokemonASCIIWidth));
-            PrintArtWithoutWhiteSpace(enemy.ImageSmallWhosThatPokemon, new int[] { x, Console.WindowHeight*20/100});
+            PrintArtWithoutWhiteSpace(enemy.ImageSmallWhosThatPokemon, new int[] { x, Console.WindowHeight * 20 / 100 });
 
             // teken le health card thingy
 
@@ -672,25 +710,29 @@ Player TileEvent(string tile, Player player, Terrain terrain)
 
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.SetCursorPosition(xBoxPos + 9, yBoxPos + 4);
-                Console.Write(new string('▬', width - 22));
+                int pokemonMaxHealth = PokemonMaxHealth(pokemon);
+                Console.Write(new string('▬', ((width - 22) * ((pokemon.Health * 100) / pokemonMaxHealth)) / 100));
 
                 Console.BackgroundColor = ConsoleColor.Gray;
                 Console.ForegroundColor = ConsoleColor.Black;
 
-                Console.CursorLeft += 3;
-                Console.Write($"{pokemon.Health}/{pokemon.Health}");
+                Console.SetCursorPosition(xBoxPos + 50, yBoxPos + 4);
+                Console.Write($"{pokemon.Health}/{pokemonMaxHealth}");
 
                 Console.BackgroundColor = ConsoleColor.Black;
             }
 
             DrawPokemonHealthCard(8, Console.WindowHeight * 25 / 100, myPokemon);
-            DrawPokemonHealthCard(Console.WindowWidth-68, Console.WindowHeight * 5 / 100, enemy);
+            DrawPokemonHealthCard(Console.WindowWidth - 68, Console.WindowHeight * 5 / 100, enemy);
         }
-        void UpdateBattleScreen(Pokemon myPokemon, int myPokeMaxHealth ,Pokemon enemy, int enemyMaxHealth)
+        void UpdateBattleScreen(Pokemon myPokemon, int myPokeMaxHealth, Pokemon enemy, int enemyMaxHealth)
         {
+            // TODO do this shit in correct order
             int width = 60;
             int xBoxPos = 8;
-            int yBoxPos = Console.WindowHeight* 25/100;
+            int yBoxPos = Console.WindowHeight * 25 / 100;
+
+            DrawBattleAnimation();
 
             Console.BackgroundColor = ConsoleColor.DarkGray;
 
@@ -703,7 +745,7 @@ Player TileEvent(string tile, Player player, Terrain terrain)
             Console.ForegroundColor = ConsoleColor.Green;
 
             Console.SetCursorPosition(xBoxPos + 9, yBoxPos + 4);
-            Console.Write(new string('▬', ((width - 22) * ((myPokemon.Health * 100)/myPokeMaxHealth)) / 100));
+            Console.Write(new string('▬', ((width - 22) * ((myPokemon.Health * 100) / myPokeMaxHealth)) / 100));
 
             Console.BackgroundColor = ConsoleColor.Gray;
             Console.ForegroundColor = ConsoleColor.Black;
@@ -711,9 +753,10 @@ Player TileEvent(string tile, Player player, Terrain terrain)
             Console.SetCursorPosition(xBoxPos + 50, yBoxPos + 4);
             Console.Write($"{myPokemon.Health}/{myPokeMaxHealth}");
 
+            DrawBattleAnimation();
 
-            xBoxPos = Console.WindowWidth - (width+8);
-            yBoxPos = Console.WindowHeight* 5/100;
+            xBoxPos = Console.WindowWidth - (width + 8);
+            yBoxPos = Console.WindowHeight * 5 / 100;
 
             Console.BackgroundColor = ConsoleColor.DarkGray;
 
@@ -726,7 +769,7 @@ Player TileEvent(string tile, Player player, Terrain terrain)
             Console.ForegroundColor = ConsoleColor.Green;
 
             Console.SetCursorPosition(xBoxPos + 9, yBoxPos + 4);
-            Console.Write(new string('▬', ((width - 22)*((enemy.Health*100)/enemyMaxHealth))/100 ));
+            Console.Write(new string('▬', ((width - 22) * ((enemy.Health * 100) / enemyMaxHealth)) / 100));
 
             Console.BackgroundColor = ConsoleColor.Gray;
             Console.ForegroundColor = ConsoleColor.Black;
@@ -737,45 +780,390 @@ Player TileEvent(string tile, Player player, Terrain terrain)
             Console.BackgroundColor = ConsoleColor.Black;
         }
 
-        Tuple<Player,Pokemon> BattleRound(Player player, Pokemon enemy, int enemyMaxHealth)
+        void DrawBattleMainOptionsCard(Pokemon pokemon)
         {
-            void DrawBattleMainOptionsCard(Pokemon pokemon)
+            // BOX
+            int width = Console.WindowWidth;
+            int height = 10;
+            Console.SetCursorPosition(0, Console.WindowHeight - height);
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine(new string('▓', width));
+            for (int i = 0; i < height - 2; i++)
             {
-                // BOX
-                int width = Console.WindowWidth;
-                int height = 10;
-                Console.SetCursorPosition(0, Console.WindowHeight - height);
-                Console.BackgroundColor = ConsoleColor.Black;
-                Console.ForegroundColor = ConsoleColor.Gray;
-                Console.WriteLine(new string('▓', width));
-                for (int i = 0; i < height - 2; i++)
-                {
-                    Console.CursorLeft = 0;
-                    Console.WriteLine("▓▓" + new string('█', 20) + "▓▓" + new string('█', (width - 4) - 2 - 20) + "▓▓");
-                }
                 Console.CursorLeft = 0;
-                Console.Write(new string('▓', width));
+                Console.WriteLine("▓▓" + new string('█', 20) + "▓▓" + new string('█', (width - 4) - 2 - 20) + "▓▓");
+            }
+            Console.CursorLeft = 0;
+            Console.Write(new string('▓', width));
 
-                //ELEMENTS 
-                Console.BackgroundColor = ConsoleColor.Gray;
-                Console.ForegroundColor = ConsoleColor.Black;
+            //ELEMENTS 
+            Console.BackgroundColor = ConsoleColor.Gray;
+            Console.ForegroundColor = ConsoleColor.Black;
 
-                int x = 6, y = (Console.WindowHeight - height + 3);
+            int x = 6, y = (Console.WindowHeight - height + 3);
 
-                Console.SetCursorPosition(x, y);
-                Console.Write("FIGHT");
-                Console.SetCursorPosition(x + 8, y);
-                Console.Write("PKMN");
-                Console.SetCursorPosition(x, y + 3);
-                Console.Write("BAG");
-                Console.SetCursorPosition(x + 8, y + 3);
-                Console.Write("RUN");
+            Console.SetCursorPosition(x, y);
+            Console.Write("FIGHT");
+            Console.SetCursorPosition(x + 8, y);
+            Console.Write("PKMN");
+            Console.SetCursorPosition(x, y + 3);
+            Console.Write("BAG");
+            Console.SetCursorPosition(x + 8, y + 3);
+            Console.Write("RUN");
+        } // FIGHT, PKMN, RUN (wussy move btw), BAG
+        int DrawBattleFightOptions(Pokemon pokemon, int x, int y)
+        {
+            // draw options
+            Console.SetCursorPosition(x, y);
+            int index;
+            for (index = 0; index < pokemon.Moves.Length; index++)
+            {
+                if (pokemon.Moves[index] == null) break;
+
+                string moveName = pokemon.Moves[index].Item1.Name;
+                int currentPP = pokemon.Moves[index].Item2;
+                int maxPP = pokemon.Moves[index].Item1.PowerPoints;
+
+                Console.Write($"{moveName} {currentPP}/{maxPP}");
+
+                if (index == 1)
+                {
+                    Console.SetCursorPosition(x, y + 3);
+                }
+                else
+                {
+                    Console.CursorLeft = x + 20;
+                }
             }
 
-            Tuple<Player, Pokemon> DoShitByChoice(Player player, Pokemon enemy, int enemyMaxHealth)
+            Console.SetCursorPosition(x - 2, y);
+            Console.Write("►");
+
+            // select cursor
+            int[] OldPos = new int[] { x - 2, y };
+            Console.SetCursorPosition(0, 0);
+            ConsoleKey key = Console.ReadKey().Key;
+            Console.SetCursorPosition(OldPos[0], OldPos[1]);
+
+            int choiceID = 0;
+            while (key != ConsoleKey.Enter && key != ConsoleKey.Escape)
             {
-                Pokemon currentPokemon = enemy.CreateDuplicatePokemon(player.PokemonTeam[0]); // enemy omda ik gwn de pokemon ding moet kunnen oproepen is confusing ma foeny
-                currentPokemon.Health -= 1;
+                switch (key)
+                {
+                    case ConsoleKey.Z:
+                        if (Console.GetCursorPosition().Top != y)
+                        {
+                            choiceID -= 2;
+                            Console.Write(" ");
+                            Console.CursorLeft--;
+                            Console.CursorTop -= 3;
+                        }
+                        break;
+
+                    case ConsoleKey.S:
+                        if (Console.GetCursorPosition().Top == y && choiceID + 2 < index)
+                        {
+                            choiceID += 2;
+                            Console.Write(" ");
+                            Console.CursorLeft--;
+                            Console.CursorTop += 3;
+                        }
+                        else if (Console.GetCursorPosition().Top == y && choiceID == 1 && index == 3)
+                        {
+                            choiceID += 1;
+                            Console.Write(" ");
+                            Console.CursorLeft--;
+                            Console.CursorTop += 3;
+                            Console.CursorLeft -= 20;
+                        }
+                        break;
+
+                    case ConsoleKey.Q:
+                        if (Console.GetCursorPosition().Left != x - 2)
+                        {
+                            choiceID -= 1;
+                            Console.Write(" ");
+                            Console.CursorLeft--;
+                            Console.CursorLeft -= 20;
+                        }
+                        break;
+
+                    case ConsoleKey.D:
+                        if (Console.GetCursorPosition().Left == x - 2 && choiceID + 1 < index)
+                        {
+                            choiceID += 1;
+                            Console.Write(" ");
+                            Console.CursorLeft--;
+                            Console.CursorLeft += 20;
+                        }
+                        else if (Console.GetCursorPosition().Left == x - 2 && choiceID == 2 && index == 3)
+                        {
+                            choiceID -= 1;
+                            Console.Write(" ");
+                            Console.CursorLeft--;
+                            Console.CursorTop -= 3;
+                            Console.CursorLeft += 20;
+                        }
+                        break;
+                }
+                OldPos[0] = Console.CursorLeft;
+                OldPos[1] = Console.CursorTop;
+                Console.Write("►");
+
+                Console.SetCursorPosition(0, 0);
+                key = Console.ReadKey().Key;
+                Console.SetCursorPosition(OldPos[0], OldPos[1]);
+
+                if (key == ConsoleKey.Enter && pokemon.Moves[choiceID].Item2 == 0) // TODO add struggle bcs it only works when no PP
+                {
+                    key = ConsoleKey.N; // n stands for NOPE CANT DO THAT JIMMY
+                }
+            }
+            if (key == ConsoleKey.Escape) choiceID = -1;
+
+            return choiceID;
+        }
+        int DrawBattlePKMNOptions(Pokemon[] team, int x, int y)
+        {
+            // draw options
+            Console.SetCursorPosition(x, y);
+            int index;
+            if (team[1] == null) return -1; // need another pokemon to do anything
+
+            for (index = 0; index < team.Length; index++)
+            {
+                if (team[index + 1] == null) break;
+
+                string pokemonName = team[index + 1].Name;
+                int currentHealth = team[index + 1].Health;
+                int maxHealth = PokemonMaxHealth(team[index + 1]);
+
+                Console.Write($"{pokemonName} {currentHealth}/{maxHealth}");
+
+                if (index == 1)
+                {
+                    Console.SetCursorPosition(x, y + 3);
+                }
+                else
+                {
+                    Console.CursorLeft = x + 20;
+                }
+            }
+
+            Console.SetCursorPosition(x - 2, y);
+            Console.Write("►");
+
+            // select cursor
+            int[] OldPos = new int[] { x - 2, y };
+            Console.SetCursorPosition(0, 0);
+            ConsoleKey key = Console.ReadKey().Key;
+            Console.SetCursorPosition(OldPos[0], OldPos[1]);
+
+            int choiceID = 0;
+            while (key != ConsoleKey.Enter && key != ConsoleKey.Escape)
+            {
+                switch (key)
+                {
+                    case ConsoleKey.Z:
+                        if (Console.GetCursorPosition().Top != y)
+                        {
+                            choiceID -= 2;
+                            Console.Write(" ");
+                            Console.CursorLeft--;
+                            Console.CursorTop -= 3;
+                        }
+                        break;
+
+                    case ConsoleKey.S:
+                        if (Console.GetCursorPosition().Top == y && choiceID + 2 < index)
+                        {
+                            choiceID += 2;
+                            Console.Write(" ");
+                            Console.CursorLeft--;
+                            Console.CursorTop += 3;
+                        }
+                        else if (Console.GetCursorPosition().Top == y && choiceID == 1 && index == 3)
+                        {
+                            choiceID += 1;
+                            Console.Write(" ");
+                            Console.CursorLeft--;
+                            Console.CursorTop += 3;
+                            Console.CursorLeft -= 20;
+                        }
+                        break;
+
+                    case ConsoleKey.Q:
+                        if (Console.GetCursorPosition().Left != x - 2)
+                        {
+                            choiceID -= 1;
+                            Console.Write(" ");
+                            Console.CursorLeft--;
+                            Console.CursorLeft -= 20;
+                        }
+                        break;
+
+                    case ConsoleKey.D:
+                        if (Console.GetCursorPosition().Left == x - 2 && choiceID + 1 < index)
+                        {
+                            choiceID += 1;
+                            Console.Write(" ");
+                            Console.CursorLeft--;
+                            Console.CursorLeft += 20;
+                        }
+                        else if (Console.GetCursorPosition().Left == x - 2 && choiceID == 2 && index == 3)
+                        {
+                            choiceID -= 1;
+                            Console.Write(" ");
+                            Console.CursorLeft--;
+                            Console.CursorTop -= 3;
+                            Console.CursorLeft += 20;
+                        }
+                        break;
+                }
+                OldPos[0] = Console.CursorLeft;
+                OldPos[1] = Console.CursorTop;
+                Console.Write("►");
+
+                Console.SetCursorPosition(0, 0);
+                key = Console.ReadKey().Key;
+                Console.SetCursorPosition(OldPos[0], OldPos[1]);
+
+                if (key == ConsoleKey.Enter && team[choiceID + 1].Health <= 0) // TODO add struggle bcs it only works when no PP
+                {
+                    key = ConsoleKey.N; // n stands for NOPE CANT DO THAT JIMMY
+                }
+            }
+            if (key == ConsoleKey.Escape) choiceID = -2;
+
+            return choiceID + 1;
+        }
+
+        void DrawBattleAnimation() // bad animations go in here
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.SetCursorPosition((Console.WindowWidth / 2) - 13, (Console.WindowHeight / 2) + 6);
+
+            string damageImage = " █ " +
+                                 "█ █" +
+                                 " █ ";
+            for (int i = 0; i < 5; i++)
+            {
+
+                for (int j = 0; j < 3; j++)
+                {
+                    string line = damageImage.Substring(j * 3, 3);
+                    Console.Write(line);
+                    Console.CursorLeft -= 3;
+                    Console.CursorTop++;
+                }
+
+                Console.CursorTop -= 3;
+                Thread.Sleep(100);
+
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write("   ");
+                    Console.CursorLeft -= 3;
+                    Console.CursorTop++;
+                }
+
+                Console.CursorLeft += 3;
+                Console.CursorTop -= 4;
+            }
+            Console.ForegroundColor = ConsoleColor.Black;
+        }
+
+        Move EnemyMove(Pokemon myPKMN, Pokemon enemy, int turn)  // wtf
+        {
+            int CalculateMoveValue(Pokemon target, Pokemon attacker, Move move)
+            {
+                int damageValue = Save.CalculateDamage(attacker, move, target); // TODO add Type and Effect
+                int debuffValue = ( // TODO balance this shit
+                    move.AttackDecrease * (target.Attack * 10) +
+                    move.DefenseDecrease * (target.Defense * 10) +
+                    move.SpeedDecrease * (target.Speed == attacker.Speed ? 15 : ((int)Math.Pow((10 / Math.Abs(target.Speed - attacker.Speed)), 2))) * 100 +
+                    move.AccuracyDecrease * (target.Accuracy * 5) +
+                    move.AttackIncrease * (attacker.Attack * 10) +
+                    move.DefenseIncrease * (attacker.Defense * 10) +
+                    move.SpeedIncrease * (target.Speed == attacker.Speed ? 15 : ((int)Math.Pow((10 / Math.Abs(target.Speed - attacker.Speed)), 2))) * 100 +
+                    move.AccuracyIncrease * (attacker.Accuracy >= 95 ? 0 : attacker.Accuracy * 5) +
+                    move.Priority * 50
+                    );
+
+                return damageValue * 2 + (debuffValue * 4) / 100;
+            }
+
+            Random rnd = new Random();
+
+            Move enemyMove = enemy.Moves[0].Item1;
+            int moveValue = int.MinValue, checkValue;
+
+            int fuckgodown = 0;
+
+            foreach (Tuple<Move, int> move in enemy.Moves)
+            {
+                fuckgodown++;
+                if (move == null) break;
+
+                checkValue = CalculateMoveValue(myPKMN, enemy, move.Item1);
+
+                fuckGoBack = new int[] { Console.CursorLeft, Console.CursorTop };
+                Console.SetCursorPosition(100, fuckgodown);
+                Console.WriteLine(checkValue);
+                Console.SetCursorPosition(102, fuckgodown);
+                Console.WriteLine(move.Item1.Name);
+                Console.SetCursorPosition(fuckGoBack[0], fuckGoBack[1]);
+
+                if (checkValue >= moveValue && rnd.Next(0, 2) == 0)
+                {
+                    moveValue = checkValue;
+                    enemyMove = move.Item1;
+                }
+            }
+
+            fuckGoBack = new int[] { Console.CursorLeft, Console.CursorTop };
+            Console.SetCursorPosition(0, 0);
+            Console.WriteLine(enemyMove);
+            Console.SetCursorPosition(fuckGoBack[0], fuckGoBack[1]);
+
+            return enemyMove;
+        }
+
+        #region "Fight wild pokemon code"
+        // transition
+        string line = new string(' ', Save.TerrainWidth * 2 + Save.DataLocSize.Length) + "\n" +
+                      new string(' ', Save.TerrainWidth * 2 + Save.DataLocSize.Length) + "\n" +
+                      new string(' ', Save.TerrainWidth * 2 + Save.DataLocSize.Length) + "\n";
+        Console.SetCursorPosition(0, 0);
+        for (int i = 0; i < (Save.TerrainHeigth + 10); i += 3)
+        {
+            Thread.Sleep(25); // task delay also a thing but is used when multiple threads ig, idk im noob
+            Console.Write(line);
+        }
+        Console.Clear();
+        Thread.Sleep(1000);
+
+        // fight start
+
+        ShowBattleScreen(player.PokemonTeam[0], enemy);
+        int enemyMaxHealth = enemy.Health;
+        Tuple<Player, Pokemon> battleData;
+
+        while (true) // damn eindelijk werken aan de combat, ik zie er zeker naar uit...    maar ik doe het morge wel...  100% ik zweer
+        {
+            Thread.Sleep(1000);
+
+            bool runAway = false;
+            #region "Battle Rounds"
+            while (true)
+            {
+                DrawBattleMainOptionsCard(player.PokemonTeam[0]);
+
+                // FIRST
+                Pokemon currentPokemon = player.PokemonTeam[0].CreateDuplicatePokemon(); // gebruikt ook ander constructor
+
                 Move[] playerMoves = new Move[4];
                 for (int i = 0; i < 4; i++)
                 {
@@ -809,50 +1197,6 @@ Player TileEvent(string tile, Player player, Terrain terrain)
                     Console.SetCursorPosition(0, 0);
                     ConsoleKey key = Console.ReadKey().Key;
                     Console.SetCursorPosition(OldPos[0], OldPos[1]);
-
-                    Move EnemyMove(Pokemon myPKMN, Pokemon enemy, int turn)  // wtf
-                    {
-                        int CalculateMoveValue(Pokemon target, Pokemon attacker, Move move)
-                        {
-                            int damageValue = Save.CalculateDamage(target, attacker, move); // TODO add Type and Effect
-                            int debuffValue = ( // TODO balance this shit
-                                move.AttackDecrease*(target.Attack*10/100) +
-                                move.DefenseDecrease*(target.Defense*10/100) + 
-                                move.SpeedDecrease*(target.Speed == attacker.Speed? 15: ((int)Math.Pow((10 / Math.Abs(target.Speed - attacker.Speed)), 2))) +
-                                move.AccuracyDecrease*(target.Accuracy*5/100) +
-                                move.AttackIncrease*(attacker.Attack*10/100) +
-                                move.DefenseIncrease*(attacker.Defense*10/100) +
-                                move.SpeedIncrease*(target.Speed == attacker.Speed? 15: ((int)Math.Pow((10 / Math.Abs(target.Speed - attacker.Speed)), 2))) +
-                                move.AccuracyIncrease*(attacker.Accuracy >= 95? 0: attacker.Accuracy*5/100)
-                                );
-
-                            return damageValue + debuffValue;
-                        }
-
-                        Random rnd = new Random();
-
-                        Move enemyMove = enemy.Moves[0].Item1;
-                        int moveValue = int.MinValue, checkValue;
-
-                        foreach (Tuple<Move, int> move in enemy.Moves)
-                        {
-                            if (move == null) break;
-
-                            checkValue = CalculateMoveValue(myPKMN, enemy, move.Item1);
-                            if (checkValue > moveValue && rnd.Next(0, rnd.Next(0, 2)) == 0)
-                            {
-                                moveValue = checkValue;
-                                enemyMove = move.Item1;
-                            }
-                        }
-
-                        int[] fuckGoBack = new int[] { Console.CursorLeft, Console.CursorTop };
-                        Console.SetCursorPosition(0, 0);
-                        Console.WriteLine(enemyMove);
-                        Console.SetCursorPosition(fuckGoBack[0], fuckGoBack[1]);
-
-                        return enemyMove;
-                    }
 
                     turn++;
                     Move enemyMove = EnemyMove(currentPokemon, enemy, turn);
@@ -916,64 +1260,100 @@ Player TileEvent(string tile, Player player, Terrain terrain)
                         Console.SetCursorPosition(OldPos[0], OldPos[1]);
                     }
 
+                    Pokemon[] battleAffectedStats;
+
+                    int pokemonMaxHealth = PokemonMaxHealth(currentPokemon);
                     switch (catagory[catagoryID])
                     {
                         case "FIGHT":
                             optionID = DrawBattleFightOptions(currentPokemon, 29, selectorPos[1]);
 
-                            if(optionID != -1)
+                            if (optionID == -1) break;
+
+                            Move playerMove = playerMoves[optionID];
+                            currentPokemon.Moves[optionID] = new Tuple<Move, int>(playerMove, currentPokemon.Moves[optionID].Item2 - 1);
+
+                            // check priorityMove, if equal check pokemonspedd.   player moves first
+                            if (playerMove.Priority > enemyMove.Priority || (playerMove.Priority == enemyMove.Priority && currentPokemon.Speed >= enemy.Speed))
                             {
-                                Move playerMove = playerMoves[optionID];
-                                // check priorityMove, if equal check pokemonspedd.   player moves first
-                                if (playerMove.Priority > enemyMove.Priority || (playerMove.Priority == enemyMove.Priority && currentPokemon.Speed >= enemy.Speed))
+                                int[] fuckGoBack = new int[] { Console.CursorLeft, Console.CursorTop };
+                                Console.SetCursorPosition(0, 2);
+                                Console.WriteLine($"turn {turn}");
+                                Console.WriteLine($"ehyo criticale hit broer: {Save.CalculateDamage(currentPokemon, playerMove, enemy)}");
+                                Console.SetCursorPosition(fuckGoBack[0], fuckGoBack[1]);
+
+                                battleAffectedStats = BattleAffectedStats(currentPokemon, playerMove, enemy);
+                                currentPokemon = battleAffectedStats[0];
+                                enemy = battleAffectedStats[1];
+
+                                if (enemy.Health <= 0)
                                 {
-                                    int[] fuckGoBack = new int[] { Console.CursorLeft, Console.CursorTop };
-                                    Console.SetCursorPosition(0, 2);
-                                    Console.WriteLine($"turn {turn}");
-                                    Console.WriteLine($"ehyo criticale hit broer: {Save.CalculateDamage(enemy, currentPokemon, playerMove)}");
-                                    Console.SetCursorPosition(fuckGoBack[0], fuckGoBack[1]);
-
-                                    enemy.Health -= Save.CalculateDamage(enemy, currentPokemon, playerMove);
-                                    if (enemy.Health <= 0)
-                                    {
-                                        UpdateBattleScreen(currentPokemon, player.PokemonTeam[0].Health, enemy, enemyMaxHealth);
-                                        return new Tuple<Player, Pokemon>(player, enemy);
-                                    }
-
-                                    fuckGoBack = new int[] { Console.CursorLeft, Console.CursorTop };
-                                    Console.SetCursorPosition(0, 4);
-                                    Console.WriteLine($"ehyo criticale hit broer: {Save.CalculateDamage(currentPokemon, enemy, enemyMove)}");
-                                    Console.SetCursorPosition(fuckGoBack[0], fuckGoBack[1]);
-
-                                    currentPokemon.Health -= Save.CalculateDamage(currentPokemon, enemy, enemyMove);
-                                    if (currentPokemon.Health <= 0)
-                                    {
-                                        UpdateBattleScreen(currentPokemon, player.PokemonTeam[0].Health, enemy, enemyMaxHealth);
-                                        player.PokemonTeam[0] = currentPokemon;
-                                        return new Tuple<Player, Pokemon>(player, enemy);
-                                    }
+                                    optionID = -2;
+                                    player.PokemonTeam[0] = currentPokemon;
+                                    break;
                                 }
-                                else // enemy moves first
-                                {
-                                    currentPokemon.Health -= Save.CalculateDamage(currentPokemon, enemy, enemyMove);
-                                    if (currentPokemon.Health <= 0)
-                                    {
-                                        player.PokemonTeam[0] = currentPokemon;
-                                        return new Tuple<Player, Pokemon>(player, enemy);
-                                    }
 
-                                    enemy.Health -= Save.CalculateDamage(enemy, currentPokemon, playerMove);
-                                    if (enemy.Health <= 0)
-                                    {
-                                        return new Tuple<Player, Pokemon>(player, enemy);
-                                    }
+                                fuckGoBack = new int[] { Console.CursorLeft, Console.CursorTop };
+                                Console.SetCursorPosition(0, 4);
+                                Console.WriteLine($"ehyo criticale hit broer: {Save.CalculateDamage(enemy, enemyMove, currentPokemon)}");
+                                Console.SetCursorPosition(fuckGoBack[0], fuckGoBack[1]);
+
+                                battleAffectedStats = BattleAffectedStats(enemy, enemyMove, currentPokemon);
+                                enemy = battleAffectedStats[0];
+                                currentPokemon = battleAffectedStats[1];
+
+                                if (currentPokemon.Health <= 0)
+                                {
+                                    optionID = -2;
+                                    player.PokemonTeam[0] = currentPokemon;
+                                    break;
+                                }
+                            }
+                            else // enemy moves first
+                            {
+                                battleAffectedStats = BattleAffectedStats(enemy, enemyMove, currentPokemon);
+                                enemy = battleAffectedStats[0];
+                                currentPokemon = battleAffectedStats[1];
+
+                                if (currentPokemon.Health <= 0)
+                                {
+                                    optionID = -2;
+                                    player.PokemonTeam[0] = currentPokemon;
+                                    break;
+                                }
+
+                                battleAffectedStats = BattleAffectedStats(currentPokemon, playerMove, enemy);
+                                currentPokemon = battleAffectedStats[0];
+                                enemy = battleAffectedStats[1];
+
+                                if (enemy.Health <= 0)
+                                {
+                                    optionID = -2;
+                                    player.PokemonTeam[0] = currentPokemon;
+                                    break;
                                 }
                             }
 
                             break;
 
                         case "PKMN":
-                            // set new pokemon on index 0
+                            optionID = DrawBattlePKMNOptions(player.PokemonTeam, 29, selectorPos[1]);
+                            Console.BackgroundColor = ConsoleColor.Black;
+
+                            if (optionID == -1) break;
+
+                            Pokemon placeHolder = player.PokemonTeam[optionID].CreateDuplicatePokemon();
+                            player.PokemonTeam[Array.IndexOf(player.PokemonTeam, player.PokemonTeam[optionID])] = player.PokemonTeam[0];
+                            player.PokemonTeam[0] = placeHolder;
+
+                            currentPokemon = player.PokemonTeam[0];
+                            pokemonMaxHealth = PokemonMaxHealth(currentPokemon);
+
+                            Console.Clear();
+                            ShowBattleScreen(currentPokemon, enemy);
+                            DrawBattleMainOptionsCard(currentPokemon);
+                            Console.SetCursorPosition(OldPos[0], OldPos[1]);
+                            Console.Write("►");
 
                             break;
 
@@ -983,174 +1363,26 @@ Player TileEvent(string tile, Player player, Terrain terrain)
                             break;
 
                         case "RUN":
-
-
+                            runAway = true;
                             break;
 
                     }
 
-                    UpdateBattleScreen(currentPokemon, player.PokemonTeam[0].Health, enemy, enemyMaxHealth);
+                    if (runAway) break;
+
+                    UpdateBattleScreen(currentPokemon, pokemonMaxHealth, enemy, enemyMaxHealth);
                 }
+                //LAST
 
-                return new Tuple<Player, Pokemon>(player, enemy);
-            }
-            int DrawBattleFightOptions(Pokemon pokemon, int x, int y)
-            {
-                // draw options
-                Console.SetCursorPosition(x, y);
-                int index;
-                for (index = 0; index < pokemon.Moves.Length; index++)
-                {
-                    if (pokemon.Moves[index] == null) break;
-
-                    string moveName = pokemon.Moves[index].Item1.Name;
-                    int currentPP = pokemon.Moves[index].Item2;
-                    int maxPP = pokemon.Moves[index].Item1.PowerPoints;
-
-                    Console.Write($"{moveName} {currentPP}/{maxPP}");
-
-                    if (index == 1)
-                    {
-                        Console.SetCursorPosition(x, y + 3);
-                    }
-                    else
-                    {
-                        Console.CursorLeft = x + 20;
-                    }
-                }
-
-                Console.SetCursorPosition(x - 2, y);
-                Console.Write("►");
-
-                // select cursor
-                int[] OldPos = new int[] { x - 2, y };
-                Console.SetCursorPosition(0, 0);
-                ConsoleKey key = Console.ReadKey().Key;
-                Console.SetCursorPosition(OldPos[0], OldPos[1]);
-
-                int choiceID = 0;
-                while (key != ConsoleKey.Enter && key != ConsoleKey.Escape)
-                {
-                    switch (key)
-                    {
-                        case ConsoleKey.Z:
-                            if (Console.GetCursorPosition().Top != y)
-                            {
-                                choiceID -= 2;
-                                Console.Write(" ");
-                                Console.CursorLeft--;
-                                Console.CursorTop -= 3;
-                            }
-                            break;
-
-                        case ConsoleKey.S:
-                            if (Console.GetCursorPosition().Top == y && choiceID + 2 < index)
-                            {
-                                choiceID += 2;
-                                Console.Write(" ");
-                                Console.CursorLeft--;
-                                Console.CursorTop += 3;
-                            }
-                            else if (Console.GetCursorPosition().Top == y && choiceID == 1 && index == 3)
-                            {
-                                choiceID += 1;
-                                Console.Write(" ");
-                                Console.CursorLeft--;
-                                Console.CursorTop += 3;
-                                Console.CursorLeft -= 20;
-                            }
-                            break;
-
-                        case ConsoleKey.Q:
-                            if (Console.GetCursorPosition().Left != x - 2)
-                            {
-                                choiceID -= 1;
-                                Console.Write(" ");
-                                Console.CursorLeft--;
-                                Console.CursorLeft -= 20;
-                            }
-                            break;
-
-                        case ConsoleKey.D:
-                            if (Console.GetCursorPosition().Left == x - 2 && choiceID + 1 < index)
-                            {
-                                choiceID += 1;
-                                Console.Write(" ");
-                                Console.CursorLeft--;
-                                Console.CursorLeft += 20;
-                            }
-                            else if (Console.GetCursorPosition().Left == x - 2 && choiceID == 2 && index == 3)
-                            {
-                                choiceID -= 1;
-                                Console.Write(" ");
-                                Console.CursorLeft--;
-                                Console.CursorTop -= 3;
-                                Console.CursorLeft += 20;
-                            }
-                            break;
-                    }
-                    OldPos[0] = Console.CursorLeft;
-                    OldPos[1] = Console.CursorTop;
-                    Console.Write("►");
-
-                    Console.SetCursorPosition(0, 0);
-                    key = Console.ReadKey().Key;
-                    Console.SetCursorPosition(OldPos[0], OldPos[1]);
-
-                    if (key == ConsoleKey.Enter && pokemon.Moves[choiceID].Item2 == 0) // TODO add struggle bcs it only works when no PP
-                    {
-                        key = ConsoleKey.N; // n stands for NOPE CANT DO THAT JIMMY
-                    }
-                }
-                if (key == ConsoleKey.Escape) choiceID = -1;
-
-                return choiceID;
-            }
-
-            Tuple<Player, Pokemon> battleData;
-            while (true)
-            {
-                DrawBattleMainOptionsCard(player.PokemonTeam[0]);
-                battleData = DoShitByChoice(player, enemy, enemyMaxHealth);
                 Thread.Sleep(100);
-                if (battleData.Item2.Health <= 0)
-                {
-                    return battleData;
-                }
-                else if (battleData.Item1.PokemonTeam[0].Health <= 0)
-                {
-                    return battleData;
-                }
+                if (enemy.Health <= 0 || player.PokemonTeam[0].Health <= 0 || runAway) break;
             }
-        }
+            #endregion "Battle Rounds"
 
-        // transition
-        string line = new string(' ', Save.TerrainWidth * 2 + Save.DataLocSize.Length) + "\n" +
-                      new string(' ', Save.TerrainWidth * 2 + Save.DataLocSize.Length) + "\n" +
-                      new string(' ', Save.TerrainWidth * 2 + Save.DataLocSize.Length) + "\n";
-        Console.SetCursorPosition(0, 0);
-        for (int i = 0; i < (Save.TerrainHeigth + 10); i += 3)
-        {
-            Thread.Sleep(25); // task delay also a thing but is used when multiple threads ig, idk im noob
-            Console.Write(line);
-        }
-        Console.Clear();
-        Thread.Sleep(1000);
-
-        // fight start
-
-        int pokemonIndex = 0;
-        ShowBattleScreen(player.PokemonTeam[pokemonIndex], enemy);
-        int enemyMaxHealth = enemy.Health;
-        Tuple<Player, Pokemon> battleData;
-
-        while (true) // damn eindelijk werken aan de combat, ik zie er zeker naar uit...    maar ik doe het morge wel...  100% ik zweer
-        {
-            Thread.Sleep(1000);
-
-            battleData = BattleRound(player, enemy, enemyMaxHealth);
-            player = battleData.Item1;
-            enemy = battleData.Item2;
+            if (runAway)
+            {
+                break;
+            }
 
             // check if player has non dead pokemon left & end battle check
             bool anotherPokemon = false;
@@ -1161,7 +1393,11 @@ Player TileEvent(string tile, Player player, Terrain terrain)
                 if (pokemon.Health > 0)
                 {
                     anotherPokemon = true;
-                    // TODO a switcherooo (rhymes for all times)
+                    Pokemon placeHolder = pokemon.CreateDuplicatePokemon();
+                    player.PokemonTeam[Array.IndexOf(player.PokemonTeam, pokemon)] = player.PokemonTeam[0];
+                    player.PokemonTeam[0] = placeHolder;
+                    Console.Clear();
+                    ShowBattleScreen(player.PokemonTeam[0], enemy);
                     break;
                 }
             }
@@ -1171,14 +1407,32 @@ Player TileEvent(string tile, Player player, Terrain terrain)
             }
         }
 
-        Console.Clear();
+
         // fight end
+
+        // transition
+        Console.BackgroundColor = ConsoleColor.Black;
+        Thread.Sleep(1000);
+        line = new string(' ', Console.WindowWidth) + "\n" +
+               new string(' ', Console.WindowWidth) + "\n" +
+               new string(' ', Console.WindowWidth) + "\n";
+
+        Console.SetCursorPosition(0, 0);
+        for (int i = 0; i < Console.WindowHeight; i += 3)
+        {
+            Thread.Sleep(25); // task delay also a thing but is used when multiple threads ig, idk im noob
+            Console.Write(line);
+        }
+        Thread.Sleep(500);
+
+        // show terrain
         Console.SetCursorPosition(0, 0);
         AddColorsPrintArea("Terrain", terrain.ShowArea());
         Console.SetCursorPosition(0, 4);
         Console.WriteLine(player.ShowStatsinWorld());
         return player;
-    }
+        #endregion "Fight wild pokemon code"
+    } // dont look inside absolute shitshow
 
     Random rnd = new Random();
 
@@ -1214,7 +1468,6 @@ Player TileEvent(string tile, Player player, Terrain terrain)
 //----------------------- MAIN --------------------------
 
 //--- Setup ---
-Console.BackgroundColor = ConsoleColor.Black;
 Console.BufferHeight = Console.LargestWindowHeight;
 Console.BufferWidth = Console.LargestWindowWidth;
 Console.WindowHeight = Console.LargestWindowHeight;
@@ -1242,8 +1495,6 @@ Console.SetCursorPosition(0, 4);
 Console.WriteLine(player.ShowStatsinWorld());
 
 //-------------
-
-
 
 
 
@@ -1285,6 +1536,41 @@ while (key != ConsoleKey.Escape)
             Console.WriteLine(terrain.Level);
             break;
 
+        case ConsoleKey.H:
+            foreach (Pokemon pokemon in player.PokemonTeam)
+            {
+                if (pokemon == null) break;
+
+                pokemon.ResetPokemonStats();
+            }
+            break; // DEBUG heal pokemon all
+
+        case ConsoleKey.X:
+            player.PokemonTeam[0].XP += 50;
+            player.PokemonTeam[0].LevelUp();
+            break; // DEBUG give xp to pokemon index 0
+
+        case ConsoleKey.P:
+            List<Pokemon> starters = new List<Pokemon>();
+
+            foreach (string name in Save.StarterPokemon)
+            {
+                foreach (Pokemon pokemon in Save.AllPokemon)
+                {
+                    if (pokemon.Name == name)
+                    {
+                        if (pokemon.Name == player.PokemonTeam[0].Name) continue;
+
+                        starters.Add(pokemon);
+                        break;
+                    }
+                }
+            }
+
+            player.PokemonTeam[1] = starters[0];
+            player.PokemonTeam[2] = starters[1];
+            break; // DEBUG give other starters
+
         default:
             Console.WindowHeight = Console.LargestWindowHeight;
             Console.WindowWidth = Console.LargestWindowWidth;
@@ -1298,7 +1584,7 @@ while (key != ConsoleKey.Escape)
         currentTerrainID = nextTerrainID;
         Console.Clear();
         AddColorsPrintArea("Terrain", terrain.ShowArea());
-        Console.SetCursorPosition(0,4);
+        Console.SetCursorPosition(0, 4);
         Console.WriteLine(player.ShowStatsinWorld());
     } // move to next terrain
 

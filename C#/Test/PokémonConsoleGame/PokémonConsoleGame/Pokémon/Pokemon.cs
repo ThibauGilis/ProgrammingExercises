@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -60,7 +61,7 @@ namespace PokémonConsoleGame.Pokémon
             this.Type = type;
             this.Level = level;
             this.XP = 0;
-            this.XPLevelUp = 10;
+            this.XPLevelUp = (int)(10*Math.Pow(1.2, this.Level-1));
             this.Health = health + (level-1)*2;  // example level 1 = 10
             this.Attack = attack + (level-1);
             this.Defense = defense + (level-1);
@@ -74,7 +75,8 @@ namespace PokémonConsoleGame.Pokémon
         }
 
         public Pokemon(string name, string description, string evolution, List<Tuple<Move, int>> unlockableMoves, Tuple<Move, int>[] moves,
-                       string type, int xp, int xpLevelUp, int level, int health, int attack, int defense, int accuracy, int speed)
+                       string type, int xp, int xpLevelUp, int level, int health, int attack, int defense, int accuracy, int speed,
+                       string[] imageSmall, string[] imageSmallWhosThatPokemon, string[] imageLarge)
         {
             this.Name = name;
             this.Description = description;
@@ -90,10 +92,12 @@ namespace PokémonConsoleGame.Pokémon
             this.Accuracy = accuracy;
             this.UnlockableMoves = unlockableMoves;
             this.Moves = moves;
-            this.ImageSmall = FileOperations.LoadPokemonAsciiArt(name, "Small");
-            this.ImageSmallWhosThatPokemon = FileOperations.CreatePokemonSilhouette(ImageSmall);
-            this.ImageLarge = FileOperations.LoadPokemonAsciiArt(name, "Large");
+            this.ImageSmall = imageSmall;
+            this.ImageSmallWhosThatPokemon = imageSmallWhosThatPokemon;
+            this.ImageLarge = imageLarge;
         }
+
+
 
         private void InitializeStartingMoves(List<Tuple<Move, int>> unlockableMoves)
         {
@@ -155,10 +159,50 @@ namespace PokémonConsoleGame.Pokémon
             return Info;
         }
 
-        public Pokemon CreateDuplicatePokemon(Pokemon p)
+        public Pokemon CreateDuplicatePokemon()
         {
-            return new Pokemon(p.Name, p.Description, p.Evolution, p.UnlockableMoves, p.Moves,
-                               p.Type, p.XP, p.XPLevelUp, p.Level, p.Health, p.Attack, p.Defense, p.Accuracy, p.Speed);
+            return new Pokemon(this.Name, this.Description, this.Evolution, this.UnlockableMoves, this.Moves,
+                               this.Type, this.XP, this.XPLevelUp, this.Level, this.Health, this.Attack, this.Defense, this.Accuracy, this.Speed,
+                               this.ImageSmall, this.ImageSmallWhosThatPokemon, this.ImageLarge);
+        }
+
+        public void ResetPokemonStats()
+        {
+            foreach (Pokemon pokemon in Save.AllPokemon)
+            {
+                if (pokemon.Name == this.Name)
+                {
+                    this.Health = pokemon.Health + (this.Level - 1) * 2;
+                    this.Attack = pokemon.Attack + (this.Level - 1);
+                    this.Defense = pokemon.Defense + (this.Level - 1);
+                    this.Speed = pokemon.Speed + (this.Level -1);
+                    this.Accuracy = pokemon.Accuracy;
+
+                    for (int i = 0; i < 4; i++)
+                    {
+                        if (this.Moves[i] == null) break;
+
+                        this.Moves[i] = new Tuple<Move, int>(this.Moves[i].Item1, this.Moves[i].Item1.PowerPoints);
+                    }
+
+                    break;
+                }
+            }
+        }
+
+        public void LevelUp()
+        {
+            while (this.XP >= this.XPLevelUp)
+            {
+                this.XP = this.XP - this.XPLevelUp;
+                this.XPLevelUp = (int)(this.XPLevelUp * 1.2);
+                this.Level++;
+                this.Health += 2;
+                this.Defense++;
+                this.Attack++;
+                // TODO check for new moves
+                // TODO check for evolution
+            }
         }
 
     }
