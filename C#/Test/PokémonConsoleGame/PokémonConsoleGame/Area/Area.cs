@@ -25,6 +25,7 @@ namespace PokémonConsoleGame.Area
         public readonly string Tree = Save.Tree;
         public readonly string Grass = Save.Grass;
         public readonly string Person = Save.Person;
+        public readonly string Item = Save.Item;
 
         public Area(int boxWidth, int boxHeigth)
         {

@@ -1,0 +1,11 @@
+﻿Type;Name;Description;Rarity;Price;CatchRate;HealFactor;EffectsType
+PokeBall;PokeBall;A device for catching wild Pokémon. It’s thrown like a ball at a Pokémon, comfortably encapsulating its target.;common;5;10;;
+PokeBall;GreatBall;A good, high-performance Poké Ball that provides a higher Pokémon catch rate than a standard Poké Ball.;rare;30;20;;
+PokeBall;UltraBall;An ultra-performance Ball that provides a higher Pokémon catch rate than a Great Ball.;epic;100;40;;
+PokeBall;MasterBall;The best Ball with the ultimate level of performance. It will catch any wild Pokémon without fail.;legendary;-1;100;;
+Potion;Heal Potion;A spray-type medicine for treating wounds. It can be used to restore 20% HP to an injured Pokémon.;common;10;;20;
+Potion;Super Potion;A spray-type medicine for treating wounds. It can be used to restore 50% HP to an injured Pokémon.;rare;50;;50;
+Stone;Leaf Stone;A peculiar stone that makes certain species of Pokémon evolve. It has a leaf pattern.;epic;-1;;;Grass
+Stone;Water Stone;A peculiar stone that makes certain species of Pokémon evolve. It is a clear, light blue.;epic;-1;;;Water
+Stone;Fire Stone;A peculiar stone that makes certain species of Pokémon evolve. It is colored orange.;epic;-1;;;Fire
+Stone;Earth Stone;A peculiar stone that makes certain species of Pokémon evolve. It is unbreakable.;epic;-1;;;Rock

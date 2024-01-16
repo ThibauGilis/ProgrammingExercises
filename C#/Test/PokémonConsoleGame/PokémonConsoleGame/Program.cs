@@ -17,7 +17,9 @@
 // insanity time
 using System;
 using System.Diagnostics.Tracing;
+using System.Linq;
 using System.Runtime.CompilerServices;
+using PokémonConsoleGame.Items;
 using PokémonConsoleGame.Pokémon;
 
 int[] fuckGoBack;
@@ -330,6 +332,183 @@ void WorldMap(World world, Terrain terrain)
     AddColorsPrintArea("Terrain", terrain.ShowArea());
 }
 
+void OpenBag(Player player)
+{
+    Console.Clear();
+
+    string[] bag = player.ShowBag();
+    Console.SetCursorPosition(20, 10);
+    foreach (string line in bag)
+    {
+        Console.Write(line);
+        Console.CursorLeft = 20;
+    }
+
+
+    int x, y;
+    int id = 0;
+    string description;
+    string section;
+    if (player.Items.Count != 0)
+    {
+        x = 66; y = 13;
+        section = "items";
+    }
+    else
+    {
+        x = 26; y = 14;
+        section = "pokemon";
+    }
+    Console.SetCursorPosition(x, y);
+    int[] oldPos = new int[] {x, y};
+    Console.Write("►");
+    Console.CursorLeft--;
+
+    ConsoleKey key = ConsoleKey.A;
+    while (key != ConsoleKey.B)
+    {
+        oldPos[0] = Console.CursorLeft;
+        oldPos[1] = Console.CursorTop;
+        Console.SetCursorPosition(166, 12);
+        for (int i = 0; i < 30; i++)
+        {
+            Console.Write(new string(' ', 50));
+            Console.CursorLeft -= 50;
+            Console.CursorTop++;
+        }
+        Console.Write(new string('▓', 50));
+        Console.CursorLeft -= 50;
+        Console.CursorTop++;
+        for (int i = 0; i < 8; i++)
+        {
+            Console.Write(new string(' ', 50));
+            Console.CursorLeft -= 50;
+            Console.CursorTop++;
+        }
+        Console.SetCursorPosition(oldPos[0], oldPos[1]);
+
+        if (section == "items")
+        {
+            switch (key)
+            {
+                case ConsoleKey.Z:
+                    if (Console.CursorTop != y)
+                    {
+                        id--;
+                        Console.CursorTop -= 2;
+                    }
+                    break;
+
+                case ConsoleKey.S:
+                    if (Console.CursorTop != y + 2*(player.Items.Count-1))
+                    {
+                        id++;
+                        Console.CursorTop += 2;
+                    }
+                    break;
+
+                case ConsoleKey.Q:
+                    if (Console.CursorLeft == x)
+                    {
+                        id = 0;
+                        section = "pokemon";
+                        x = 26; y = 14;
+                        Console.SetCursorPosition(x, y);
+                        continue;
+                    }
+                    break;
+
+                case ConsoleKey.D:
+                    if (Console.CursorLeft == x)
+                    {
+                        // TODO tweede kolom items?
+                    }
+                    break;
+            }
+
+            oldPos[0] = Console.CursorLeft;
+            oldPos[1] = Console.CursorTop;
+            PrintArtWithoutWhiteSpace(player.Items[id].Icon, new int[] { 175, 12 + (30-player.Items[id].Icon.Length) /2});
+
+            description = player.Items[id].Description;
+        }
+        else //pokemon
+        {
+            switch (key) // Q aka links is er nie
+            {
+                case ConsoleKey.Z:
+                    if (Console.CursorTop != y)
+                    {
+                        id--;
+                        Console.CursorTop -= 2;
+                    }
+                    break;
+
+                case ConsoleKey.S:
+                    if (Console.CursorTop != y + 2*(player.PokemonTeam.Where(pokemon => pokemon != null).Count()-1))
+                    {
+                        id++;
+                        Console.CursorTop += 2;
+                    }
+                    break;
+
+                case ConsoleKey.D:
+                    if (player.Items.Count != 0)
+                    {
+                        id = 0;
+                        section = "items";
+                        x = 66; y = 13;
+                        Console.SetCursorPosition(x, y);
+                        continue;
+                    }
+                    break;
+            }
+
+            oldPos[0] = Console.CursorLeft;
+            oldPos[1] = Console.CursorTop;
+            SetForegroundColorToType(player.PokemonTeam[id].Type);
+            PrintArtWithoutWhiteSpace(player.PokemonTeam[id].ImageSmall, new int[] { 166, 12 + (30-player.PokemonTeam[id].ImageSmall.Length) /2});
+            Console.ForegroundColor = ConsoleColor.White;
+
+            description = player.PokemonTeam[id].Description;
+        }
+
+        Console.SetCursorPosition(168, 44);
+        // description printing is insane
+        int spaceIndex = description.Length;
+        for (int i = 0; i < description.Length; i = spaceIndex + 1)
+        {
+            if (description.Length - i <= 46)
+            {
+                spaceIndex = description.Length - i;
+                Console.Write(description.Substring(i, spaceIndex));
+                break;
+            }
+            for (int j = i; j <= 46 + i; j++)
+            {
+                if (description[j] == ' ')
+                {
+                    spaceIndex = j;
+                }
+            }
+            Console.Write(description.Substring(i, spaceIndex - i));
+            Console.CursorLeft = 168; /*-= spaceIndex - i    " this thing -> ’ ,counts as 2 spaces on console but not in index wich is annoying" */
+            Console.CursorTop++;
+        }
+
+        Console.SetCursorPosition(oldPos[0], oldPos[1]);
+
+        Console.Write("►");
+        Console.CursorLeft--;
+        Console.ForegroundColor = ConsoleColor.Black;
+        key = Console.ReadKey().Key;
+        Console.CursorLeft--;
+        Console.ForegroundColor = ConsoleColor.White;
+
+    }
+    Console.Clear();
+}
+
 void AddColorsPrintArea(string areaType, string areaData)
 {
     if (areaType == "Terrain")
@@ -343,7 +522,8 @@ void AddColorsPrintArea(string areaType, string areaData)
             Save.Border[0],
             Save.Tree[0],
             Save.Grass[0],
-            Save.Person[0] };
+            Save.Person[0],
+            Save.Item[0] };
         List<char> otherTileTypes = tileTypes.ToList();
 
         while (i < areaData.Length - 1)
@@ -393,6 +573,11 @@ void AddColorsPrintArea(string areaType, string areaData)
             {
                 Console.ForegroundColor = ConsoleColor.White;
                 otherTileTypes.Remove(tileTypes[4]);
+            }
+            else if (tileType == tileTypes[5])
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                otherTileTypes.Remove(tileTypes[5]);
             }
         }
     }
@@ -536,18 +721,6 @@ void PrintArtWithoutWhiteSpace(string[] lines, int[] cursorposition) // whitespa
     }
 } // ik weet ni wrm ma het werkt
 
-int PokemonMaxHealth(Pokemon pokemon) // too lazy to add extra properties
-{
-    foreach (Pokemon check in Save.AllPokemon)
-    {
-        if (check.Name == pokemon.Name)
-        {
-            return check.Health + (pokemon.Level - check.Level) * 2;
-        }
-    }
-    return 0;
-}
-
 string[] PlayerMove(World world, Terrain terrain, int[] currentTerrainID, int[] yx, int[] vector, string tileTypeMovedFrom)
 {
     int y = yx[0];
@@ -585,12 +758,20 @@ string[] PlayerMove(World world, Terrain terrain, int[] currentTerrainID, int[] 
         if (terrain.CheckValidPostition(y + vector[0], x + vector[1]))
         {
             Console.SetCursorPosition(x * 2 + Save.DataLocSize.Length, y); // dont question the dataLocSize and why its a string
+
+            terrain.Box[y][x] = tileTypeMovedFrom;
             if (tileTypeMovedFrom == Save.Grass)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
             }
+            else if (tileTypeMovedFrom == Save.Item)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                tileTypeMovedFrom = Save.Grass;
+                terrain.Box[y][x] = Save.Grass;
+            }
             Console.Write(tileTypeMovedFrom);
-            terrain.Box[y][x] = tileTypeMovedFrom;
+
             y += vector[0];
             x += vector[1];
             tileTypeMovedFrom = terrain.Box[y][x];
@@ -612,8 +793,7 @@ Pokemon[] BattleAffectedStats(Pokemon attacker, Move move, Pokemon target) // TO
     target.Accuracy -= move.AccuracyDecrease * 5;
     target.Speed -= move.SpeedDecrease;
 
-    int attackerMaxHealth = PokemonMaxHealth(attacker);
-    attacker.Health = Math.Min(attackerMaxHealth, ((100 + move.HealthRecovery) * attacker.Health) / 100);
+    attacker.Health = Math.Min(attacker.MaxHealth, ((100 + move.HealthRecovery) * attacker.Health) / 100);
     attacker.Attack += move.AttackIncrease * Math.Max(1, (target.Attack * 10) / 100);
     attacker.Defense += move.DefenseIncrease * Math.Max(1, (target.Defense * 10) / 100);
     attacker.Accuracy += move.AccuracyIncrease * 5;
@@ -710,14 +890,13 @@ Player TileEvent(string tile, Player player, Terrain terrain)
 
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.SetCursorPosition(xBoxPos + 9, yBoxPos + 4);
-                int pokemonMaxHealth = PokemonMaxHealth(pokemon);
-                Console.Write(new string('▬', ((width - 22) * ((pokemon.Health * 100) / pokemonMaxHealth)) / 100));
+                Console.Write(new string('▬', ((width - 22) * ((pokemon.Health * 100) / pokemon.MaxHealth)) / 100));
 
                 Console.BackgroundColor = ConsoleColor.Gray;
                 Console.ForegroundColor = ConsoleColor.Black;
 
                 Console.SetCursorPosition(xBoxPos + 50, yBoxPos + 4);
-                Console.Write($"{pokemon.Health}/{pokemonMaxHealth}");
+                Console.Write($"{pokemon.Health}/{pokemon.MaxHealth}");
 
                 Console.BackgroundColor = ConsoleColor.Black;
             }
@@ -725,7 +904,7 @@ Player TileEvent(string tile, Player player, Terrain terrain)
             DrawPokemonHealthCard(8, Console.WindowHeight * 25 / 100, myPokemon);
             DrawPokemonHealthCard(Console.WindowWidth - 68, Console.WindowHeight * 5 / 100, enemy);
         }
-        void UpdateBattleScreen(Pokemon myPokemon, int myPokeMaxHealth, Pokemon enemy, int enemyMaxHealth)
+        void UpdateBattleScreen(Pokemon myPokemon, Pokemon enemy)
         {
             // TODO do this shit in correct order
             int width = 60;
@@ -745,13 +924,13 @@ Player TileEvent(string tile, Player player, Terrain terrain)
             Console.ForegroundColor = ConsoleColor.Green;
 
             Console.SetCursorPosition(xBoxPos + 9, yBoxPos + 4);
-            Console.Write(new string('▬', ((width - 22) * ((myPokemon.Health * 100) / myPokeMaxHealth)) / 100));
+            Console.Write(new string('▬', ((width - 22) * ((myPokemon.Health * 100) / myPokemon.MaxHealth)) / 100));
 
             Console.BackgroundColor = ConsoleColor.Gray;
             Console.ForegroundColor = ConsoleColor.Black;
 
             Console.SetCursorPosition(xBoxPos + 50, yBoxPos + 4);
-            Console.Write($"{myPokemon.Health}/{myPokeMaxHealth}");
+            Console.Write($"{myPokemon.Health}/{myPokemon.MaxHealth}");
 
             DrawBattleAnimation();
 
@@ -769,18 +948,18 @@ Player TileEvent(string tile, Player player, Terrain terrain)
             Console.ForegroundColor = ConsoleColor.Green;
 
             Console.SetCursorPosition(xBoxPos + 9, yBoxPos + 4);
-            Console.Write(new string('▬', ((width - 22) * ((enemy.Health * 100) / enemyMaxHealth)) / 100));
+            Console.Write(new string('▬', ((width - 22) * ((enemy.Health * 100) / enemy.MaxHealth)) / 100));
 
             Console.BackgroundColor = ConsoleColor.Gray;
             Console.ForegroundColor = ConsoleColor.Black;
 
             Console.SetCursorPosition(xBoxPos + 50, yBoxPos + 4);
-            Console.Write($"{enemy.Health}/{enemyMaxHealth}");
+            Console.Write($"{enemy.Health}/{enemy.MaxHealth}");
 
             Console.BackgroundColor = ConsoleColor.Black;
         }
 
-        void DrawBattleMainOptionsCard(Pokemon pokemon)
+        void DrawBattleMainOptionsCard()
         {
             // BOX
             int width = Console.WindowWidth;
@@ -845,6 +1024,11 @@ Player TileEvent(string tile, Player player, Terrain terrain)
             Console.SetCursorPosition(0, 0);
             ConsoleKey key = Console.ReadKey().Key;
             Console.SetCursorPosition(OldPos[0], OldPos[1]);
+
+            if (key == ConsoleKey.Enter && pokemon.Moves[0].Item2 == 0) // TODO add struggle bcs it only works when no PP
+            {
+                key = ConsoleKey.N; // n stands for NOPE CANT DO THAT JIMMY
+            }
 
             int choiceID = 0;
             while (key != ConsoleKey.Enter && key != ConsoleKey.Escape)
@@ -931,23 +1115,23 @@ Player TileEvent(string tile, Player player, Terrain terrain)
             int index;
             if (team[1] == null) return -1; // need another pokemon to do anything
 
-            for (index = 0; index < team.Length; index++)
+            for (index = 1; index < team.Length; index++)
             {
-                if (team[index + 1] == null) break;
+                if (team[index] == null) break;
 
-                string pokemonName = team[index + 1].Name;
-                int currentHealth = team[index + 1].Health;
-                int maxHealth = PokemonMaxHealth(team[index + 1]);
+                string pokemonName = team[index].Name;
+                int currentHealth = team[index].Health;
+                int maxHealth = team[index].MaxHealth;
 
                 Console.Write($"{pokemonName} {currentHealth}/{maxHealth}");
 
-                if (index == 1)
+                if (index > 1 && index%2 == 1)
                 {
-                    Console.SetCursorPosition(x, y + 3);
+                    Console.CursorLeft = x + 20;
                 }
                 else
                 {
-                    Console.CursorLeft = x + 20;
+                    Console.SetCursorPosition(x, y + 3);
                 }
             }
 
@@ -960,7 +1144,12 @@ Player TileEvent(string tile, Player player, Terrain terrain)
             ConsoleKey key = Console.ReadKey().Key;
             Console.SetCursorPosition(OldPos[0], OldPos[1]);
 
-            int choiceID = 0;
+            if (key == ConsoleKey.Enter && team[0].Health <= 0)
+            {
+                key = ConsoleKey.N; // n stands for NOPE CANT DO THAT JIMMY
+            }
+
+            int choiceID = 1;
             while (key != ConsoleKey.Enter && key != ConsoleKey.Escape)
             {
                 switch (key)
@@ -968,7 +1157,7 @@ Player TileEvent(string tile, Player player, Terrain terrain)
                     case ConsoleKey.Z:
                         if (Console.GetCursorPosition().Top != y)
                         {
-                            choiceID -= 2;
+                            choiceID -= 1;
                             Console.Write(" ");
                             Console.CursorLeft--;
                             Console.CursorTop -= 3;
@@ -976,16 +1165,16 @@ Player TileEvent(string tile, Player player, Terrain terrain)
                         break;
 
                     case ConsoleKey.S:
-                        if (Console.GetCursorPosition().Top == y && choiceID + 2 < index)
+                        if (Console.GetCursorPosition().Top == y && choiceID+1 < index)
                         {
-                            choiceID += 2;
+                            choiceID += 1;
                             Console.Write(" ");
                             Console.CursorLeft--;
                             Console.CursorTop += 3;
                         }
-                        else if (Console.GetCursorPosition().Top == y && choiceID == 1 && index == 3)
+                        else if (Console.GetCursorPosition().Top == y && (choiceID == 3 || choiceID == 5))
                         {
-                            choiceID += 1;
+                            choiceID -= 1;
                             Console.Write(" ");
                             Console.CursorLeft--;
                             Console.CursorTop += 3;
@@ -996,7 +1185,7 @@ Player TileEvent(string tile, Player player, Terrain terrain)
                     case ConsoleKey.Q:
                         if (Console.GetCursorPosition().Left != x - 2)
                         {
-                            choiceID -= 1;
+                            choiceID -= 2;
                             Console.Write(" ");
                             Console.CursorLeft--;
                             Console.CursorLeft -= 20;
@@ -1004,16 +1193,16 @@ Player TileEvent(string tile, Player player, Terrain terrain)
                         break;
 
                     case ConsoleKey.D:
-                        if (Console.GetCursorPosition().Left == x - 2 && choiceID + 1 < index)
+                        if (Console.GetCursorPosition().Left == x - 2 && choiceID+2 < index)
                         {
-                            choiceID += 1;
+                            choiceID += 2;
                             Console.Write(" ");
                             Console.CursorLeft--;
                             Console.CursorLeft += 20;
                         }
-                        else if (Console.GetCursorPosition().Left == x - 2 && choiceID == 2 && index == 3)
+                        else if (Console.GetCursorPosition().Left == x - 2 && (choiceID == 2 || choiceID == 4) && choiceID+2 == index)
                         {
-                            choiceID -= 1;
+                            choiceID += 1;
                             Console.Write(" ");
                             Console.CursorLeft--;
                             Console.CursorTop -= 3;
@@ -1029,14 +1218,14 @@ Player TileEvent(string tile, Player player, Terrain terrain)
                 key = Console.ReadKey().Key;
                 Console.SetCursorPosition(OldPos[0], OldPos[1]);
 
-                if (key == ConsoleKey.Enter && team[choiceID + 1].Health <= 0) // TODO add struggle bcs it only works when no PP
+                if (key == ConsoleKey.Enter && team[choiceID].Health <= 0)
                 {
                     key = ConsoleKey.N; // n stands for NOPE CANT DO THAT JIMMY
                 }
             }
-            if (key == ConsoleKey.Escape) choiceID = -2;
+            if (key == ConsoleKey.Escape) choiceID = -1;
 
-            return choiceID + 1;
+            return choiceID;
         }
 
         void DrawBattleAnimation() // bad animations go in here
@@ -1092,7 +1281,7 @@ Player TileEvent(string tile, Player player, Terrain terrain)
                     move.Priority * 50
                     );
 
-                return damageValue * 2 + (debuffValue * 4) / 100;
+                return damageValue * 2 + (int)(debuffValue*3.5)/100;
             }
 
             Random rnd = new Random();
@@ -1129,7 +1318,7 @@ Player TileEvent(string tile, Player player, Terrain terrain)
             Console.SetCursorPosition(fuckGoBack[0], fuckGoBack[1]);
 
             return enemyMove;
-        }
+        } // TODO add turn shit
 
         #region "Fight wild pokemon code"
         // transition
@@ -1148,7 +1337,6 @@ Player TileEvent(string tile, Player player, Terrain terrain)
         // fight start
 
         ShowBattleScreen(player.PokemonTeam[0], enemy);
-        int enemyMaxHealth = enemy.Health;
         Tuple<Player, Pokemon> battleData;
 
         while (true) // damn eindelijk werken aan de combat, ik zie er zeker naar uit...    maar ik doe het morge wel...  100% ik zweer
@@ -1159,7 +1347,7 @@ Player TileEvent(string tile, Player player, Terrain terrain)
             #region "Battle Rounds"
             while (true)
             {
-                DrawBattleMainOptionsCard(player.PokemonTeam[0]);
+                DrawBattleMainOptionsCard();
 
                 // FIRST
                 Pokemon currentPokemon = player.PokemonTeam[0].CreateDuplicatePokemon(); // gebruikt ook ander constructor
@@ -1258,11 +1446,10 @@ Player TileEvent(string tile, Player player, Terrain terrain)
                         Console.SetCursorPosition(0, 0);
                         key = Console.ReadKey().Key;
                         Console.SetCursorPosition(OldPos[0], OldPos[1]);
-                    }
+                    }  // catagoryID
 
                     Pokemon[] battleAffectedStats;
 
-                    int pokemonMaxHealth = PokemonMaxHealth(currentPokemon);
                     switch (catagory[catagoryID])
                     {
                         case "FIGHT":
@@ -1340,6 +1527,7 @@ Player TileEvent(string tile, Player player, Terrain terrain)
                             optionID = DrawBattlePKMNOptions(player.PokemonTeam, 29, selectorPos[1]);
                             Console.BackgroundColor = ConsoleColor.Black;
 
+
                             if (optionID == -1) break;
 
                             Pokemon placeHolder = player.PokemonTeam[optionID].CreateDuplicatePokemon();
@@ -1347,18 +1535,26 @@ Player TileEvent(string tile, Player player, Terrain terrain)
                             player.PokemonTeam[0] = placeHolder;
 
                             currentPokemon = player.PokemonTeam[0];
-                            pokemonMaxHealth = PokemonMaxHealth(currentPokemon);
 
                             Console.Clear();
                             ShowBattleScreen(currentPokemon, enemy);
-                            DrawBattleMainOptionsCard(currentPokemon);
+                            DrawBattleMainOptionsCard();
                             Console.SetCursorPosition(OldPos[0], OldPos[1]);
                             Console.Write("►");
 
+                            battleAffectedStats = BattleAffectedStats(enemy, enemyMove, currentPokemon);
+                            enemy = battleAffectedStats[0];
+                            currentPokemon = battleAffectedStats[1];
+
+                            if (currentPokemon.Health <= 0)
+                            {
+                                optionID = -2;
+                                player.PokemonTeam[0] = currentPokemon;
+                                break;
+                            }
                             break;
 
                         case "BAG":
-
 
                             break;
 
@@ -1366,11 +1562,11 @@ Player TileEvent(string tile, Player player, Terrain terrain)
                             runAway = true;
                             break;
 
-                    }
+                    }  // OptionID
 
                     if (runAway) break;
 
-                    UpdateBattleScreen(currentPokemon, pokemonMaxHealth, enemy, enemyMaxHealth);
+                    UpdateBattleScreen(currentPokemon, enemy);
                 }
                 //LAST
 
@@ -1528,13 +1724,22 @@ while (key != ConsoleKey.Escape)
             Console.WriteLine(terrain.Level);
             break;
 
+        case ConsoleKey.B:
+            OpenBag(player);
+
+            AddColorsPrintArea("Terrain", terrain.ShowArea());
+            Console.SetCursorPosition(0, 4);
+            Console.WriteLine(player.ShowStatsinWorld());
+            Console.WriteLine(terrain.Level);
+            break;
+
         case ConsoleKey.I:
             GameInfoDebugging();
             AddColorsPrintArea("Terrain", terrain.ShowArea());
             Console.SetCursorPosition(0, 4);
             Console.WriteLine(player.ShowStatsinWorld());
             Console.WriteLine(terrain.Level);
-            break;
+            break; // DEBUG pokemon info
 
         case ConsoleKey.H:
             foreach (Pokemon pokemon in player.PokemonTeam)
@@ -1571,6 +1776,17 @@ while (key != ConsoleKey.Escape)
             player.PokemonTeam[2] = starters[1];
             break; // DEBUG give other starters
 
+        case ConsoleKey.G:
+            foreach (Item item in Save.AllItems)
+            {
+                if (!player.Items.Contains(item))
+                {
+                    player.Items.Add(item);
+                }
+                player.Items[player.Items.IndexOf(item)].Amount++;
+            }
+            break; // DEBUG give items
+
         default:
             Console.WindowHeight = Console.LargestWindowHeight;
             Console.WindowWidth = Console.LargestWindowWidth;
@@ -1591,6 +1807,44 @@ while (key != ConsoleKey.Escape)
     MyYX[0] = int.Parse(moveData[1]);
     MyYX[1] = int.Parse(moveData[2]);
     tileTypeMovedFrom = moveData[3];
+
+    if (tileTypeMovedFrom == Save.Item) 
+    {
+        Item[] GatherRarityItems(string rarity)
+        {
+            List<Item> items = new List<Item>();
+            foreach (Item item in Save.AllItems)
+            {
+                if (item.Rarity == rarity)
+                {
+                    items.Add(item);
+                }
+            }
+            return items.ToArray();
+        }
+
+        Random rnd = new Random();
+
+        Item[] rarityItems;
+        int pickRarity = rnd.Next(1, Save.SummedWeigths.Sum());
+
+        if (pickRarity <= Save.SummedWeigths[0]) 
+            rarityItems = GatherRarityItems("common");
+        else if (pickRarity <= Save.SummedWeigths[0] +Save.SummedWeigths[1])
+            rarityItems = GatherRarityItems("rare");
+        else if (pickRarity <= Save.SummedWeigths[0] +Save.SummedWeigths[1] +Save.SummedWeigths[2])
+            rarityItems = GatherRarityItems("epic");
+        else
+            rarityItems = GatherRarityItems("legendary");
+
+        Item item = rarityItems[rnd.Next(0, rarityItems.Length)];
+
+        if (!player.Items.Contains(item))
+        {
+            player.Items.Add(item);
+        }
+        player.Items[player.Items.IndexOf(item)].Amount++;
+    } // DONE GOT IETEM, TODO make better
 
     player = TileEvent(tileTypeMovedFrom, player, terrain);  // a player goes to an event and comes back like a different man - stay sober kids
 

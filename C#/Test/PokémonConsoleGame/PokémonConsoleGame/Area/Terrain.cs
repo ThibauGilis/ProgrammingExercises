@@ -37,6 +37,7 @@ namespace PokémonConsoleGame.Area
 
             GenerateTrees();
             GenerateGrass();
+            GenerateItems();
             GenerateGates();
 
             int[] centerTerrainID = new int[] {0,0};
@@ -265,6 +266,40 @@ namespace PokémonConsoleGame.Area
             }
         }
 
+        // add like random items to be found in terrain
+        private bool CheckSurroundingTiles(int y, int x)
+        {
+            bool spotFound = true;
+            for (int k = y - 1; k < y + 2; k++)
+            {
+                for (int z = x - 1; z < x + 2; z++)
+                {
+                    if (Box[k][z] == Empty)
+                    {
+                        spotFound = false;
+                        break;
+                    }
+                }
+            }
+            return spotFound;
+        }
+        private void GenerateItems()
+        {
+            Random rnd = new Random();
+            bool validSpot;
+            for (int y = 1; y < BoxHeigth - 1; y++)
+            {
+                for (int x = 1; x < BoxWidth - 1; x++)
+                {
+                    if (Box[y][x] != Grass) continue;
+                    validSpot = CheckSurroundingTiles(y, x);
+                    if (validSpot && rnd.Next(0,10+(BoxWidth*BoxHeigth/64)) == 0)
+                    {
+                        Box[y][x] = Item;
+                    }
+                }
+            }
+        }
 
 
         // Some player movement

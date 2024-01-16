@@ -123,7 +123,7 @@ namespace PokémonConsoleGame.Area
                 {
                     for (int k = i; k < i+width; k++)
                     {
-                        FullMap += Map[k].Substring(l*6, 5); // dont question it (bassicly size of map sqaure)
+                        FullMap += Map[k].Substring(l*6, 5); // dont question it (bassicly size of map square)
                     }
                     FullMap += "\n\t";
                 }

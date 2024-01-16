@@ -64,3 +64,9 @@ C:\Users\thiba\source\repos\Test\PokémonConsoleGame\PokémonConsoleGame\bin\Deb
 C:\Users\thiba\source\repos\Test\PokémonConsoleGame\PokémonConsoleGame\bin\Debug\net6.0\GameData\PokemonMoveSetData.csv
 C:\Users\thiba\source\repos\Test\PokémonConsoleGame\PokémonConsoleGame\bin\Debug\net6.0\GameData\OtherASCII_Art\BattlePlatform.txt
 C:\Users\thiba\source\repos\Test\PokémonConsoleGame\PokémonConsoleGame\bin\Debug\net6.0\GameData\OtherASCII_Art\PokeBall.txt
+C:\Users\thiba\source\repos\Test\PokémonConsoleGame\PokémonConsoleGame\bin\Debug\net6.0\GameData\ItemData.csv
+C:\Users\thiba\source\repos\Test\PokémonConsoleGame\PokémonConsoleGame\bin\Debug\net6.0\GameData\ItemASCII_Art\GreatBall.txt
+C:\Users\thiba\source\repos\Test\PokémonConsoleGame\PokémonConsoleGame\bin\Debug\net6.0\GameData\ItemASCII_Art\MasterBall.txt
+C:\Users\thiba\source\repos\Test\PokémonConsoleGame\PokémonConsoleGame\bin\Debug\net6.0\GameData\ItemASCII_Art\PokeBall.txt
+C:\Users\thiba\source\repos\Test\PokémonConsoleGame\PokémonConsoleGame\bin\Debug\net6.0\GameData\ItemASCII_Art\UltraBall.txt
+C:\Users\thiba\source\repos\Test\PokémonConsoleGame\PokémonConsoleGame\bin\Debug\net6.0\GameData\OtherASCII_Art\Bag.txt

@@ -36,6 +36,7 @@ namespace PokémonConsoleGame.Pokémon
         private int _xp;
         private int _xpLevelUp;
         private int _health;
+        private int _maxHealth;
         private int _attack;
         private int _defense;
         private int _speed;
@@ -46,6 +47,7 @@ namespace PokémonConsoleGame.Pokémon
         public int XP { get { return _xp; } set { _xp = value; } }
         public int XPLevelUp { get { return _xpLevelUp; } set { _xpLevelUp = value; } }
         public int Health { get { return _health; } set { if (value < 0) { _health = 0; } else _health = value; } }
+        public int MaxHealth { get { return _maxHealth; } set { _maxHealth = value; } }
         public int Attack { get { return _attack; } set { _attack = value; } }
         public int Defense { get { return _defense; } set { _defense = value; } }
         public int Speed { get { return _speed; } set { _speed = value; } }
@@ -62,7 +64,8 @@ namespace PokémonConsoleGame.Pokémon
             this.Level = level;
             this.XP = 0;
             this.XPLevelUp = (int)(10*Math.Pow(1.2, this.Level-1));
-            this.Health = health + (level-1)*2;  // example level 1 = 10
+            this.MaxHealth = health + (level-1)*2;  // example level 1 = 10
+            this.Health = this.MaxHealth;
             this.Attack = attack + (level-1);
             this.Defense = defense + (level-1);
             this.Speed = speed;
@@ -75,7 +78,7 @@ namespace PokémonConsoleGame.Pokémon
         }
 
         public Pokemon(string name, string description, string evolution, List<Tuple<Move, int>> unlockableMoves, Tuple<Move, int>[] moves,
-                       string type, int xp, int xpLevelUp, int level, int health, int attack, int defense, int accuracy, int speed,
+                       string type, int xp, int xpLevelUp, int level, int maxHealth, int health, int attack, int defense, int accuracy, int speed,
                        string[] imageSmall, string[] imageSmallWhosThatPokemon, string[] imageLarge)
         {
             this.Name = name;
@@ -85,6 +88,7 @@ namespace PokémonConsoleGame.Pokémon
             this.Level = level;
             this.XP = xp;
             this.XPLevelUp = xpLevelUp;
+            this.MaxHealth = maxHealth;
             this.Health = health + (level - 1)*2;
             this.Attack = attack + (level - 1);
             this.Defense = defense + (level - 1);
@@ -162,7 +166,7 @@ namespace PokémonConsoleGame.Pokémon
         public Pokemon CreateDuplicatePokemon()
         {
             return new Pokemon(this.Name, this.Description, this.Evolution, this.UnlockableMoves, this.Moves,
-                               this.Type, this.XP, this.XPLevelUp, this.Level, this.Health, this.Attack, this.Defense, this.Accuracy, this.Speed,
+                               this.Type, this.XP, this.XPLevelUp, this.Level, this.MaxHealth, this.Health, this.Attack, this.Defense, this.Accuracy, this.Speed,
                                this.ImageSmall, this.ImageSmallWhosThatPokemon, this.ImageLarge);
         }
 
@@ -197,7 +201,8 @@ namespace PokémonConsoleGame.Pokémon
                 this.XP = this.XP - this.XPLevelUp;
                 this.XPLevelUp = (int)(this.XPLevelUp * 1.2);
                 this.Level++;
-                this.Health += 2;
+                this.MaxHealth += 2;
+                this.Health = this.MaxHealth;
                 this.Defense++;
                 this.Attack++;
                 // TODO check for new moves

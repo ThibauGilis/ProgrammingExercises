@@ -14,6 +14,9 @@ namespace PokémonConsoleGame.GameData
         public static List<PokemonMoveSet> AllPokemonMoveSets;
         public static string[] StarterPokemon = new string[] { "Bulbasaur", "Charmander", "Squirtle" };
 
+        // Items
+        public static List<Item> AllItems;
+
         // Area Settings
         public static string DataLocSize = new string(' ', 24);
         public static int TerrainHeigth;
@@ -24,10 +27,12 @@ namespace PokémonConsoleGame.GameData
         public static string Tree = "木";
         public static string Grass = "ゞ";
         public static string Person = "웃";
+        public static string Item = "㋰";
 
         // Player Settings
         public static Player Player;
-
+        public static int[] RarityWeigths = { 125, 25, 5, 1};
+        public static int[] SummedWeigths = { 0, 0, 0, 0};
 
         // Program.cs Shit
         public static World World;
@@ -40,6 +45,7 @@ namespace PokémonConsoleGame.GameData
         // ASCII art data
         public static int PokemonASCIIWidth = 50;
         public static string[] BattlePlatform; //string array prints faster TODO keep the '\n' or no?
+        public static string[] PlayerBag;
         public static string[] PokeBall;
 
         public static void NewGame()
@@ -47,8 +53,10 @@ namespace PokémonConsoleGame.GameData
             FileOperations.LoadAllMoves();
             FileOperations.LoadAllPokemonMoveSets();
             FileOperations.LoadAllPokemon();
+            FileOperations.LoadAllItems();
             BattlePlatform = FileOperations.LoadOtherAsciiArt("BattlePlatform");
             PokeBall = FileOperations.LoadOtherAsciiArt("PokeBall");
+            PlayerBag = FileOperations.LoadOtherAsciiArt("Bag");
 
 
             do

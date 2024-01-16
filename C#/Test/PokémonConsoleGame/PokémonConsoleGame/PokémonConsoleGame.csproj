@@ -12,7 +12,25 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="GameData\ItemASCII_Art\GreatBall.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="GameData\ItemASCII_Art\MasterBall.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="GameData\ItemASCII_Art\PokeBall.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="GameData\ItemASCII_Art\UltraBall.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="GameData\ItemData.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="GameData\MoveData.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="GameData\OtherASCII_Art\Bag.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="GameData\OtherASCII_Art\BattlePlatform.txt">
@@ -168,6 +186,10 @@
     <None Update="GameData\PokemonMoveSetData.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="GameData\ItemASCII_Art\" />
   </ItemGroup>
 
 </Project>

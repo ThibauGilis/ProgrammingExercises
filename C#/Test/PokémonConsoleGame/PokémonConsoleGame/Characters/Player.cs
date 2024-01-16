@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PokémonConsoleGame.Items;
 
 namespace PokémonConsoleGame.Characters
 {
@@ -33,6 +34,33 @@ namespace PokémonConsoleGame.Characters
             Info += "\n└───────────────┘";
 
             return Info;
+        }
+
+        public string[] ShowBag()
+        {
+            string[] Bag = new string[Save.PlayerBag.Length];
+            Array.Copy(Save.PlayerBag, Bag, Save.PlayerBag.Length);
+
+            int x = 8; int y = 4;
+            foreach (Pokemon pokemon in this.PokemonTeam)
+            {
+                if (pokemon == null) break;
+
+                Bag[y] = Bag[y].Remove(x, $"{pokemon.Name} {pokemon.Health}/{pokemon.MaxHealth}".Length);
+                Bag[y] = Bag[y].Insert(x, $"{pokemon.Name} {pokemon.Health}/{pokemon.MaxHealth}");
+                y += 2;
+            }
+
+
+            x = 48; y = 3;
+            foreach (Item item in this.Items)
+            {
+                Bag[y] = Bag[y].Remove(x, $"{item.Name} {item.Amount}x".Length);
+                Bag[y] = Bag[y].Insert(x, $"{item.Name} {item.Amount}x");
+                y += 2;
+            }
+
+            return Bag;
         }
     }
 }

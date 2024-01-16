@@ -5,8 +5,10 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using CsvHelper;
 using CsvHelper.Configuration;
+using PokémonConsoleGame.Items;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace PokémonConsoleGame.GameData
@@ -16,6 +18,7 @@ namespace PokémonConsoleGame.GameData
         public static string PokemonDataFile = "GameData\\PokemonData.csv";
         public static string MovesDataFile = "GameData\\MoveData.csv";
         public static string PokemonMoveSetDataFile = "GameData\\PokemonMoveSetData.csv";
+        public static string ItemData = "GameData\\ItemData.csv";
 
         public static void LoadAllPokemon()
         {
@@ -118,6 +121,8 @@ namespace PokémonConsoleGame.GameData
 
         public static string[] LoadPokemonAsciiArt(string pokemonName, string size)
         {
+            if (!File.Exists($"GameData\\PokemonASCII_Art\\{pokemonName}{size}.txt")) return new string[] { "IMAGE NOT FOUND" };
+
             StreamReader streamReader = new StreamReader($"GameData\\PokemonASCII_Art\\{pokemonName}{size}.txt");
             string image = streamReader.ReadToEnd();
             image = image.Replace("\r", string.Empty);
@@ -193,6 +198,8 @@ namespace PokémonConsoleGame.GameData
 
         public static string[] LoadOtherAsciiArt(string item)
         {
+            if (!File.Exists($"GameData\\OtherASCII_Art\\{item}.txt")) return new string[] { "IMAGE NOT FOUND" };
+
             StreamReader streamReader = new StreamReader($"GameData\\OtherASCII_Art\\{item}.txt");
             string image = streamReader.ReadToEnd();
             image = image.Replace("\r", string.Empty);
@@ -231,6 +238,97 @@ namespace PokémonConsoleGame.GameData
             }
 
             return image;
+        }
+
+        public static void LoadAllItems()
+        {
+            List<Item> items = new List<Item>();
+            StreamReader streamReader = new StreamReader(ItemData);
+
+            streamReader.ReadLine(); //headers
+            while (!streamReader.EndOfStream)
+            {
+                Item item;
+                string[] data = streamReader.ReadLine().Split(';');
+
+                string type = data[0];
+                string name = data[1];
+                string descirption = data[2];
+                string[] icon = LoadItemAsciiArt(name);
+                string rarity = data[3];
+                int price = int.Parse(data[4]);
+
+                switch (rarity)
+                {
+                    case "common":
+                        Save.SummedWeigths[0] += Save.RarityWeigths[0];
+                        break;
+
+                    case "rare":
+                        Save.SummedWeigths[1] += Save.RarityWeigths[1];
+                        break;
+
+                    case "epic":
+                        Save.SummedWeigths[2] += Save.RarityWeigths[2];
+                        break;
+
+                    case "legendary":
+                        Save.SummedWeigths[3] += Save.RarityWeigths[3];
+                        break;
+                }
+
+                switch (type)
+                {
+                    case "PokeBall":
+                        int catchRate = int.Parse(data[5]);
+                        item = new PokeBall(name, descirption, icon, rarity, 0, price, catchRate);
+                        break;
+
+                    case "Potion":
+                        int healFactor = int.Parse(data[6]);
+                        item = new Potion(name, descirption, icon, rarity, 0, price, healFactor);
+                        break;
+
+                    case "Stone":
+                        string effectsType = data[7];
+                        item = new Stone(name, descirption, icon, rarity, 0, price, effectsType);
+                        break;
+
+                    default:
+                        continue;
+                }
+                items.Add(item);
+            }
+
+            Save.AllItems = items;
+        }
+
+        public static string[] LoadItemAsciiArt(string name)
+        {
+            if (!File.Exists($"GameData\\ItemASCII_Art\\{name}.txt")) return new string[] { "IMAGE NOT FOUND" };
+
+            StreamReader streamReader = new StreamReader($"GameData\\ItemASCII_Art\\{name}.txt");
+            string image = streamReader.ReadToEnd();
+            image = image.Replace("\r", string.Empty);
+
+            List<string> imageLines = new List<string>();
+            string line = "";
+
+            for (int i = 0; i < image.Length; i++)
+            {
+                char c = image[i];
+
+                if (c == '\n')
+                {
+                    line += c;
+                    imageLines.Add(line);
+                    line = "";
+                }
+                else line += c;
+            }
+            imageLines.Add(line);
+
+            return imageLines.ToArray();
         }
 
     }
