@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const letters = ['a', 'b']
+        
+        myAsyncFunc = async (k) => {
+            
+            console.log('async', k)
+        }
+        myFunc = (k) => {
+            console.log('sync', k)
+        }
+
+        myFunc(letters);
+        myAsyncFunc(letters);
+
+    </script>
+</body>
+</html>

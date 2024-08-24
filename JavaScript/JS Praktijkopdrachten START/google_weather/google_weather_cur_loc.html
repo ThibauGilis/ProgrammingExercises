@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="#">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Map</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=XXX&libraries=places"></script>
+
+    <style>
+      /* styles.css */
+      #weather {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      #weather-icon {
+        margin-right: 20px;
+        font-size: 48px; /* Increase the font size */
+      }
+
+      #weather-info {
+        text-align: center;
+      }
+
+      #temperature {
+        font-size: 24px;
+      }
+
+      #weather-description {
+        font-style: italic;
+        margin-top: 5px;
+      }
+
+      #min-max-temperature {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="weather">
+      <div id="weather-icon"></div>
+      <div id="weather-info">
+        <p id="temperature"></p>
+        <p id="weather-description"></p>
+        <p id="min-max-temperature"></p>
+      </div>
+    </div>
+
+    <div id="map" style="height: 600px; width: 100%"></div>
+
+    <script>     
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie app :: sort & filter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container p-4">
+        <h4>Find, sort & filter movies</h4>
+        <form name="myForm" id="myForm">
+            <div class="form-row">
+                <div class="col-md-4">
+
+                    <div class="form-group">
+                        <label for="search" class="text-danger">Zoekterm</label>
+                        <input type="text" class="form-control" id="search" placeholder="Game of Thrones" value="game">
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="sort" class="text-danger">Sortering</label>
+                        <select class="form-control" id="sort">
+                            <option value="original_title#az" selected>Naam A-Z</option>
+                            <option value="original_title#za">Naam Z-A</option>
+                            <option value="vote_average#az">Vote A-Z</option>
+                            <option value="vote_average#za">Vote Z-A</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-4 ml-5">
+                    <div class="form-group">
+                        <label for="sort" class="text-danger">Filter</label>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="filterVotes" id="filterVotesG8"
+                                value="filterVotesG8" checked>
+                            <label class="form-check-label" for="filterVotesG8">
+                                Votes &gt; 8
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="filterVotes" id="filterVotesKG8"
+                                value="filterVotesKG8">
+                            <label class="form-check-label" for="filterVotesKG8">
+                                Votes &lt;= 8 </label> </div>
+                        <div class="form-check disabled">
+                            <input class="form-check-input" type="radio" name="filterVotes" id="filterVotesK5"
+                                value="filterVotesK5">
+                            <label class="form-check-label" for="filterVotesK5">
+                                Votes &gt; 5 </label> </div>
+                    </div>
+                </div>
+            </div> <button type="submit" class="btn btn-primary mb-2" id="searchMovies">Zoeken</button>
+        </form>
+
+        <div class="mt-2">
+            <table id="tableSearch" class="table table-light table-sm table-striped table-hover table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Original name</th>
+                        <th scope="col">Vote average</th>
+                        <th scope="col">First air date</th>
+                    </tr>
+                </thead>
+                <tbody id="tdata">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+       
+    </script>
+
+</body>
+
+</html>

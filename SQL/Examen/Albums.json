@@ -1,0 +1,24 @@
+{
+    "jsonschema": {
+        "title": "Albums",
+        "description": "Een album op een site.",
+        "required": ["title", "format", "releasedate", "genre"],
+        "properties": {
+            "title": {"bsonType": "string"},
+            "format": {"bsonType": "string"},
+            "releasedate": {"bsonType": "date"},
+            "genre": {"bsonType": "string"},
+            "cover": {"bsonType": "string"},
+            "reviews": {
+                "bsonType": "array", 
+                "required": ["userId", "text", "postDate"],
+                "properties": {
+                    "userId": {"bsonType": "int"},
+                    "text": {"bsonType": "string"},
+                    "postDate": {"bsonType": "date"},
+                    "rating": {"bsonType": "int"}
+                }
+            }
+        }
+    }
+}

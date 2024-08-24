@@ -1,0 +1,2476 @@
+[{
+        "id": 4600,
+        "guid": "d7dc37a6-c2ee-4ed4-addb-85408bbfe545",
+        "betalingVerif": false,
+        "openstaand": 1156,
+        "leeftijd": 22,
+        "campus": {
+            "campus_naam": "Campus Geel",
+            "campus_id": 19
+        },
+        "geg": {
+            "voornaam": "Fern",
+            "achternaam": "Keller",
+            "geslacht": "V"
+        },
+        "inschrijving": "Sun Aug 04 2019 07:12:17 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            }
+        ]
+    },
+    {
+        "id": 2422,
+        "guid": "e414577b-b87d-4619-a840-1d6013f3aa1f",
+        "betalingVerif": true,
+        "openstaand": 1216,
+        "leeftijd": 20,
+        "campus": {
+            "campus_naam": "Campus De Nayer",
+            "campus_id": 13
+        },
+        "geg": {
+            "voornaam": "Cohen",
+            "achternaam": "Mccoy",
+            "geslacht": "V"
+        },
+        "inschrijving": "Thu Aug 29 2019 09:16:03 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            },
+            {
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            },
+            {
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            }
+        ]
+    },
+    {
+        "id": 8663,
+        "guid": "77695ff4-d680-408e-a4ec-8febba0ab220",
+        "betalingVerif": true,
+        "openstaand": 248,
+        "leeftijd": 22,
+        "campus": {
+            "campus_naam": "Campus Geel",
+            "campus_id": 19
+        },
+        "geg": {
+            "voornaam": "Karen",
+            "achternaam": "Weiss",
+            "geslacht": "M"
+        },
+        "inschrijving": "Fri Aug 16 2019 23:11:55 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            }
+        ]
+    },
+    {
+        "id": 5075,
+        "guid": "4f8b5bd0-87eb-4603-a348-3c5796ad3116",
+        "betalingVerif": false,
+        "openstaand": 769,
+        "leeftijd": 18,
+        "campus": {
+            "campus_naam": "Campus Geel",
+            "campus_id": 19
+        },
+        "geg": {
+            "voornaam": "Felicia",
+            "achternaam": "Benton",
+            "geslacht": "V"
+        },
+        "inschrijving": "Sat Apr 27 2019 19:22:19 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            }
+        ]
+    },
+    {
+        "id": 8196,
+        "guid": "d34a8d54-0fc5-4df3-bacf-d153e3e09b24",
+        "betalingVerif": true,
+        "openstaand": 33,
+        "leeftijd": 20,
+        "campus": {
+            "campus_naam": "Campus De Ham",
+            "campus_id": 5
+        },
+        "geg": {
+            "voornaam": "Wilma",
+            "achternaam": "Slater",
+            "geslacht": "M"
+        },
+        "inschrijving": "Mon Nov 18 2019 13:10:48 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            },
+            {
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            }
+        ]
+    },
+    {
+        "id": 6731,
+        "guid": "095b8968-43b3-4dda-a70e-d7bd059acabc",
+        "betalingVerif": true,
+        "openstaand": 736,
+        "leeftijd": 22,
+        "campus": {
+            "campus_naam": "Campus Turnhout",
+            "campus_id": 21
+        },
+        "geg": {
+            "voornaam": "Cassandra",
+            "achternaam": "Stuart",
+            "geslacht": "V"
+        },
+        "inschrijving": "Sun Sep 01 2019 07:11:24 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            }
+        ]
+    },
+    {
+        "id": 8249,
+        "guid": "54053336-ee35-41c2-aa2f-53fbee503660",
+        "betalingVerif": false,
+        "openstaand": 932,
+        "leeftijd": 23,
+        "campus": {
+            "campus_naam": "Campus De Ham",
+            "campus_id": 5
+        },
+        "geg": {
+            "voornaam": "Fields",
+            "achternaam": "Adkins",
+            "geslacht": "M"
+        },
+        "inschrijving": "Wed Jun 19 2019 23:47:25 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            }
+        ]
+    },
+    {
+        "id": 5095,
+        "guid": "3cfe0d07-cea6-4979-8c17-5752e262ebbb",
+        "betalingVerif": true,
+        "openstaand": 641,
+        "leeftijd": 21,
+        "campus": {
+            "campus_naam": "Campus Geel",
+            "campus_id": 19
+        },
+        "geg": {
+            "voornaam": "Sonya",
+            "achternaam": "Parker",
+            "geslacht": "M"
+        },
+        "inschrijving": "Sun Dec 22 2019 21:25:39 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            }
+        ]
+    },
+    {
+        "id": 4211,
+        "guid": "8d88f618-d972-4126-8f79-d28bf0366b6c",
+        "betalingVerif": false,
+        "openstaand": 935,
+        "leeftijd": 21,
+        "campus": {
+            "campus_naam": "Campus De Nayer",
+            "campus_id": 13
+        },
+        "geg": {
+            "voornaam": "Wilkerson",
+            "achternaam": "Daugherty",
+            "geslacht": "M"
+        },
+        "inschrijving": "Tue May 07 2019 05:32:17 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            }
+        ]
+    },
+    {
+        "id": 6910,
+        "guid": "6b7a0eee-1118-4885-8afd-3bffa824d0f7",
+        "betalingVerif": false,
+        "openstaand": 422,
+        "leeftijd": 19,
+        "campus": {
+            "campus_naam": "Campus De Nayer",
+            "campus_id": 13
+        },
+        "geg": {
+            "voornaam": "Naomi",
+            "achternaam": "Nash",
+            "geslacht": "M"
+        },
+        "inschrijving": "Wed Oct 16 2019 15:53:10 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            }
+        ]
+    },
+    {
+        "id": 9048,
+        "guid": "96f8c288-f2a5-432a-b0a9-811671655e15",
+        "betalingVerif": false,
+        "openstaand": 1537,
+        "leeftijd": 21,
+        "campus": {
+            "campus_naam": "Campus De Ham",
+            "campus_id": 5
+        },
+        "geg": {
+            "voornaam": "Millicent",
+            "achternaam": "Bauer",
+            "geslacht": "V"
+        },
+        "inschrijving": "Tue Jun 04 2019 11:18:56 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            }
+        ]
+    },
+    {
+        "id": 7362,
+        "guid": "b132fea3-cd8f-4190-98d2-b096ac82d888",
+        "betalingVerif": false,
+        "openstaand": 1547,
+        "leeftijd": 22,
+        "campus": {
+            "campus_naam": "Campus De Nayer",
+            "campus_id": 13
+        },
+        "geg": {
+            "voornaam": "Kline",
+            "achternaam": "Pearson",
+            "geslacht": "M"
+        },
+        "inschrijving": "Mon Sep 16 2019 08:31:06 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            },
+            {
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            },
+            {
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            }
+        ]
+    },
+    {
+        "id": 5870,
+        "guid": "3172009e-392d-45a5-b43c-dfd84d53d8b0",
+        "betalingVerif": false,
+        "openstaand": 1846,
+        "leeftijd": 20,
+        "campus": {
+            "campus_naam": "Campus Turnhout",
+            "campus_id": 21
+        },
+        "geg": {
+            "voornaam": "Kelley",
+            "achternaam": "Wong",
+            "geslacht": "M"
+        },
+        "inschrijving": "Fri Mar 29 2019 02:24:32 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            }
+        ]
+    },
+    {
+        "id": 2500,
+        "guid": "1f4e7e67-ea81-4937-9d7a-904e82d4c3a9",
+        "betalingVerif": true,
+        "openstaand": 1314,
+        "leeftijd": 20,
+        "campus": {
+            "campus_naam": "Campus De Nayer",
+            "campus_id": 13
+        },
+        "geg": {
+            "voornaam": "Travis",
+            "achternaam": "Roy",
+            "geslacht": "V"
+        },
+        "inschrijving": "Wed Jul 24 2019 14:04:00 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            }
+        ]
+    },
+    {
+        "id": 4506,
+        "guid": "ca4987d4-8e11-4637-8b02-8aa357e41bd7",
+        "betalingVerif": true,
+        "openstaand": 1593,
+        "leeftijd": 21,
+        "campus": {
+            "campus_naam": "Campus De Ham",
+            "campus_id": 5
+        },
+        "geg": {
+            "voornaam": "Marla",
+            "achternaam": "Mcintosh",
+            "geslacht": "V"
+        },
+        "inschrijving": "Tue Oct 29 2019 00:34:03 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            }
+        ]
+    },
+    {
+        "id": 5571,
+        "guid": "221bd00d-3c63-4be1-8185-1270752f8b7f",
+        "betalingVerif": false,
+        "openstaand": 38,
+        "leeftijd": 21,
+        "campus": {
+            "campus_naam": "Campus Turnhout",
+            "campus_id": 21
+        },
+        "geg": {
+            "voornaam": "Bradshaw",
+            "achternaam": "Hahn",
+            "geslacht": "V"
+        },
+        "inschrijving": "Wed Oct 16 2019 11:42:23 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            }
+        ]
+    },
+    {
+        "id": 6609,
+        "guid": "07a23b8e-62d6-46ef-b4c1-f44dcd331fd9",
+        "betalingVerif": false,
+        "openstaand": 1541,
+        "leeftijd": 18,
+        "campus": {
+            "campus_naam": "Campus Geel",
+            "campus_id": 19
+        },
+        "geg": {
+            "voornaam": "Clayton",
+            "achternaam": "Mccarthy",
+            "geslacht": "M"
+        },
+        "inschrijving": "Sat May 25 2019 05:40:55 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            }
+        ]
+    },
+    {
+        "id": 2420,
+        "guid": "a40b99a5-f8a2-46cf-9425-84ebfaa81ed9",
+        "betalingVerif": false,
+        "openstaand": 1024,
+        "leeftijd": 19,
+        "campus": {
+            "campus_naam": "Campus Geel",
+            "campus_id": 19
+        },
+        "geg": {
+            "voornaam": "Cecilia",
+            "achternaam": "Rivera",
+            "geslacht": "M"
+        },
+        "inschrijving": "Thu Jul 25 2019 21:39:50 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            }
+        ]
+    },
+    {
+        "id": 3765,
+        "guid": "048c1e8c-e8c1-477d-8911-8489d863d8d4",
+        "betalingVerif": false,
+        "openstaand": 1907,
+        "leeftijd": 22,
+        "campus": {
+            "campus_naam": "Campus De Nayer",
+            "campus_id": 13
+        },
+        "geg": {
+            "voornaam": "Jennie",
+            "achternaam": "Nolan",
+            "geslacht": "M"
+        },
+        "inschrijving": "Fri Sep 06 2019 07:26:45 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            },
+            {
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            }
+        ]
+    },
+    {
+        "id": 2932,
+        "guid": "0f2758a8-c24d-44ec-9e8a-39cab90efede",
+        "betalingVerif": true,
+        "openstaand": 70,
+        "leeftijd": 18,
+        "campus": {
+            "campus_naam": "Campus De Nayer",
+            "campus_id": 13
+        },
+        "geg": {
+            "voornaam": "Hale",
+            "achternaam": "Jackson",
+            "geslacht": "M"
+        },
+        "inschrijving": "Thu Oct 31 2019 11:33:58 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            }
+        ]
+    },
+    {
+        "id": 2283,
+        "guid": "9683d3f1-738e-4b45-9f6f-7c52a30e8d38",
+        "betalingVerif": false,
+        "openstaand": 1988,
+        "leeftijd": 18,
+        "campus": {
+            "campus_naam": "Campus De Nayer",
+            "campus_id": 13
+        },
+        "geg": {
+            "voornaam": "Berta",
+            "achternaam": "Anderson",
+            "geslacht": "M"
+        },
+        "inschrijving": "Mon Nov 18 2019 05:52:31 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            },
+            {
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            }
+        ]
+    },
+    {
+        "id": 7581,
+        "guid": "f1d14f7c-4214-4b78-aaf2-980b40d831c8",
+        "betalingVerif": true,
+        "openstaand": 204,
+        "leeftijd": 19,
+        "campus": {
+            "campus_naam": "Campus Geel",
+            "campus_id": 19
+        },
+        "geg": {
+            "voornaam": "Imogene",
+            "achternaam": "Landry",
+            "geslacht": "V"
+        },
+        "inschrijving": "Tue Feb 26 2019 18:15:09 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            }
+        ]
+    },
+    {
+        "id": 8720,
+        "guid": "737250d2-3c52-4954-9a07-eb464e8f719b",
+        "betalingVerif": true,
+        "openstaand": 1089,
+        "leeftijd": 19,
+        "campus": {
+            "campus_naam": "Campus Geel",
+            "campus_id": 19
+        },
+        "geg": {
+            "voornaam": "Owen",
+            "achternaam": "Rasmussen",
+            "geslacht": "V"
+        },
+        "inschrijving": "Fri Sep 27 2019 03:38:50 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            }
+        ]
+    },
+    {
+        "id": 8241,
+        "guid": "786ca36f-b33b-4981-b2e6-45c279989607",
+        "betalingVerif": false,
+        "openstaand": 16,
+        "leeftijd": 18,
+        "campus": {
+            "campus_naam": "Campus Geel",
+            "campus_id": 19
+        },
+        "geg": {
+            "voornaam": "Herring",
+            "achternaam": "Hartman",
+            "geslacht": "V"
+        },
+        "inschrijving": "Sun Apr 07 2019 23:46:58 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            }
+        ]
+    },
+    {
+        "id": 5100,
+        "guid": "901a0fd7-bb60-4b27-aefb-3261d8348284",
+        "betalingVerif": true,
+        "openstaand": 666,
+        "leeftijd": 22,
+        "campus": {
+            "campus_naam": "Campus De Ham",
+            "campus_id": 5
+        },
+        "geg": {
+            "voornaam": "Bettye",
+            "achternaam": "Flores",
+            "geslacht": "M"
+        },
+        "inschrijving": "Fri Jan 04 2019 05:16:30 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            }
+        ]
+    },
+    {
+        "id": 3600,
+        "guid": "18d144af-f7b9-4a18-9420-bd82135388bf",
+        "betalingVerif": true,
+        "openstaand": 608,
+        "leeftijd": 22,
+        "campus": {
+            "campus_naam": "Campus De Nayer",
+            "campus_id": 13
+        },
+        "geg": {
+            "voornaam": "Walters",
+            "achternaam": "Woods",
+            "geslacht": "M"
+        },
+        "inschrijving": "Sat Nov 30 2019 03:37:39 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            }
+        ]
+    },
+    {
+        "id": 4359,
+        "guid": "fa9723ed-389d-43c0-9bf4-cc563738e90c",
+        "betalingVerif": false,
+        "openstaand": 960,
+        "leeftijd": 20,
+        "campus": {
+            "campus_naam": "Campus Turnhout",
+            "campus_id": 21
+        },
+        "geg": {
+            "voornaam": "Ophelia",
+            "achternaam": "Solomon",
+            "geslacht": "M"
+        },
+        "inschrijving": "Tue Aug 27 2019 01:54:31 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            }
+        ]
+    },
+    {
+        "id": 4543,
+        "guid": "63099fc9-5d3e-4860-835d-d4e3822ba083",
+        "betalingVerif": true,
+        "openstaand": 73,
+        "leeftijd": 18,
+        "campus": {
+            "campus_naam": "Campus De Ham",
+            "campus_id": 5
+        },
+        "geg": {
+            "voornaam": "Rodriquez",
+            "achternaam": "Vazquez",
+            "geslacht": "M"
+        },
+        "inschrijving": "Tue Sep 10 2019 20:04:39 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            },
+            {
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            }
+        ]
+    },
+    {
+        "id": 2956,
+        "guid": "238b1c2b-155a-4672-97d4-6e45ed106b76",
+        "betalingVerif": false,
+        "openstaand": 271,
+        "leeftijd": 20,
+        "campus": {
+            "campus_naam": "Campus De Ham",
+            "campus_id": 5
+        },
+        "geg": {
+            "voornaam": "Barton",
+            "achternaam": "Mercado",
+            "geslacht": "V"
+        },
+        "inschrijving": "Fri Jul 12 2019 14:20:34 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            }
+        ]
+    },
+    {
+        "id": 2522,
+        "guid": "5e5d28a9-27ca-4478-81ea-f5921e97b17d",
+        "betalingVerif": true,
+        "openstaand": 1996,
+        "leeftijd": 20,
+        "campus": {
+            "campus_naam": "Campus Turnhout",
+            "campus_id": 21
+        },
+        "geg": {
+            "voornaam": "Vazquez",
+            "achternaam": "Becker",
+            "geslacht": "M"
+        },
+        "inschrijving": "Mon Dec 09 2019 19:39:50 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            }
+        ]
+    },
+    {
+        "id": 6419,
+        "guid": "707d495e-ce04-4870-b3b9-983791ea95fc",
+        "betalingVerif": true,
+        "openstaand": 389,
+        "leeftijd": 19,
+        "campus": {
+            "campus_naam": "Campus De Nayer",
+            "campus_id": 13
+        },
+        "geg": {
+            "voornaam": "Janis",
+            "achternaam": "Greer",
+            "geslacht": "M"
+        },
+        "inschrijving": "Sat Jul 06 2019 18:54:54 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            }
+        ]
+    },
+    {
+        "id": 5949,
+        "guid": "1540d49a-9234-4830-9258-cd1cc4da7dbf",
+        "betalingVerif": true,
+        "openstaand": 1609,
+        "leeftijd": 20,
+        "campus": {
+            "campus_naam": "Campus De Nayer",
+            "campus_id": 13
+        },
+        "geg": {
+            "voornaam": "Torres",
+            "achternaam": "Guzman",
+            "geslacht": "V"
+        },
+        "inschrijving": "Wed Feb 20 2019 20:13:33 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            },
+            {
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            },
+            {
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            }
+        ]
+    },
+    {
+        "id": 8101,
+        "guid": "600b0ac2-5173-4ba5-998c-e05f6a5e1174",
+        "betalingVerif": true,
+        "openstaand": 1802,
+        "leeftijd": 18,
+        "campus": {
+            "campus_naam": "Campus Geel",
+            "campus_id": 19
+        },
+        "geg": {
+            "voornaam": "Combs",
+            "achternaam": "Ross",
+            "geslacht": "V"
+        },
+        "inschrijving": "Sun Sep 29 2019 15:15:16 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            },
+            {
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            }
+        ]
+    },
+    {
+        "id": 8450,
+        "guid": "2c3f98a0-be32-4777-ad23-bd31d4aba99f",
+        "betalingVerif": true,
+        "openstaand": 1412,
+        "leeftijd": 20,
+        "campus": {
+            "campus_naam": "Campus De Ham",
+            "campus_id": 5
+        },
+        "geg": {
+            "voornaam": "Santos",
+            "achternaam": "Spence",
+            "geslacht": "M"
+        },
+        "inschrijving": "Tue Oct 29 2019 07:24:36 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            }
+        ]
+    },
+    {
+        "id": 7016,
+        "guid": "64539524-f4a6-4e68-bddd-614628ad0a55",
+        "betalingVerif": false,
+        "openstaand": 358,
+        "leeftijd": 22,
+        "campus": {
+            "campus_naam": "Campus De Ham",
+            "campus_id": 5
+        },
+        "geg": {
+            "voornaam": "Ayala",
+            "achternaam": "Barber",
+            "geslacht": "M"
+        },
+        "inschrijving": "Wed Apr 10 2019 17:37:08 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            }
+        ]
+    },
+    {
+        "id": 7756,
+        "guid": "5c38ce21-813a-4717-b32e-19054079800c",
+        "betalingVerif": true,
+        "openstaand": 852,
+        "leeftijd": 23,
+        "campus": {
+            "campus_naam": "Campus De Nayer",
+            "campus_id": 13
+        },
+        "geg": {
+            "voornaam": "Keri",
+            "achternaam": "Hampton",
+            "geslacht": "M"
+        },
+        "inschrijving": "Fri Dec 13 2019 16:52:13 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            },
+            {
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            }
+        ]
+    },
+    {
+        "id": 2651,
+        "guid": "dd44d56d-5f53-462c-b129-677f8bf13e93",
+        "betalingVerif": false,
+        "openstaand": 1583,
+        "leeftijd": 18,
+        "campus": {
+            "campus_naam": "Campus De Ham",
+            "campus_id": 5
+        },
+        "geg": {
+            "voornaam": "Deirdre",
+            "achternaam": "Woodard",
+            "geslacht": "V"
+        },
+        "inschrijving": "Tue Jun 04 2019 06:37:04 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            }
+        ]
+    },
+    {
+        "id": 8267,
+        "guid": "4abd68c8-bfc7-4e86-a744-6abec1e7d4ba",
+        "betalingVerif": false,
+        "openstaand": 291,
+        "leeftijd": 23,
+        "campus": {
+            "campus_naam": "Campus Turnhout",
+            "campus_id": 21
+        },
+        "geg": {
+            "voornaam": "Good",
+            "achternaam": "Hurst",
+            "geslacht": "M"
+        },
+        "inschrijving": "Thu Jan 17 2019 04:20:34 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            },
+            {
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            },
+            {
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            }
+        ]
+    },
+    {
+        "id": 3357,
+        "guid": "0c7f8da4-c266-441d-984e-f4d3d0cd4b1e",
+        "betalingVerif": false,
+        "openstaand": 894,
+        "leeftijd": 19,
+        "campus": {
+            "campus_naam": "Campus De Nayer",
+            "campus_id": 13
+        },
+        "geg": {
+            "voornaam": "Bridges",
+            "achternaam": "Fuller",
+            "geslacht": "V"
+        },
+        "inschrijving": "Fri May 31 2019 22:47:28 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            }
+        ]
+    },
+    {
+        "id": 2615,
+        "guid": "a7556dfe-05af-40d5-9b00-2c59c0a0e7f4",
+        "betalingVerif": false,
+        "openstaand": 1272,
+        "leeftijd": 21,
+        "campus": {
+            "campus_naam": "Campus Turnhout",
+            "campus_id": 21
+        },
+        "geg": {
+            "voornaam": "Harrison",
+            "achternaam": "Mayo",
+            "geslacht": "M"
+        },
+        "inschrijving": "Tue Oct 08 2019 00:56:02 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            },
+            {
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            }
+        ]
+    },
+    {
+        "id": 4905,
+        "guid": "a78f89ec-3c2f-475e-b9eb-028598fe5418",
+        "betalingVerif": false,
+        "openstaand": 1810,
+        "leeftijd": 22,
+        "campus": {
+            "campus_naam": "Campus De Nayer",
+            "campus_id": 13
+        },
+        "geg": {
+            "voornaam": "Maria",
+            "achternaam": "Tucker",
+            "geslacht": "V"
+        },
+        "inschrijving": "Sun Mar 31 2019 03:31:02 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            }
+        ]
+    },
+    {
+        "id": 7029,
+        "guid": "06e4c9fe-80a9-4629-93d9-1d3402a9a171",
+        "betalingVerif": false,
+        "openstaand": 1532,
+        "leeftijd": 19,
+        "campus": {
+            "campus_naam": "Campus Geel",
+            "campus_id": 19
+        },
+        "geg": {
+            "voornaam": "Dollie",
+            "achternaam": "Fields",
+            "geslacht": "V"
+        },
+        "inschrijving": "Sat Oct 19 2019 23:05:17 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            }
+        ]
+    },
+    {
+        "id": 7396,
+        "guid": "e17866f3-ce00-4e89-9832-b2488d5b6e63",
+        "betalingVerif": false,
+        "openstaand": 1433,
+        "leeftijd": 23,
+        "campus": {
+            "campus_naam": "Campus Geel",
+            "campus_id": 19
+        },
+        "geg": {
+            "voornaam": "Jody",
+            "achternaam": "Justice",
+            "geslacht": "M"
+        },
+        "inschrijving": "Tue Aug 13 2019 13:54:42 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            },
+            {
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            }
+        ]
+    },
+    {
+        "id": 8508,
+        "guid": "a2105143-7baf-4653-a326-b7ec881c6985",
+        "betalingVerif": false,
+        "openstaand": 1636,
+        "leeftijd": 22,
+        "campus": {
+            "campus_naam": "Campus Geel",
+            "campus_id": 19
+        },
+        "geg": {
+            "voornaam": "Hebert",
+            "achternaam": "Welch",
+            "geslacht": "V"
+        },
+        "inschrijving": "Thu Feb 21 2019 06:06:27 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            }
+        ]
+    },
+    {
+        "id": 6377,
+        "guid": "0e5a54ac-049e-4ac7-b0ae-2412d22790b2",
+        "betalingVerif": false,
+        "openstaand": 1639,
+        "leeftijd": 22,
+        "campus": {
+            "campus_naam": "Campus De Nayer",
+            "campus_id": 13
+        },
+        "geg": {
+            "voornaam": "Jeanette",
+            "achternaam": "Crawford",
+            "geslacht": "M"
+        },
+        "inschrijving": "Sun Jan 20 2019 16:09:30 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            },
+            {
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            }
+        ]
+    },
+    {
+        "id": 5629,
+        "guid": "bf470ab7-c550-42ec-b592-e2199b904edc",
+        "betalingVerif": false,
+        "openstaand": 1807,
+        "leeftijd": 18,
+        "campus": {
+            "campus_naam": "Campus De Ham",
+            "campus_id": 5
+        },
+        "geg": {
+            "voornaam": "Mcclure",
+            "achternaam": "Dyer",
+            "geslacht": "V"
+        },
+        "inschrijving": "Sat May 11 2019 07:43:31 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            }
+        ]
+    },
+    {
+        "id": 7796,
+        "guid": "e0f49095-10dc-4bc4-9265-8fe5e834b668",
+        "betalingVerif": false,
+        "openstaand": 1225,
+        "leeftijd": 22,
+        "campus": {
+            "campus_naam": "Campus Turnhout",
+            "campus_id": 21
+        },
+        "geg": {
+            "voornaam": "Deidre",
+            "achternaam": "Michael",
+            "geslacht": "M"
+        },
+        "inschrijving": "Sun Jul 07 2019 22:01:50 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            }
+        ]
+    },
+    {
+        "id": 3691,
+        "guid": "df168759-d0b0-41d3-9743-790ff3a0b9a1",
+        "betalingVerif": true,
+        "openstaand": 1792,
+        "leeftijd": 22,
+        "campus": {
+            "campus_naam": "Campus Turnhout",
+            "campus_id": 21
+        },
+        "geg": {
+            "voornaam": "Benton",
+            "achternaam": "Gregory",
+            "geslacht": "M"
+        },
+        "inschrijving": "Thu Oct 31 2019 20:29:35 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            }
+        ]
+    },
+    {
+        "id": 4051,
+        "guid": "7fa5931d-eacf-4949-9424-1e0943826fd0",
+        "betalingVerif": true,
+        "openstaand": 1198,
+        "leeftijd": 18,
+        "campus": {
+            "campus_naam": "Campus De Nayer",
+            "campus_id": 13
+        },
+        "geg": {
+            "voornaam": "Holt",
+            "achternaam": "Obrien",
+            "geslacht": "M"
+        },
+        "inschrijving": "Thu Jan 03 2019 23:20:37 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            }
+        ]
+    },
+    {
+        "id": 2587,
+        "guid": "05a3634b-2a39-4c72-8aeb-9562b2300da2",
+        "betalingVerif": false,
+        "openstaand": 1491,
+        "leeftijd": 19,
+        "campus": {
+            "campus_naam": "Campus De Nayer",
+            "campus_id": 13
+        },
+        "geg": {
+            "voornaam": "Dejesus",
+            "achternaam": "Hunt",
+            "geslacht": "V"
+        },
+        "inschrijving": "Fri Jul 26 2019 20:01:50 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            }
+        ]
+    },
+    {
+        "id": 6647,
+        "guid": "506b421c-0da5-4376-b52c-578f40f3efb1",
+        "betalingVerif": true,
+        "openstaand": 1964,
+        "leeftijd": 20,
+        "campus": {
+            "campus_naam": "Campus De Nayer",
+            "campus_id": 13
+        },
+        "geg": {
+            "voornaam": "Ruby",
+            "achternaam": "Brock",
+            "geslacht": "V"
+        },
+        "inschrijving": "Thu Oct 24 2019 14:42:53 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            }
+        ]
+    },
+    {
+        "id": 6133,
+        "guid": "4c1d7558-786e-432b-a54f-677f8cbae50f",
+        "betalingVerif": true,
+        "openstaand": 1175,
+        "leeftijd": 23,
+        "campus": {
+            "campus_naam": "Campus De Ham",
+            "campus_id": 5
+        },
+        "geg": {
+            "voornaam": "Rasmussen",
+            "achternaam": "Love",
+            "geslacht": "M"
+        },
+        "inschrijving": "Sat Jun 15 2019 12:59:17 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            }
+        ]
+    },
+    {
+        "id": 4112,
+        "guid": "bc7be976-4fcc-4ade-8d0b-c3dc7d599a98",
+        "betalingVerif": true,
+        "openstaand": 1621,
+        "leeftijd": 23,
+        "campus": {
+            "campus_naam": "Campus De Nayer",
+            "campus_id": 13
+        },
+        "geg": {
+            "voornaam": "Pope",
+            "achternaam": "Joyner",
+            "geslacht": "M"
+        },
+        "inschrijving": "Wed May 29 2019 08:18:46 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            },
+            {
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            }
+        ]
+    },
+    {
+        "id": 4356,
+        "guid": "a3925d63-0c32-43da-a7df-34bbe9376e56",
+        "betalingVerif": true,
+        "openstaand": 149,
+        "leeftijd": 23,
+        "campus": {
+            "campus_naam": "Campus Geel",
+            "campus_id": 19
+        },
+        "geg": {
+            "voornaam": "Kaitlin",
+            "achternaam": "King",
+            "geslacht": "V"
+        },
+        "inschrijving": "Sun Jan 27 2019 10:45:06 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            },
+            {
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            },
+            {
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            }
+        ]
+    },
+    {
+        "id": 8283,
+        "guid": "b0daa3c1-1818-4b87-9dd1-d51e59dd3059",
+        "betalingVerif": true,
+        "openstaand": 1700,
+        "leeftijd": 20,
+        "campus": {
+            "campus_naam": "Campus Geel",
+            "campus_id": 19
+        },
+        "geg": {
+            "voornaam": "Lucia",
+            "achternaam": "Foreman",
+            "geslacht": "M"
+        },
+        "inschrijving": "Thu Jan 10 2019 05:20:18 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            }
+        ]
+    },
+    {
+        "id": 3815,
+        "guid": "766a9ad4-8ea4-4e27-bae3-1cf381cd2f85",
+        "betalingVerif": true,
+        "openstaand": 914,
+        "leeftijd": 23,
+        "campus": {
+            "campus_naam": "Campus De Ham",
+            "campus_id": 5
+        },
+        "geg": {
+            "voornaam": "Hess",
+            "achternaam": "Holt",
+            "geslacht": "V"
+        },
+        "inschrijving": "Wed Jan 23 2019 05:19:54 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            },
+            {
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            },
+            {
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            }
+        ]
+    },
+    {
+        "id": 4632,
+        "guid": "820e311a-eec2-4250-b85b-6d239532a0a3",
+        "betalingVerif": true,
+        "openstaand": 237,
+        "leeftijd": 20,
+        "campus": {
+            "campus_naam": "Campus De Nayer",
+            "campus_id": 13
+        },
+        "geg": {
+            "voornaam": "Marietta",
+            "achternaam": "Santana",
+            "geslacht": "M"
+        },
+        "inschrijving": "Wed Aug 07 2019 19:20:50 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            }
+        ]
+    },
+    {
+        "id": 7978,
+        "guid": "bf0fa22d-875f-4530-b36f-83cba7f4c20b",
+        "betalingVerif": false,
+        "openstaand": 92,
+        "leeftijd": 23,
+        "campus": {
+            "campus_naam": "Campus Geel",
+            "campus_id": 19
+        },
+        "geg": {
+            "voornaam": "Avila",
+            "achternaam": "Mckinney",
+            "geslacht": "V"
+        },
+        "inschrijving": "Fri Jan 04 2019 06:02:28 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            }
+        ]
+    },
+    {
+        "id": 3080,
+        "guid": "5b836efa-f232-4cc8-a740-8c3ef3da0a8e",
+        "betalingVerif": false,
+        "openstaand": 1538,
+        "leeftijd": 23,
+        "campus": {
+            "campus_naam": "Campus De Nayer",
+            "campus_id": 13
+        },
+        "geg": {
+            "voornaam": "Traci",
+            "achternaam": "Carey",
+            "geslacht": "V"
+        },
+        "inschrijving": "Sun Jul 21 2019 08:55:26 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            }
+        ]
+    },
+    {
+        "id": 8278,
+        "guid": "9f75a16f-dd3f-4d42-aafc-4b5986d6b59b",
+        "betalingVerif": false,
+        "openstaand": 195,
+        "leeftijd": 21,
+        "campus": {
+            "campus_naam": "Campus De Nayer",
+            "campus_id": 13
+        },
+        "geg": {
+            "voornaam": "Thomas",
+            "achternaam": "Preston",
+            "geslacht": "V"
+        },
+        "inschrijving": "Sat Mar 09 2019 23:34:48 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            }
+        ]
+    },
+    {
+        "id": 4231,
+        "guid": "6bbd47e5-06c8-4b30-826d-7022b1640734",
+        "betalingVerif": true,
+        "openstaand": 768,
+        "leeftijd": 23,
+        "campus": {
+            "campus_naam": "Campus Geel",
+            "campus_id": 19
+        },
+        "geg": {
+            "voornaam": "Norman",
+            "achternaam": "Rivers",
+            "geslacht": "V"
+        },
+        "inschrijving": "Sun Dec 01 2019 23:28:38 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            }
+        ]
+    },
+    {
+        "id": 5410,
+        "guid": "7e3f281b-8a75-402b-8554-73604f5ab6c3",
+        "betalingVerif": true,
+        "openstaand": 1757,
+        "leeftijd": 22,
+        "campus": {
+            "campus_naam": "Campus De Ham",
+            "campus_id": 5
+        },
+        "geg": {
+            "voornaam": "Mcdonald",
+            "achternaam": "Aguilar",
+            "geslacht": "V"
+        },
+        "inschrijving": "Thu Jun 27 2019 17:13:57 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            },
+            {
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            },
+            {
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            }
+        ]
+    },
+    {
+        "id": 2679,
+        "guid": "30f8d3c1-9603-4c8d-b058-f7ca3785e737",
+        "betalingVerif": true,
+        "openstaand": 1685,
+        "leeftijd": 22,
+        "campus": {
+            "campus_naam": "Campus De Nayer",
+            "campus_id": 13
+        },
+        "geg": {
+            "voornaam": "Gracie",
+            "achternaam": "Nielsen",
+            "geslacht": "V"
+        },
+        "inschrijving": "Sun Sep 29 2019 05:42:21 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            }
+        ]
+    },
+    {
+        "id": 3971,
+        "guid": "1184c9f3-fdfb-40d9-94c3-cdf61f7e8683",
+        "betalingVerif": true,
+        "openstaand": 1599,
+        "leeftijd": 18,
+        "campus": {
+            "campus_naam": "Campus Turnhout",
+            "campus_id": 21
+        },
+        "geg": {
+            "voornaam": "Washington",
+            "achternaam": "Mcknight",
+            "geslacht": "V"
+        },
+        "inschrijving": "Sat Nov 16 2019 04:35:25 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            }
+        ]
+    },
+    {
+        "id": 3772,
+        "guid": "bb91f3ed-78e0-45e0-b204-561ddc6dd772",
+        "betalingVerif": true,
+        "openstaand": 203,
+        "leeftijd": 20,
+        "campus": {
+            "campus_naam": "Campus Geel",
+            "campus_id": 19
+        },
+        "geg": {
+            "voornaam": "Raquel",
+            "achternaam": "Shields",
+            "geslacht": "M"
+        },
+        "inschrijving": "Mon Jul 01 2019 21:02:52 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            }
+        ]
+    },
+    {
+        "id": 7883,
+        "guid": "b0fa9cdd-b289-4da6-96a7-d673dd9d4925",
+        "betalingVerif": true,
+        "openstaand": 803,
+        "leeftijd": 23,
+        "campus": {
+            "campus_naam": "Campus Turnhout",
+            "campus_id": 21
+        },
+        "geg": {
+            "voornaam": "Kemp",
+            "achternaam": "Jenkins",
+            "geslacht": "M"
+        },
+        "inschrijving": "Thu Mar 21 2019 03:12:43 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            }
+        ]
+    },
+    {
+        "id": 6452,
+        "guid": "9c3fd854-4cd2-46e1-8cfd-e325819b2fbb",
+        "betalingVerif": true,
+        "openstaand": 1002,
+        "leeftijd": 18,
+        "campus": {
+            "campus_naam": "Campus De Nayer",
+            "campus_id": 13
+        },
+        "geg": {
+            "voornaam": "Leola",
+            "achternaam": "Witt",
+            "geslacht": "M"
+        },
+        "inschrijving": "Mon Jul 01 2019 15:59:33 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            }
+        ]
+    },
+    {
+        "id": 7909,
+        "guid": "28b84904-a4ec-4f86-908a-f4ed6b6003f3",
+        "betalingVerif": false,
+        "openstaand": 814,
+        "leeftijd": 22,
+        "campus": {
+            "campus_naam": "Campus Geel",
+            "campus_id": 19
+        },
+        "geg": {
+            "voornaam": "Mullins",
+            "achternaam": "Williamson",
+            "geslacht": "M"
+        },
+        "inschrijving": "Tue Dec 03 2019 13:57:14 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            }
+        ]
+    },
+    {
+        "id": 5294,
+        "guid": "3b1dc528-d5c7-48a1-855e-382b170b0bd1",
+        "betalingVerif": false,
+        "openstaand": 449,
+        "leeftijd": 19,
+        "campus": {
+            "campus_naam": "Campus Geel",
+            "campus_id": 19
+        },
+        "geg": {
+            "voornaam": "Essie",
+            "achternaam": "Duke",
+            "geslacht": "M"
+        },
+        "inschrijving": "Sun Mar 17 2019 00:07:32 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            }
+        ]
+    },
+    {
+        "id": 5808,
+        "guid": "81a6e8a5-f5e0-49a7-b824-07242c3c677f",
+        "betalingVerif": false,
+        "openstaand": 383,
+        "leeftijd": 18,
+        "campus": {
+            "campus_naam": "Campus Geel",
+            "campus_id": 19
+        },
+        "geg": {
+            "voornaam": "Puckett",
+            "achternaam": "Whitney",
+            "geslacht": "M"
+        },
+        "inschrijving": "Sat Sep 14 2019 10:13:27 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            },
+            {
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            }
+        ]
+    },
+    {
+        "id": 2236,
+        "guid": "6d0a4419-e03d-402b-9923-85316a17eb49",
+        "betalingVerif": true,
+        "openstaand": 1182,
+        "leeftijd": 21,
+        "campus": {
+            "campus_naam": "Campus De Ham",
+            "campus_id": 5
+        },
+        "geg": {
+            "voornaam": "Ingram",
+            "achternaam": "Battle",
+            "geslacht": "M"
+        },
+        "inschrijving": "Sat Apr 06 2019 21:11:55 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            }
+        ]
+    },
+    {
+        "id": 5682,
+        "guid": "62916aa6-43b1-4c1f-b9cf-5743896a34b5",
+        "betalingVerif": true,
+        "openstaand": 1791,
+        "leeftijd": 18,
+        "campus": {
+            "campus_naam": "Campus De Nayer",
+            "campus_id": 13
+        },
+        "geg": {
+            "voornaam": "Earnestine",
+            "achternaam": "Contreras",
+            "geslacht": "M"
+        },
+        "inschrijving": "Thu Jun 27 2019 09:06:46 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            }
+        ]
+    },
+    {
+        "id": 7679,
+        "guid": "3072bbb5-9072-489c-8f81-7f6e4d9eda77",
+        "betalingVerif": false,
+        "openstaand": 541,
+        "leeftijd": 23,
+        "campus": {
+            "campus_naam": "Campus Turnhout",
+            "campus_id": 21
+        },
+        "geg": {
+            "voornaam": "Alyssa",
+            "achternaam": "Fox",
+            "geslacht": "V"
+        },
+        "inschrijving": "Fri May 24 2019 05:54:39 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Interactieve websites",
+                "vak_stpnt": 4,
+                "vak_id": 19
+            },
+            {
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            }
+        ]
+    },
+    {
+        "id": 3771,
+        "guid": "6a411884-a1a8-4424-bb9d-1d5f2567ac75",
+        "betalingVerif": false,
+        "openstaand": 786,
+        "leeftijd": 20,
+        "campus": {
+            "campus_naam": "Campus De Ham",
+            "campus_id": 5
+        },
+        "geg": {
+            "voornaam": "Leonard",
+            "achternaam": "Warren",
+            "geslacht": "V"
+        },
+        "inschrijving": "Tue May 28 2019 03:45:19 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            },
+            {
+                "vak_naam": "Inleiding tot programmeren ",
+                "vak_stpnt": 4,
+                "vak_id": 11
+            },
+            {
+                "vak_naam": "Objectgeorienteerd programmeren",
+                "vak_stpnt": 6,
+                "vak_id": 12
+            }
+        ]
+    },
+    {
+        "id": 4873,
+        "guid": "ef884134-7a0a-4808-be02-08ec374c9fb0",
+        "betalingVerif": false,
+        "openstaand": 626,
+        "leeftijd": 20,
+        "campus": {
+            "campus_naam": "Campus Geel",
+            "campus_id": 19
+        },
+        "geg": {
+            "voornaam": "Beulah",
+            "achternaam": "Garcia",
+            "geslacht": "V"
+        },
+        "inschrijving": "Fri Nov 08 2019 12:39:10 GMT+0000 (UTC)",
+        "vakken": [{
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            },
+            {
+                "vak_naam": "Datamanipulatie vanuit een programma",
+                "vak_stpnt": 5,
+                "vak_id": 17
+            },
+            {
+                "vak_naam": "Statische websites",
+                "vak_stpnt": 4,
+                "vak_id": 13
+            }
+        ]
+    }
+]

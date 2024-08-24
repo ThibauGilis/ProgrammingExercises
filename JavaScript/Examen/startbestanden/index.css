@@ -1,0 +1,9 @@
+img {
+    width: auto;
+    height: 50px;
+}
+
+#shopping-cart-summary {
+    display: flex;
+    justify-content: space-between;
+}

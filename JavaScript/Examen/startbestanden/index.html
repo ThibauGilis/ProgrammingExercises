@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examen JavaScript</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<main class="container">
+    <h1>Examen JavaScript: Juni 2024</h1>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12 d-none" id="fetch-foutmelding">
+            <div class="alert alert-danger" role="alert">
+                We konden de albums niet ophalen. Probeer het later opnieuw.
+            </div>
+        </div>
+
+        <div class="col-lg-8">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Albums</h2>
+                </div>
+
+                <form class="col mb-2 d-flex gap-2">
+                    <input type="text" class="form-control" name="title-filter" id="title-filter"
+                           placeholder="Album titel">
+                    <select class="form-select" name="type-filter" id="type-filter">
+                        <option value="0" selected>Alle types</option>
+                        <option value="7 Inch Vinyl">7 Inch Vinyl</option>
+                        <option value="12 Inch Vinyl">12 Inch Vinyl</option>
+                        <option value="CD">CD</option>
+                        <option value="Cassette">Cassette</option>
+                    </select>
+                    <input type="submit" name="filter-btn" id="filter-btn" value="Filter resultaten"
+                           class="btn btn-success">
+                </form>
+
+                <div class="col-sm-12">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Cover</th>
+                            <th scope="col">Titel</th>
+                            <th scope="col">Artiest</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Prijs</th>
+                            <th scope="col">Kopen</th>
+                        </tr>
+                        </thead>
+                        <tbody id="albums">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Winkelwagen</h2>
+                    <ul id="shopping-cart-items">
+                        <li>Geen items in de winkelmand</li>
+                    </ul>
+                    <div id="shopping-cart-summary">
+                        <strong>TOTAAL:</strong>
+                        <strong id="shopping-cart-total">0 EUR</strong>
+                    </div>
+                    <div class="my-2 d-grid">
+                        <button class="btn btn-danger" id="clear-cart">Winkelwagen legen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<script src="bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+<script src="index.js" ></script>
+<script src="music.json"></script>
+</body>
+</html>

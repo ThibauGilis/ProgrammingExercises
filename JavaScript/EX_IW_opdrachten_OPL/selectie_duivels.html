@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Opdracht 1: Rode duivels</title>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Opdracht 1: Rode duivels</h1>
+        <hr>
+        <div class="row">
+            <div class="col-md mb-2">
+                <input type="text" class="form-control" name="naam" id="naam" placeholder="Naam van de speler">
+            </div>
+            <div class="col-md mb-2">
+                <select class="form-select" name="positie" id="positie">
+                    <option value="0" selected>Kies een positie</option>
+                    <option value="Aanvaller">Aanvaller</option>
+                    <option value="Middenvelder">Middenvelder</option>
+                    <option value="Verdediger">Verdediger</option>
+                    <option value="Keeper">Keeper</option>
+                </select>
+            </div>
+            <div class="col-md mb-2">
+                <div class="d-grid">
+                    <input type="button" name="toevoegen" id="toevoegen" value="Speler toevoegen" class="btn btn-success">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2>Selectie</h2>
+                <ul id="lijst">
+
+
+                </ul>
+            </div>
+        </div>
+    </main>
+    <script>
+        // Gebuik maken van Event delegation zoals bij jQuery .on("click","ul", funct...)
+        document.getElementById('lijst').addEventListener('click', e => {
+            if (e.target.className === 'delreddev') {
+                e.target.parentElement.remove(this);
+            }
+        });
+
+        document.querySelector('#toevoegen').addEventListener('click', () => {
+            if (positie.value != 0 && naam.value != '') {
+                // De waarden uit form
+                let naam = document.querySelector('#naam')
+                let positie = document.querySelector('#positie')
+
+                // Elementen lijst
+                let el = document.createElement("span");
+                let li = document.createElement("li");
+                let lijst = document.querySelector("#lijst")
+
+                // Nieuwe content toevoegen
+                el.textContent = `${naam.value} - ${positie.value}`;
+                el.className = 'delreddev';
+
+                li.appendChild(el);
+                lijst.appendChild(li);
+            } else {
+                alert('Gelieve een naam en positie in te geven.')
+            }
+        })
+
+        // Oplossing via innerHTML (controleren)
+        /*
+        let ul = document.querySelector("#lijst");
+
+        document.querySelector("#toevoegen").addEventListener("click", () => {
+            let naam = document.querySelector("#naam").value;
+            let positie = document.querySelector("#positie").value;
+            if(naam.length > 0 && positie != 0){
+                ul.innerHTML += '<li class="listItem" onclick="removeItem(this)">' + naam + ' - ' + positie + '</li>';
+            }
+            else{
+                alert("Gelieve een naam en positie in te geven.");
+            }
+        });
+
+        function removeItem(item){
+            ul.removeChild(item);
+        }
+    */
+    </script>
+
+
+</body>
+
+</html>

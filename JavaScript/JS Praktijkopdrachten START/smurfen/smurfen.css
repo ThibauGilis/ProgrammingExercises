@@ -1,0 +1,28 @@
+/* Vorm de btn cellen van het spelbord om in circels met diameter 6em, en een zwarte zichtbare rand. */
+.cell {
+    border-radius: 100%;
+    border: 1px solid black;
+    width: 6em;
+    height: 6em;
+    background-color: aqua;
+    margin: 0.2em;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cell.start {
+    cursor: unset;
+}
+
+/* Een smurf heeft een blauwe achtergrond met een horizontaal en verticaal gecentreerde tekst. */
+.smurf {
+    background-color: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Een paddenstoel heeft een rode achtergrond met een witte stip in het midden van de bol. */
+.paddenstoel {
+    background: red radial-gradient(white 20%, transparent 16%);
+}
